@@ -69,11 +69,11 @@ class LoginViewController: UIViewController
         }
     }
     
-    @IBAction func cancelPressed(sender: UIBarButtonItem)
-    {
-        dismissViewControllerAnimated(true, completion: nil)
-       self.navigationController?.performSegueWithIdentifier("unwindFromLogin", sender: self)
-    }
+//    @IBAction func cancelPressed(sender: UIBarButtonItem)
+//    {
+//        dismissViewControllerAnimated(true, completion: nil)
+//       self.navigationController?.performSegueWithIdentifier("unwindFromLogin", sender: self)
+//    }
 
 
 

@@ -95,6 +95,7 @@
 		5DD63AF01C41BC340063DCA4 /* relaxingnovember.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63AEF1C41BC340063DCA4 /* relaxingnovember.mp3 */; };
 		5DD63AF21C41BC470063DCA4 /* thebeautifulbeach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63AF11C41BC470063DCA4 /* thebeautifulbeach.mp3 */; };
 		5DD63AF41C41BC550063DCA4 /* thunderlight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63AF31C41BC550063DCA4 /* thunderlight.mp3 */; };
+		5DD63AF71C41C3BC0063DCA4 /* mainProfileImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63AF61C41C3BC0063DCA4 /* mainProfileImg.png */; };
 		E1281FCAC358DC7ECD4396D8 /* libPods-GetWell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3C58CCC35B4189BB3E31 /* libPods-GetWell.a */; };
 /* End PBXBuildFile section */
 
@@ -190,6 +191,7 @@
 		5DD63AEF1C41BC340063DCA4 /* relaxingnovember.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relaxingnovember.mp3; sourceTree = "<group>"; };
 		5DD63AF11C41BC470063DCA4 /* thebeautifulbeach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thebeautifulbeach.mp3; sourceTree = "<group>"; };
 		5DD63AF31C41BC550063DCA4 /* thunderlight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thunderlight.mp3; sourceTree = "<group>"; };
+		5DD63AF61C41C3BC0063DCA4 /* mainProfileImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainProfileImg.png; sourceTree = "<group>"; };
 		9C602676B433DB109FA1C0C8 /* Pods-GetWell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.release.xcconfig"; sourceTree = "<group>"; };
 		BBE4FD4065752F92C4A89F66 /* Pods-GetWell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.debug.xcconfig"; sourceTree = "<group>"; };
 		C0AB3C58CCC35B4189BB3E31 /* libPods-GetWell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GetWell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +243,8 @@
 				4C66A21E1C41B12D00B4BFDA /* PlaylistTableViewController.swift */,
 				4C66A21F1C41B12D00B4BFDA /* RecordingViewController.swift */,
 				5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */,
+				5DD63AF61C41C3BC0063DCA4 /* mainProfileImg.png */,
+				4C66A2061C41920300B4BFDA /* Main.storyboard */,
 				5DD63AF51C41BC600063DCA4 /* GWSound */,
 				5DD63AB81C41BB4E0063DCA4 /* UpdatedMediaImg */,
 				5DD63AAB1C41BB180063DCA4 /* gwIcons */,
@@ -248,7 +252,6 @@
 				5DD63A931C41BAE30063DCA4 /* GetWellSkin */,
 				5DD63A861C41BACC0063DCA4 /* checkedUnchecked */,
 				5DD63A5A1C41BA730063DCA4 /* buttons */,
-				4C66A2061C41920300B4BFDA /* Main.storyboard */,
 				4C66A2141C41921100B4BFDA /* Misc */,
 			);
 			path = GetWell;
@@ -569,6 +572,7 @@
 				4C66A2081C41920300B4BFDA /* Main.storyboard in Resources */,
 				5DD63A7D1C41BA730063DCA4 /* PlayPauseB@2x.png in Resources */,
 				5DD63A901C41BACC0063DCA4 /* unchecked@1x.png in Resources */,
+				5DD63AF71C41C3BC0063DCA4 /* mainProfileImg.png in Resources */,
 				5DD63A801C41BA730063DCA4 /* PreviousB@2x.png in Resources */,
 				5DD63AF01C41BC340063DCA4 /* relaxingnovember.mp3 in Resources */,
 				5DD63A771C41BA730063DCA4 /* gwArrow.png in Resources */,
