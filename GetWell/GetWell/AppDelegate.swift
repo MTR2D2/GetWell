@@ -14,8 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+    {
+        
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Sound], categories: nil))
+        
+        Parse.setApplicationId("vRD8iG1xxduHAAOlLaGxxJAVk73f9cmYhuPp6n2B",
+            clientKey: "iIKaB9BmdXOVymILxrLhBXAvNJrTI4CDLNwBbrF9")
+        
         return true
     }
 
