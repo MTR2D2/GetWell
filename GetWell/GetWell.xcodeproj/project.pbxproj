@@ -8,21 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		4C66A2031C41920300B4BFDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A2021C41920300B4BFDA /* AppDelegate.swift */; };
-		4C66A2051C41920300B4BFDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A2041C41920300B4BFDA /* ViewController.swift */; };
 		4C66A2081C41920300B4BFDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C66A2061C41920300B4BFDA /* Main.storyboard */; };
 		4C66A20A1C41920300B4BFDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C66A2091C41920300B4BFDA /* Assets.xcassets */; };
 		4C66A20D1C41920300B4BFDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C66A20B1C41920300B4BFDA /* LaunchScreen.storyboard */; };
+		4C66A2201C41B12D00B4BFDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A2151C41B12D00B4BFDA /* LoginViewController.swift */; };
+		4C66A2211C41B12D00B4BFDA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A2161C41B12D00B4BFDA /* MainViewController.swift */; };
+		4C66A2221C41B12D00B4BFDA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A2171C41B12D00B4BFDA /* MapViewController.swift */; };
+		4C66A2271C41B12D00B4BFDA /* MediaPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A21C1C41B12D00B4BFDA /* MediaPlayerViewController.swift */; };
+		4C66A2281C41B12D00B4BFDA /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A21D1C41B12D00B4BFDA /* PlaylistTableViewCell.swift */; };
+		4C66A2291C41B12D00B4BFDA /* PlaylistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A21E1C41B12D00B4BFDA /* PlaylistTableViewController.swift */; };
+		4C66A22A1C41B12D00B4BFDA /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A21F1C41B12D00B4BFDA /* RecordingViewController.swift */; };
+		4C66A22C1C41B33300B4BFDA /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A22B1C41B33300B4BFDA /* Song.swift */; };
+		4C66A22E1C41B35700B4BFDA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A22D1C41B35700B4BFDA /* RegisterViewController.swift */; };
+		4C66A2321C41B39300B4BFDA /* SetReminderPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */; };
+		4C66A2331C41B39300B4BFDA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A2301C41B39300B4BFDA /* TableViewCell.swift */; };
+		4C66A2341C41B39300B4BFDA /* TableViewChkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */; };
 		E1281FCAC358DC7ECD4396D8 /* libPods-GetWell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3C58CCC35B4189BB3E31 /* libPods-GetWell.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C66A1FF1C41920300B4BFDA /* GetWell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetWell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C66A2021C41920300B4BFDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C66A2041C41920300B4BFDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C66A2071C41920300B4BFDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C66A2091C41920300B4BFDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C66A20C1C41920300B4BFDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C66A20E1C41920300B4BFDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C66A2151C41B12D00B4BFDA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4C66A2161C41B12D00B4BFDA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4C66A2171C41B12D00B4BFDA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4C66A21C1C41B12D00B4BFDA /* MediaPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerViewController.swift; sourceTree = "<group>"; };
+		4C66A21D1C41B12D00B4BFDA /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
+		4C66A21E1C41B12D00B4BFDA /* PlaylistTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewController.swift; sourceTree = "<group>"; };
+		4C66A21F1C41B12D00B4BFDA /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
+		4C66A22B1C41B33300B4BFDA /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		4C66A22D1C41B35700B4BFDA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetReminderPopOverViewController.swift; sourceTree = "<group>"; };
+		4C66A2301C41B39300B4BFDA /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewChkList.swift; sourceTree = "<group>"; };
 		5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GetWell-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		9C602676B433DB109FA1C0C8 /* Pods-GetWell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.release.xcconfig"; sourceTree = "<group>"; };
 		BBE4FD4065752F92C4A89F66 /* Pods-GetWell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,8 +84,19 @@
 		4C66A2011C41920300B4BFDA /* GetWell */ = {
 			isa = PBXGroup;
 			children = (
+				4C66A22B1C41B33300B4BFDA /* Song.swift */,
+				4C66A2151C41B12D00B4BFDA /* LoginViewController.swift */,
+				4C66A22D1C41B35700B4BFDA /* RegisterViewController.swift */,
+				4C66A2161C41B12D00B4BFDA /* MainViewController.swift */,
+				4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */,
+				4C66A2301C41B39300B4BFDA /* TableViewCell.swift */,
+				4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */,
+				4C66A2171C41B12D00B4BFDA /* MapViewController.swift */,
+				4C66A21C1C41B12D00B4BFDA /* MediaPlayerViewController.swift */,
+				4C66A21D1C41B12D00B4BFDA /* PlaylistTableViewCell.swift */,
+				4C66A21E1C41B12D00B4BFDA /* PlaylistTableViewController.swift */,
+				4C66A21F1C41B12D00B4BFDA /* RecordingViewController.swift */,
 				5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */,
-				4C66A2041C41920300B4BFDA /* ViewController.swift */,
 				4C66A2061C41920300B4BFDA /* Main.storyboard */,
 				4C66A2141C41921100B4BFDA /* Misc */,
 			);
@@ -221,8 +254,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C66A2051C41920300B4BFDA /* ViewController.swift in Sources */,
+				4C66A22C1C41B33300B4BFDA /* Song.swift in Sources */,
+				4C66A22E1C41B35700B4BFDA /* RegisterViewController.swift in Sources */,
+				4C66A2211C41B12D00B4BFDA /* MainViewController.swift in Sources */,
+				4C66A2271C41B12D00B4BFDA /* MediaPlayerViewController.swift in Sources */,
+				4C66A2341C41B39300B4BFDA /* TableViewChkList.swift in Sources */,
+				4C66A2321C41B39300B4BFDA /* SetReminderPopOverViewController.swift in Sources */,
+				4C66A22A1C41B12D00B4BFDA /* RecordingViewController.swift in Sources */,
+				4C66A2201C41B12D00B4BFDA /* LoginViewController.swift in Sources */,
+				4C66A2281C41B12D00B4BFDA /* PlaylistTableViewCell.swift in Sources */,
+				4C66A2291C41B12D00B4BFDA /* PlaylistTableViewController.swift in Sources */,
+				4C66A2331C41B39300B4BFDA /* TableViewCell.swift in Sources */,
 				4C66A2031C41920300B4BFDA /* AppDelegate.swift in Sources */,
+				4C66A2221C41B12D00B4BFDA /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
