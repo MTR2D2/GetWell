@@ -85,7 +85,7 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         next.alpha = 0
         isDone = false
         
-        chkGuideImg.addGestureRecognizer(tapImageGesture)
+//        chkGuideImg.addGestureRecognizer(tapImageGesture)
         
 //        if PFUser.currentUser() == nil
 //        {
