@@ -69,7 +69,7 @@
                                     <constraint firstAttribute="width" secondItem="xeJ-0Y-t0P" secondAttribute="height" multiplier="83:6" id="sva-Ls-wZm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="T06-ZQ-MeO"/>
@@ -622,6 +622,7 @@
                         <outlet property="meditationCountdown" destination="pjh-1r-Pcd" id="6gn-j6-ZGj"/>
                         <outlet property="playPauseButton" destination="jw8-bE-6js" id="Qef-7S-sa3"/>
                         <outlet property="plusButton" destination="kXY-1F-Dah" id="XyY-Yp-utk"/>
+                        <outlet property="recordingLabel" destination="KZh-kd-nTU" id="Und-gX-JHO"/>
                         <outlet property="songTitleLabel" destination="UTE-Oo-Bby" id="mrh-hD-4Py"/>
                         <outlet property="timeSegmentedControl" destination="hwc-4M-SAo" id="7qd-KR-lDK"/>
                     </connections>
@@ -656,7 +657,7 @@
                                     <action selector="signinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJO-Er-iXG"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1i-wF-NTG">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Create User Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1i-wF-NTG">
                                 <rect key="frame" x="20" y="228" width="335" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9Ni-GU-PpC"/>
@@ -673,7 +674,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07S-Ad-rUk">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Create Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07S-Ad-rUk">
                                 <rect key="frame" x="20" y="257" width="335" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="07S-Ad-rUk" secondAttribute="height" multiplier="83:6" id="JxS-Yn-Qxe"/>
@@ -681,7 +682,7 @@
                                     <constraint firstAttribute="height" constant="30" id="j5x-M5-MWd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="JxS-Yn-Qxe"/>
@@ -889,6 +890,6 @@
         <image name="stopButton.png" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1BS-r5-0Lr"/>
+        <segue reference="o5T-B8-enu"/>
     </inferredMetricsTieBreakers>
 </document>
