@@ -102,6 +102,24 @@
 		5DD63B0D1C4209E90063DCA4 /* cHheckeD.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B0C1C4209E90063DCA4 /* cHheckeD.png */; };
 		5DD63B0F1C4217610063DCA4 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD63B0E1C4217610063DCA4 /* Checklist.swift */; };
 		5DD63B111C421F550063DCA4 /* newMediaSkin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B101C421F550063DCA4 /* newMediaSkin2.png */; };
+		5DD63B1A1C423FCC0063DCA4 /* newCancelButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B121C423FCC0063DCA4 /* newCancelButton.png */; };
+		5DD63B1B1C423FCC0063DCA4 /* newGwArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B131C423FCC0063DCA4 /* newGwArrow.png */; };
+		5DD63B1C1C423FCC0063DCA4 /* newMicrophone.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B141C423FCC0063DCA4 /* newMicrophone.png */; };
+		5DD63B1D1C423FCC0063DCA4 /* newNext.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B151C423FCC0063DCA4 /* newNext.png */; };
+		5DD63B1E1C423FCC0063DCA4 /* newPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B161C423FCC0063DCA4 /* newPlay.png */; };
+		5DD63B1F1C423FCC0063DCA4 /* newPrevious.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B171C423FCC0063DCA4 /* newPrevious.png */; };
+		5DD63B201C423FCC0063DCA4 /* newReset.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B181C423FCC0063DCA4 /* newReset.png */; };
+		5DD63B211C423FCC0063DCA4 /* newSoundIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B191C423FCC0063DCA4 /* newSoundIcon.png */; };
+		5DD63B261C42418B0063DCA4 /* newCancelButtonA.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B221C42418B0063DCA4 /* newCancelButtonA.png */; };
+		5DD63B271C42418B0063DCA4 /* newGwArrowA.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B231C42418B0063DCA4 /* newGwArrowA.png */; };
+		5DD63B281C42418B0063DCA4 /* newMicrophoneA.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B241C42418B0063DCA4 /* newMicrophoneA.png */; };
+		5DD63B291C42418B0063DCA4 /* newResetA.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B251C42418B0063DCA4 /* newResetA.png */; };
+		5DD63B2B1C4244790063DCA4 /* newMicrophoneb.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B2A1C4244790063DCA4 /* newMicrophoneb.png */; };
+		5DD63B2D1C4244F90063DCA4 /* newMicrophoneC.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B2C1C4244F90063DCA4 /* newMicrophoneC.png */; };
+		5DD63B2F1C4245A80063DCA4 /* newMicrophoneD.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B2E1C4245A80063DCA4 /* newMicrophoneD.png */; };
+		5DD63B311C42461F0063DCA4 /* newMicrophoneE.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B301C42461F0063DCA4 /* newMicrophoneE.png */; };
+		5DD63B331C4246F00063DCA4 /* myMicrophone2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B321C4246F00063DCA4 /* myMicrophone2.png */; };
+		5DD63B351C4248650063DCA4 /* stopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B341C4248650063DCA4 /* stopButton.png */; };
 		E1281FCAC358DC7ECD4396D8 /* libPods-GetWell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3C58CCC35B4189BB3E31 /* libPods-GetWell.a */; };
 /* End PBXBuildFile section */
 
@@ -204,6 +222,24 @@
 		5DD63B0C1C4209E90063DCA4 /* cHheckeD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cHheckeD.png; path = ../cHheckeD.png; sourceTree = "<group>"; };
 		5DD63B0E1C4217610063DCA4 /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		5DD63B101C421F550063DCA4 /* newMediaSkin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newMediaSkin2.png; sourceTree = "<group>"; };
+		5DD63B121C423FCC0063DCA4 /* newCancelButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newCancelButton.png; sourceTree = "<group>"; };
+		5DD63B131C423FCC0063DCA4 /* newGwArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newGwArrow.png; sourceTree = "<group>"; };
+		5DD63B141C423FCC0063DCA4 /* newMicrophone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newMicrophone.png; sourceTree = "<group>"; };
+		5DD63B151C423FCC0063DCA4 /* newNext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newNext.png; sourceTree = "<group>"; };
+		5DD63B161C423FCC0063DCA4 /* newPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newPlay.png; sourceTree = "<group>"; };
+		5DD63B171C423FCC0063DCA4 /* newPrevious.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newPrevious.png; sourceTree = "<group>"; };
+		5DD63B181C423FCC0063DCA4 /* newReset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newReset.png; sourceTree = "<group>"; };
+		5DD63B191C423FCC0063DCA4 /* newSoundIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newSoundIcon.png; sourceTree = "<group>"; };
+		5DD63B221C42418B0063DCA4 /* newCancelButtonA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newCancelButtonA.png; sourceTree = "<group>"; };
+		5DD63B231C42418B0063DCA4 /* newGwArrowA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newGwArrowA.png; sourceTree = "<group>"; };
+		5DD63B241C42418B0063DCA4 /* newMicrophoneA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newMicrophoneA.png; sourceTree = "<group>"; };
+		5DD63B251C42418B0063DCA4 /* newResetA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newResetA.png; sourceTree = "<group>"; };
+		5DD63B2A1C4244790063DCA4 /* newMicrophoneb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newMicrophoneb.png; sourceTree = "<group>"; };
+		5DD63B2C1C4244F90063DCA4 /* newMicrophoneC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newMicrophoneC.png; sourceTree = "<group>"; };
+		5DD63B2E1C4245A80063DCA4 /* newMicrophoneD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newMicrophoneD.png; sourceTree = "<group>"; };
+		5DD63B301C42461F0063DCA4 /* newMicrophoneE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newMicrophoneE.png; sourceTree = "<group>"; };
+		5DD63B321C4246F00063DCA4 /* myMicrophone2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myMicrophone2.png; sourceTree = "<group>"; };
+		5DD63B341C4248650063DCA4 /* stopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopButton.png; sourceTree = "<group>"; };
 		9C602676B433DB109FA1C0C8 /* Pods-GetWell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.release.xcconfig"; sourceTree = "<group>"; };
 		BBE4FD4065752F92C4A89F66 /* Pods-GetWell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.debug.xcconfig"; sourceTree = "<group>"; };
 		C0AB3C58CCC35B4189BB3E31 /* libPods-GetWell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GetWell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +319,24 @@
 		5DD63A5A1C41BA730063DCA4 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
+				5DD63B341C4248650063DCA4 /* stopButton.png */,
+				5DD63B321C4246F00063DCA4 /* myMicrophone2.png */,
+				5DD63B301C42461F0063DCA4 /* newMicrophoneE.png */,
+				5DD63B2E1C4245A80063DCA4 /* newMicrophoneD.png */,
+				5DD63B2C1C4244F90063DCA4 /* newMicrophoneC.png */,
+				5DD63B221C42418B0063DCA4 /* newCancelButtonA.png */,
+				5DD63B231C42418B0063DCA4 /* newGwArrowA.png */,
+				5DD63B2A1C4244790063DCA4 /* newMicrophoneb.png */,
+				5DD63B241C42418B0063DCA4 /* newMicrophoneA.png */,
+				5DD63B251C42418B0063DCA4 /* newResetA.png */,
+				5DD63B121C423FCC0063DCA4 /* newCancelButton.png */,
+				5DD63B131C423FCC0063DCA4 /* newGwArrow.png */,
+				5DD63B141C423FCC0063DCA4 /* newMicrophone.png */,
+				5DD63B151C423FCC0063DCA4 /* newNext.png */,
+				5DD63B161C423FCC0063DCA4 /* newPlay.png */,
+				5DD63B171C423FCC0063DCA4 /* newPrevious.png */,
+				5DD63B181C423FCC0063DCA4 /* newReset.png */,
+				5DD63B191C423FCC0063DCA4 /* newSoundIcon.png */,
 				5DD63B0C1C4209E90063DCA4 /* cHheckeD.png */,
 				5DD63B0A1C4209230063DCA4 /* uUncheckeD.png */,
 				5DD63A5B1C41BA730063DCA4 /* cancelButton */,
@@ -531,6 +585,9 @@
 				5DD63ACA1C41BB4E0063DCA4 /* newCalmAffirmation.png in Resources */,
 				5DD63A831C41BA730063DCA4 /* theReset@2x.png in Resources */,
 				5DD63A9C1C41BAE30063DCA4 /* background.png in Resources */,
+				5DD63B211C423FCC0063DCA4 /* newSoundIcon.png in Resources */,
+				5DD63B1D1C423FCC0063DCA4 /* newNext.png in Resources */,
+				5DD63B2B1C4244790063DCA4 /* newMicrophoneb.png in Resources */,
 				5DD63A7B1C41BA730063DCA4 /* NextBx@3x.png in Resources */,
 				5DD63A8E1C41BACC0063DCA4 /* checked@2x.png in Resources */,
 				4C66A20D1C41920300B4BFDA /* LaunchScreen.storyboard in Resources */,
@@ -547,12 +604,16 @@
 				5DD63AA11C41BAE30063DCA4 /* newMediaSkin.jpg in Resources */,
 				5DD63A8D1C41BACC0063DCA4 /* checked@1x.png in Resources */,
 				5DD63A841C41BA730063DCA4 /* theReset@3x.png in Resources */,
+				5DD63B1E1C423FCC0063DCA4 /* newPlay.png in Resources */,
 				5DD63A921C41BACC0063DCA4 /* unchecked@3x.png in Resources */,
 				5DD63A851C41BA730063DCA4 /* soundicon.png in Resources */,
 				5DD63AD31C41BB4E0063DCA4 /* newSnowStormImg.png in Resources */,
 				5DD63AB61C41BB180063DCA4 /* searchYogaButton.png in Resources */,
 				5DD63A7E1C41BA730063DCA4 /* PlayPauseB@3x.png in Resources */,
+				5DD63B271C42418B0063DCA4 /* newGwArrowA.png in Resources */,
+				5DD63B201C423FCC0063DCA4 /* newReset.png in Resources */,
 				5DD63A781C41BA730063DCA4 /* microphone2.png in Resources */,
+				5DD63B351C4248650063DCA4 /* stopButton.png in Resources */,
 				5DD63AD01C41BB4E0063DCA4 /* newRainImg.png in Resources */,
 				5DD63AA81C41BB070063DCA4 /* clearMind.png in Resources */,
 				5DD63AD51C41BB4E0063DCA4 /* newTomorrowImg.png in Resources */,
@@ -561,12 +622,15 @@
 				5DD63AF91C41EA2D0063DCA4 /* mainImage2.png in Resources */,
 				5DD63AB41C41BB180063DCA4 /* Icon-60@3x.png in Resources */,
 				5DD63ACE1C41BB4E0063DCA4 /* newHeavyRain.png in Resources */,
+				5DD63B281C42418B0063DCA4 /* newMicrophoneA.png in Resources */,
 				5DD63ACD1C41BB4E0063DCA4 /* newForestImg.png in Resources */,
+				5DD63B1B1C423FCC0063DCA4 /* newGwArrow.png in Resources */,
 				5DD63A9B1C41BAE30063DCA4 /* Affirmation Page.jpg in Resources */,
 				5DD63AA71C41BB070063DCA4 /* beginBreathing.png in Resources */,
 				5DD63A821C41BA730063DCA4 /* theReset.png in Resources */,
 				5DD63A751C41BA730063DCA4 /* cancelButton@3x.png in Resources */,
 				5DD63AD81C41BB830063DCA4 /* betterdaysahead.mp3 in Resources */,
+				5DD63B261C42418B0063DCA4 /* newCancelButtonA.png in Resources */,
 				5DD63AA91C41BB070063DCA4 /* findYourMeditationImg2.png in Resources */,
 				5DD63A7A1C41BA730063DCA4 /* NextB@2x.png in Resources */,
 				5DD63ADC1C41BBA10063DCA4 /* calmPeace.mp3 in Resources */,
@@ -574,10 +638,13 @@
 				5DD63A731C41BA730063DCA4 /* cancelButton.png in Resources */,
 				5DD63AC81C41BB4E0063DCA4 /* newBeachImg.png in Resources */,
 				5DD63AD21C41BB4E0063DCA4 /* newRooftopImg.png in Resources */,
+				5DD63B1F1C423FCC0063DCA4 /* newPrevious.png in Resources */,
 				5DD63A791C41BA730063DCA4 /* NextB.png in Resources */,
 				5DD63AAA1C41BB070063DCA4 /* getComfortable.png in Resources */,
 				5DD63A741C41BA730063DCA4 /* cancelButton@2x.png in Resources */,
 				5DD63ADE1C41BBB00063DCA4 /* coldsnowstorm.mp3 in Resources */,
+				5DD63B331C4246F00063DCA4 /* myMicrophone2.png in Resources */,
+				5DD63B1A1C423FCC0063DCA4 /* newCancelButton.png in Resources */,
 				5DD63A811C41BA730063DCA4 /* PreviousB@3x.png in Resources */,
 				5DD63AEC1C41BC190063DCA4 /* rainOntheRooftop.mp3 in Resources */,
 				5DD63AB31C41BB180063DCA4 /* Icon-60@2x.png in Resources */,
@@ -586,11 +653,14 @@
 				4C66A20A1C41920300B4BFDA /* Assets.xcassets in Resources */,
 				5DD63ADA1C41BB940063DCA4 /* busygreenforest.mp3 in Resources */,
 				5DD63AF21C41BC470063DCA4 /* thebeautifulbeach.mp3 in Resources */,
+				5DD63B2F1C4245A80063DCA4 /* newMicrophoneD.png in Resources */,
 				5DD63AD41C41BB4E0063DCA4 /* newThunderImg.png in Resources */,
 				5DD63AC91C41BB4E0063DCA4 /* newBirdsImg.png in Resources */,
 				5DD63AE41C41BBDA0063DCA4 /* heavywetrain.mp3 in Resources */,
 				5DD63AF41C41BC550063DCA4 /* thunderlight.mp3 in Resources */,
+				5DD63B1C1C423FCC0063DCA4 /* newMicrophone.png in Resources */,
 				4C66A2081C41920300B4BFDA /* Main.storyboard in Resources */,
+				5DD63B2D1C4244F90063DCA4 /* newMicrophoneC.png in Resources */,
 				5DD63A7D1C41BA730063DCA4 /* PlayPauseB@2x.png in Resources */,
 				5DD63A901C41BACC0063DCA4 /* unchecked@1x.png in Resources */,
 				5DD63B111C421F550063DCA4 /* newMediaSkin2.png in Resources */,
@@ -598,10 +668,12 @@
 				5DD63A801C41BA730063DCA4 /* PreviousB@2x.png in Resources */,
 				5DD63B031C41F2A90063DCA4 /* calendarImage2.png in Resources */,
 				5DD63AF01C41BC340063DCA4 /* relaxingnovember.mp3 in Resources */,
+				5DD63B311C42461F0063DCA4 /* newMicrophoneE.png in Resources */,
 				5DD63A771C41BA730063DCA4 /* gwArrow.png in Resources */,
 				5DD63ACF1C41BB4E0063DCA4 /* newMindPowerImg.png in Resources */,
 				5DD63A7F1C41BA730063DCA4 /* PreviousB.png in Resources */,
 				5DD63AA01C41BAE30063DCA4 /* GetWellSignUpFinal.png in Resources */,
+				5DD63B291C42418B0063DCA4 /* newResetA.png in Resources */,
 				5DD63A9D1C41BAE30063DCA4 /* GetWellLogin2.jpg in Resources */,
 				5DD63A9F1C41BAE30063DCA4 /* GetWellSignUp22a.png in Resources */,
 				5DD63AB51C41BB180063DCA4 /* loadingIcon4.png in Resources */,
