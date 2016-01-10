@@ -22,7 +22,6 @@ class MediaPlayerViewController: UIViewController
     @IBOutlet var meditationCountdown: UILabel!
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var albumArtwork: UIImageView!
-    @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
@@ -114,44 +113,33 @@ class MediaPlayerViewController: UIViewController
             originalCount = 300
             meditationCountdown.text = "05:00"
             whichSegment = 0
-            //            startTimer()
-            //            setupAudioSession()
-            //            loadCurrentSong()
-            //            togglePlayback(true)
+            
         }
         else if sender.selectedSegmentIndex == 1
         {
             originalCount = 600
             meditationCountdown.text = "10:00"
             whichSegment = 1
-            //            startTimer()
-            //            setupAudioSession()
-            //            loadCurrentSong()
-            //            togglePlayback(true)
+            
         }
         else if sender.selectedSegmentIndex == 2
         {
             originalCount = 900
             meditationCountdown.text = "15:00"
             whichSegment = 2
-            //            startTimer()
-            //            setupAudioSession()
-            //            loadCurrentSong()
-            //            togglePlayback(true)
+            
         }
         else if sender.selectedSegmentIndex == 3
         {
             originalCount = 1200
             meditationCountdown.text = "20:00"
             whichSegment = 3
-            //            startTimer()
-            //            setupAudioSession()
-            //            loadCurrentSong()
-            //            togglePlayback(true)
+           
         }
         
     }
     
+    // Play Button Animation
     func morePulse(button: UIButton)
     {
         let pulseAnimation = CABasicAnimation(keyPath: "opacity")
@@ -199,9 +187,7 @@ class MediaPlayerViewController: UIViewController
     func updateUI()
     {
         originalCount = originalCount - 1
-        //        let newMinuteCount = originalCount/60
-        //        let newSecondCount = originalCount%60
-        //        meditationCountdown.text = String("\(newMinuteCount):\(newSecondCount)")
+        
         timerDisplay()
         print(originalCount)
         
@@ -276,7 +262,7 @@ class MediaPlayerViewController: UIViewController
         }
         currentSong = songs[nextSong]
         loadCurrentSong()
-        //        togglePlayback(true)
+       
     }
     
     @IBAction func skipBackTapped(sender: UIButton)
@@ -462,7 +448,7 @@ class MediaPlayerViewController: UIViewController
             song.playerItem.seekToTime(CMTimeMakeWithSeconds(0.0, 1))
             player.insertItem(song.playerItem, afterItem: nil)
             songTitleLabel.text = song.title
-            //            artistLabel.text? = song.artist
+            
             albumArtwork.image = UIImage(named: song.albumArtworkName)
             
         }
