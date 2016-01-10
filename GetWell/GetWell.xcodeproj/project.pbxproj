@@ -23,6 +23,18 @@
 		4C66A2321C41B39300B4BFDA /* SetReminderPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */; };
 		4C66A2331C41B39300B4BFDA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A2301C41B39300B4BFDA /* TableViewCell.swift */; };
 		4C66A2341C41B39300B4BFDA /* TableViewChkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */; };
+		4C802B881C42AC4400F5698C /* AnotherStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C802B871C42AC4400F5698C /* AnotherStoryboard.storyboard */; };
+		4C802B8B1C42AC9300F5698C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C802B8A1C42AC9300F5698C /* LoginVC.swift */; };
+		4C802B921C42ACA300F5698C /* OLNConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C802B8C1C42ACA300F5698C /* OLNConstans.swift */; };
+		4C802B931C42ACA300F5698C /* OLNGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C802B8D1C42ACA300F5698C /* OLNGradientView.swift */; };
+		4C802B941C42ACA300F5698C /* OLNLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C802B8E1C42ACA300F5698C /* OLNLogoView.swift */; };
+		4C802B951C42ACA300F5698C /* OLNSocialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C802B8F1C42ACA300F5698C /* OLNSocialButton.swift */; };
+		4C802B961C42ACA300F5698C /* OLNThinTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C802B901C42ACA300F5698C /* OLNThinTextField.swift */; };
+		4C802B971C42ACA300F5698C /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C802B911C42ACA300F5698C /* UIView+Animation.swift */; };
+		4C802B991C42ACC200F5698C /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C802B981C42ACC200F5698C /* facebook.png */; };
+		4C802B9D1C42ACDD00F5698C /* googlePlus.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C802B9A1C42ACDD00F5698C /* googlePlus.png */; };
+		4C802B9E1C42ACDD00F5698C /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C802B9B1C42ACDD00F5698C /* user.png */; };
+		4C802B9F1C42ACDD00F5698C /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C802B9C1C42ACDD00F5698C /* twitter.png */; };
 		5DD63A731C41BA730063DCA4 /* cancelButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5C1C41BA730063DCA4 /* cancelButton.png */; };
 		5DD63A741C41BA730063DCA4 /* cancelButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5D1C41BA730063DCA4 /* cancelButton@2x.png */; };
 		5DD63A751C41BA730063DCA4 /* cancelButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5E1C41BA730063DCA4 /* cancelButton@3x.png */; };
@@ -118,6 +130,18 @@
 		4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetReminderPopOverViewController.swift; sourceTree = "<group>"; };
 		4C66A2301C41B39300B4BFDA /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewChkList.swift; sourceTree = "<group>"; };
+		4C802B871C42AC4400F5698C /* AnotherStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnotherStoryboard.storyboard; sourceTree = "<group>"; };
+		4C802B8A1C42AC9300F5698C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		4C802B8C1C42ACA300F5698C /* OLNConstans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNConstans.swift; sourceTree = "<group>"; };
+		4C802B8D1C42ACA300F5698C /* OLNGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNGradientView.swift; sourceTree = "<group>"; };
+		4C802B8E1C42ACA300F5698C /* OLNLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNLogoView.swift; sourceTree = "<group>"; };
+		4C802B8F1C42ACA300F5698C /* OLNSocialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNSocialButton.swift; sourceTree = "<group>"; };
+		4C802B901C42ACA300F5698C /* OLNThinTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNThinTextField.swift; sourceTree = "<group>"; };
+		4C802B911C42ACA300F5698C /* UIView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
+		4C802B981C42ACC200F5698C /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		4C802B9A1C42ACDD00F5698C /* googlePlus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = googlePlus.png; sourceTree = "<group>"; };
+		4C802B9B1C42ACDD00F5698C /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		4C802B9C1C42ACDD00F5698C /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GetWell-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		5DD63A5C1C41BA730063DCA4 /* cancelButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelButton.png; sourceTree = "<group>"; };
 		5DD63A5D1C41BA730063DCA4 /* cancelButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancelButton@2x.png"; sourceTree = "<group>"; };
@@ -230,6 +254,7 @@
 		4C66A2011C41920300B4BFDA /* GetWell */ = {
 			isa = PBXGroup;
 			children = (
+				4C802B891C42AC7100F5698C /* Animated Login */,
 				4C66A22B1C41B33300B4BFDA /* Song.swift */,
 				4C66A2151C41B12D00B4BFDA /* LoginViewController.swift */,
 				4C66A22D1C41B35700B4BFDA /* RegisterViewController.swift */,
@@ -245,6 +270,7 @@
 				5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */,
 				5DD63AF61C41C3BC0063DCA4 /* mainProfileImg.png */,
 				4C66A2061C41920300B4BFDA /* Main.storyboard */,
+				4C802B871C42AC4400F5698C /* AnotherStoryboard.storyboard */,
 				5DD63AF51C41BC600063DCA4 /* GWSound */,
 				5DD63AB81C41BB4E0063DCA4 /* UpdatedMediaImg */,
 				5DD63AAB1C41BB180063DCA4 /* gwIcons */,
@@ -266,6 +292,24 @@
 				4C66A20E1C41920300B4BFDA /* Info.plist */,
 			);
 			name = Misc;
+			sourceTree = "<group>";
+		};
+		4C802B891C42AC7100F5698C /* Animated Login */ = {
+			isa = PBXGroup;
+			children = (
+				4C802B981C42ACC200F5698C /* facebook.png */,
+				4C802B9A1C42ACDD00F5698C /* googlePlus.png */,
+				4C802B9B1C42ACDD00F5698C /* user.png */,
+				4C802B9C1C42ACDD00F5698C /* twitter.png */,
+				4C802B8A1C42AC9300F5698C /* LoginVC.swift */,
+				4C802B8C1C42ACA300F5698C /* OLNConstans.swift */,
+				4C802B8D1C42ACA300F5698C /* OLNGradientView.swift */,
+				4C802B8E1C42ACA300F5698C /* OLNLogoView.swift */,
+				4C802B8F1C42ACA300F5698C /* OLNSocialButton.swift */,
+				4C802B901C42ACA300F5698C /* OLNThinTextField.swift */,
+				4C802B911C42ACA300F5698C /* UIView+Animation.swift */,
+			);
+			name = "Animated Login";
 			sourceTree = "<group>";
 		};
 		5DD63A5A1C41BA730063DCA4 /* buttons */ = {
@@ -534,12 +578,14 @@
 				5DD63A7E1C41BA730063DCA4 /* PlayPauseB@3x.png in Resources */,
 				5DD63A781C41BA730063DCA4 /* microphone2.png in Resources */,
 				5DD63AD01C41BB4E0063DCA4 /* newRainImg.png in Resources */,
+				4C802B9E1C42ACDD00F5698C /* user.png in Resources */,
 				5DD63AA81C41BB070063DCA4 /* clearMind.png in Resources */,
 				5DD63AD51C41BB4E0063DCA4 /* newTomorrowImg.png in Resources */,
 				5DD63A8F1C41BACC0063DCA4 /* checked@3x.png in Resources */,
 				5DD63A911C41BACC0063DCA4 /* unchecked@2x.png in Resources */,
 				5DD63AB41C41BB180063DCA4 /* Icon-60@3x.png in Resources */,
 				5DD63ACE1C41BB4E0063DCA4 /* newHeavyRain.png in Resources */,
+				4C802B9D1C42ACDD00F5698C /* googlePlus.png in Resources */,
 				5DD63ACD1C41BB4E0063DCA4 /* newForestImg.png in Resources */,
 				5DD63A9B1C41BAE30063DCA4 /* Affirmation Page.jpg in Resources */,
 				5DD63AA71C41BB070063DCA4 /* beginBreathing.png in Resources */,
@@ -557,6 +603,7 @@
 				5DD63AAA1C41BB070063DCA4 /* getComfortable.png in Resources */,
 				5DD63A741C41BA730063DCA4 /* cancelButton@2x.png in Resources */,
 				5DD63ADE1C41BBB00063DCA4 /* coldsnowstorm.mp3 in Resources */,
+				4C802B991C42ACC200F5698C /* facebook.png in Resources */,
 				5DD63A811C41BA730063DCA4 /* PreviousB@3x.png in Resources */,
 				5DD63AEC1C41BC190063DCA4 /* rainOntheRooftop.mp3 in Resources */,
 				5DD63AB31C41BB180063DCA4 /* Icon-60@2x.png in Resources */,
@@ -583,7 +630,9 @@
 				5DD63A9F1C41BAE30063DCA4 /* GetWellSignUp22a.png in Resources */,
 				5DD63AB51C41BB180063DCA4 /* loadingIcon4.png in Resources */,
 				5DD63AE61C41BBE60063DCA4 /* leaveswind.mp3 in Resources */,
+				4C802B9F1C42ACDD00F5698C /* twitter.png in Resources */,
 				5DD63AE01C41BBC00063DCA4 /* gentlewetcreek.mp3 in Resources */,
+				4C802B881C42AC4400F5698C /* AnotherStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,15 +693,22 @@
 			files = (
 				4C66A22C1C41B33300B4BFDA /* Song.swift in Sources */,
 				4C66A22E1C41B35700B4BFDA /* RegisterViewController.swift in Sources */,
+				4C802B931C42ACA300F5698C /* OLNGradientView.swift in Sources */,
+				4C802B921C42ACA300F5698C /* OLNConstans.swift in Sources */,
+				4C802B8B1C42AC9300F5698C /* LoginVC.swift in Sources */,
 				4C66A2211C41B12D00B4BFDA /* MainViewController.swift in Sources */,
 				4C66A2271C41B12D00B4BFDA /* MediaPlayerViewController.swift in Sources */,
 				4C66A2341C41B39300B4BFDA /* TableViewChkList.swift in Sources */,
 				4C66A2321C41B39300B4BFDA /* SetReminderPopOverViewController.swift in Sources */,
 				4C66A22A1C41B12D00B4BFDA /* RecordingViewController.swift in Sources */,
 				4C66A2201C41B12D00B4BFDA /* LoginViewController.swift in Sources */,
+				4C802B941C42ACA300F5698C /* OLNLogoView.swift in Sources */,
+				4C802B961C42ACA300F5698C /* OLNThinTextField.swift in Sources */,
 				4C66A2281C41B12D00B4BFDA /* PlaylistTableViewCell.swift in Sources */,
 				4C66A2291C41B12D00B4BFDA /* PlaylistTableViewController.swift in Sources */,
+				4C802B951C42ACA300F5698C /* OLNSocialButton.swift in Sources */,
 				4C66A2331C41B39300B4BFDA /* TableViewCell.swift in Sources */,
+				4C802B971C42ACA300F5698C /* UIView+Animation.swift in Sources */,
 				4C66A2031C41920300B4BFDA /* AppDelegate.swift in Sources */,
 				4C66A2221C41B12D00B4BFDA /* MapViewController.swift in Sources */,
 			);
