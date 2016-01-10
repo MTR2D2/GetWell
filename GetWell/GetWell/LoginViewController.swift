@@ -42,12 +42,15 @@ class LoginViewController: UIViewController
         {
             return true
         }
+        errorMessageLabel.text = "Enter Username and Password to Login"
+
         return false
     }
     
 
     @IBAction func signinTapped(sender: UIButton)
     {
+        
         if userCanSignIn()
         {
             PFUser.logInWithUsernameInBackground(usernameTextField.text!, password: passwordTextField.text!) {
@@ -56,13 +59,14 @@ class LoginViewController: UIViewController
                 {
                     print("login successful")
 //       self.dismissDelegate?.unwindFromLogin()
-        self.navigationController?.performSegueWithIdentifier("unwindFromLogin", sender: self)
+//        self.navigationController?.performSegueWithIdentifier("unwindFromLogin", sender: self)
+                    self.performSegueWithIdentifier("unwindFromLogin", sender: self)
 //                    self.navigationController?.performSegueWithIdentifier("MediaPlayerViewController", sender: self)
                 }
                 else
                 {
                     print(error?.localizedDescription)
-                    self.errorMessageLabel.text = "Please enter username and password to login."
+                    self.errorMessageLabel.text = "Username and/or Password Do Not Match"
                 }
                 
             }

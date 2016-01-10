@@ -15,6 +15,8 @@ class RegisterViewController: UIViewController
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var errorMessageLabel: UILabel!
+
     
     
     override func viewDidLoad()
@@ -50,6 +52,8 @@ class RegisterViewController: UIViewController
                 if !succeeded
                 {
                     print(error?.localizedDescription)
+                    self.errorMessageLabel.text = "Username Already Taken"
+
                 }
                 else
                 {
