@@ -142,6 +142,7 @@
 		4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetReminderPopOverViewController.swift; sourceTree = "<group>"; };
 		4C66A2301C41B39300B4BFDA /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewChkList.swift; sourceTree = "<group>"; };
+		4C802BA01C42B17400F5698C /* SessionOver.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = SessionOver.m4a; sourceTree = "<group>"; };
 		5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GetWell-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		5DD63A5C1C41BA730063DCA4 /* cancelButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelButton.png; sourceTree = "<group>"; };
 		5DD63A5D1C41BA730063DCA4 /* cancelButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancelButton@2x.png"; sourceTree = "<group>"; };
@@ -482,6 +483,7 @@
 		5DD63AF51C41BC600063DCA4 /* GWSound */ = {
 			isa = PBXGroup;
 			children = (
+				4C802BA01C42B17400F5698C /* SessionOver.m4a */,
 				5DD63AF31C41BC550063DCA4 /* thunderlight.mp3 */,
 				5DD63AF11C41BC470063DCA4 /* thebeautifulbeach.mp3 */,
 				5DD63AEF1C41BC340063DCA4 /* relaxingnovember.mp3 */,
