@@ -241,7 +241,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pK-4c-ywx">
                                 <rect key="frame" x="188" y="98" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.67226357984293195" green="0.087934486015679519" blue="0.39140860670750521" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -282,7 +282,7 @@
                     <navigationItem key="navigationItem" id="D7H-Dz-1Zd">
                         <barButtonItem key="rightBarButtonItem" image="calendarImage2.png" id="lZm-KU-BbE">
                             <connections>
-                                <segue destination="ubk-G8-OmH" kind="popoverPresentation" popoverAnchorBarButtonItem="lZm-KU-BbE" id="U1B-bc-Zwr">
+                                <segue destination="ubk-G8-OmH" kind="popoverPresentation" identifier="SetReminderSegue" popoverAnchorBarButtonItem="lZm-KU-BbE" id="yP2-Uv-eUk">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -375,11 +375,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Qxd-f6-mkC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4As-DX-e2h">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="OSp-rv-ldB">
-                                <rect key="frame" x="0.0" y="20" width="320" height="410"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="627"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OSp-rv-ldB" secondAttribute="height" multiplier="1:1" id="dVb-ai-cDy"/>
                                 </constraints>
@@ -393,7 +393,7 @@
                                 </variation>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZQ-iL-wBn">
-                                <rect key="frame" x="113" y="438" width="95" height="33"/>
+                                <rect key="frame" x="140" y="640" width="95" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Date Selected">
                                     <color key="titleColor" red="0.86146187780000005" green="0.24257457260000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -410,16 +410,20 @@
                             <constraint firstItem="UZQ-iL-wBn" firstAttribute="centerX" secondItem="OSp-rv-ldB" secondAttribute="centerX" id="EOZ-Is-E2O"/>
                             <constraint firstAttribute="trailing" secondItem="OSp-rv-ldB" secondAttribute="trailing" id="GQw-gZ-aAT"/>
                             <constraint firstItem="Qxd-f6-mkC" firstAttribute="top" secondItem="OSp-rv-ldB" secondAttribute="bottom" id="gFP-cB-lCp"/>
-                            <constraint firstItem="Qxd-f6-mkC" firstAttribute="top" secondItem="OSp-rv-ldB" secondAttribute="bottom" constant="50" id="hg4-ko-pyq"/>
+                            <constraint firstItem="Qxd-f6-mkC" firstAttribute="top" secondItem="OSp-rv-ldB" secondAttribute="bottom" constant="20" id="hg4-ko-pyq"/>
                             <constraint firstItem="OSp-rv-ldB" firstAttribute="top" secondItem="7fV-7r-O6U" secondAttribute="bottom" id="its-JN-dK9"/>
+                            <constraint firstItem="UZQ-iL-wBn" firstAttribute="centerX" secondItem="OSp-rv-ldB" secondAttribute="centerX" id="mxK-Px-MFG"/>
+                            <constraint firstItem="UZQ-iL-wBn" firstAttribute="top" secondItem="OSp-rv-ldB" secondAttribute="bottom" constant="-7" id="rAU-rw-z1l"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="70H-2R-3Cg"/>
+                                <exclude reference="EOZ-Is-E2O"/>
                                 <exclude reference="gFP-cB-lCp"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="datePicker" destination="OSp-rv-ldB" id="ABc-R7-xnG"/>
                         <outlet property="doneButton" destination="UZQ-iL-wBn" id="c5T-I8-QxD"/>
@@ -427,7 +431,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOY-Zf-i83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="1154"/>
+            <point key="canvasLocation" x="1689.5" y="1247.5"/>
         </scene>
         <!--Media Player View Controller-->
         <scene sceneID="DXx-SJ-tHA">
@@ -613,7 +617,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5fl-nD-5lT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1996.5" y="1247.5"/>
+            <point key="canvasLocation" x="2204.5" y="1247.5"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="hOt-Oy-ZNA">
@@ -804,6 +808,6 @@
         <image name="stopButton.png" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="o5T-B8-enu"/>
+        <segue reference="1BS-r5-0Lr"/>
     </inferredMetricsTieBreakers>
 </document>
