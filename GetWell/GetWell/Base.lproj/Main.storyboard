@@ -318,20 +318,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HJL-YU-LXr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                        </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFW-D9-UFs">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HJL-YU-LXr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstItem="HJL-YU-LXr" firstAttribute="top" secondItem="bFW-D9-UFs" secondAttribute="top" id="F0Q-9s-uAT"/>
-                                                <constraint firstItem="HJL-YU-LXr" firstAttribute="leading" secondItem="bFW-D9-UFs" secondAttribute="leading" id="NdG-6Y-ZOt"/>
-                                                <constraint firstAttribute="trailing" secondItem="HJL-YU-LXr" secondAttribute="trailing" id="SKf-MM-UFm"/>
-                                                <constraint firstAttribute="bottom" secondItem="HJL-YU-LXr" secondAttribute="bottom" id="iAd-Yk-HD4"/>
-                                            </constraints>
+                                            <color key="backgroundColor" red="0.81498406079999997" green="0.66922057420000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYq-Rb-2hU">
                                             <rect key="frame" x="16" y="11" width="66" height="28"/>
@@ -783,6 +775,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QoC-0n-Uks">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.42117964659685869" green="0.40879560382870483" blue="0.41576331390265592" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.49803921568627452" green="0.88627450980392153" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
