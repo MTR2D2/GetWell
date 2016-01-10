@@ -183,13 +183,12 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         
         switch indexPath.row
         {
-        case 0: chkGuideImg.image = UIImage(named: "beginBreathing")
-        case 1: chkGuideImg.image = UIImage(named: "clearMind")
-        case 2: chkGuideImg.image = UIImage(named: "findYourMeditationImg2")
-        case 3: chkGuideImg.image = UIImage(named: "getComfortable")
-        default: chkGuideImg.image = UIImage(named: "beginBreathing")
+        case 0: chkGuideImg.image = UIImage(named: "findYourMeditationImg2")
+        case 1: chkGuideImg.image = UIImage(named: "getComfortable")
+        case 2: chkGuideImg.image = UIImage(named: "beginBreathing")
+        case 3: chkGuideImg.image = UIImage(named: "clearMind")
+        default: chkGuideImg.image = UIImage(named: "mainImage2")
         }
-        
         
         tableView.reloadData()
         
