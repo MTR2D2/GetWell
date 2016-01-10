@@ -544,6 +544,8 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         //        startTimer()
     }
     
+    // MARK: - Navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if timerCount%2 == 1
