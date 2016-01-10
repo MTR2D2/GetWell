@@ -114,6 +114,9 @@
                     <navigationItem key="navigationItem" id="7zV-pf-2nT">
                         <barButtonItem key="rightBarButtonItem" title="Create Account" id="iBf-lM-VyS">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="VPk-mH-L74" kind="show" id="ryn-0b-JGc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -126,6 +129,117 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1186.5" y="402.5"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="hOt-Oy-ZNA">
+            <objects>
+                <viewController id="VPk-mH-L74" customClass="RegisterViewController" customModule="GetWell" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c5s-mo-KyG"/>
+                        <viewControllerLayoutGuide type="bottom" id="3nm-E0-Qpi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bfr-mb-tu0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GetWellSignUpFinal.png" translatesAutoresizingMaskIntoConstraints="NO" id="ukp-ue-fMe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOp-8o-UCy">
+                                <rect key="frame" x="20" y="298" width="335" height="30"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.51271609039999999" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleColor" red="0.93946921510000003" green="0.96486600739999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccountTapped:" destination="VPk-mH-L74" eventType="touchUpInside" id="eYd-c4-mdn"/>
+                                    <action selector="signinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJO-Er-iXG"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1i-wF-NTG">
+                                <rect key="frame" x="20" y="228" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9Ni-GU-PpC"/>
+                                    <constraint firstAttribute="width" secondItem="b1i-wF-NTG" secondAttribute="height" multiplier="83:6" id="JFc-XL-c69"/>
+                                    <constraint firstAttribute="width" constant="335" id="rKC-Zp-UC7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JFc-XL-c69"/>
+                                        <exclude reference="rKC-Zp-UC7"/>
+                                        <exclude reference="9Ni-GU-PpC"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07S-Ad-rUk">
+                                <rect key="frame" x="20" y="257" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="07S-Ad-rUk" secondAttribute="height" multiplier="83:6" id="JxS-Yn-Qxe"/>
+                                    <constraint firstAttribute="width" constant="335" id="djv-JO-Tf4"/>
+                                    <constraint firstAttribute="height" constant="30" id="j5x-M5-MWd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JxS-Yn-Qxe"/>
+                                        <exclude reference="djv-JO-Tf4"/>
+                                        <exclude reference="j5x-M5-MWd"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezj-Ik-maE">
+                                <rect key="frame" x="124" y="171" width="127" height="41"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3nm-E0-Qpi" firstAttribute="top" secondItem="ukp-ue-fMe" secondAttribute="bottom" id="4pp-Xr-c9d"/>
+                            <constraint firstItem="07S-Ad-rUk" firstAttribute="width" secondItem="b1i-wF-NTG" secondAttribute="width" id="8Lv-eH-pno"/>
+                            <constraint firstItem="pOp-8o-UCy" firstAttribute="width" secondItem="07S-Ad-rUk" secondAttribute="width" id="98b-Li-bcI"/>
+                            <constraint firstAttribute="trailing" secondItem="ukp-ue-fMe" secondAttribute="trailing" id="Cja-3C-vNG"/>
+                            <constraint firstItem="ezj-Ik-maE" firstAttribute="centerX" secondItem="ukp-ue-fMe" secondAttribute="centerX" id="Fka-hD-jq3"/>
+                            <constraint firstItem="07S-Ad-rUk" firstAttribute="centerX" secondItem="b1i-wF-NTG" secondAttribute="centerX" id="LUW-ss-mej"/>
+                            <constraint firstAttribute="trailing" secondItem="b1i-wF-NTG" secondAttribute="trailing" constant="20" id="Nnm-aR-BOQ"/>
+                            <constraint firstItem="ukp-ue-fMe" firstAttribute="top" secondItem="ezj-Ik-maE" secondAttribute="bottom" constant="-113" id="RbQ-Xv-EZO"/>
+                            <constraint firstItem="b1i-wF-NTG" firstAttribute="leading" secondItem="Bfr-mb-tu0" secondAttribute="leading" constant="20" id="Sk4-hh-Tna"/>
+                            <constraint firstItem="ukp-ue-fMe" firstAttribute="top" secondItem="ezj-Ik-maE" secondAttribute="bottom" constant="-148" id="TeQ-h5-Gsa"/>
+                            <constraint firstItem="ukp-ue-fMe" firstAttribute="top" secondItem="ezj-Ik-maE" secondAttribute="bottom" constant="-113" id="Vf0-cX-5Ul"/>
+                            <constraint firstItem="ukp-ue-fMe" firstAttribute="leading" secondItem="Bfr-mb-tu0" secondAttribute="leading" id="YmD-Lm-hyC"/>
+                            <constraint firstItem="b1i-wF-NTG" firstAttribute="top" secondItem="ezj-Ik-maE" secondAttribute="bottom" constant="16" id="Ypm-Du-B7j"/>
+                            <constraint firstItem="ezj-Ik-maE" firstAttribute="centerX" secondItem="b1i-wF-NTG" secondAttribute="centerX" id="bfJ-Fx-GIn"/>
+                            <constraint firstItem="pOp-8o-UCy" firstAttribute="top" secondItem="07S-Ad-rUk" secondAttribute="bottom" constant="20" id="g6l-6t-gin"/>
+                            <constraint firstItem="pOp-8o-UCy" firstAttribute="centerX" secondItem="07S-Ad-rUk" secondAttribute="centerX" id="i2L-1H-rLH"/>
+                            <constraint firstItem="ezj-Ik-maE" firstAttribute="centerX" secondItem="ukp-ue-fMe" secondAttribute="centerX" id="jnx-Ed-jau"/>
+                            <constraint firstItem="07S-Ad-rUk" firstAttribute="top" secondItem="b1i-wF-NTG" secondAttribute="bottom" constant="8" id="nYA-fX-Vod"/>
+                            <constraint firstItem="ukp-ue-fMe" firstAttribute="top" secondItem="c5s-mo-KyG" secondAttribute="bottom" id="oKU-Sb-B69"/>
+                            <constraint firstItem="b1i-wF-NTG" firstAttribute="centerX" secondItem="ukp-ue-fMe" secondAttribute="centerX" id="rEy-Bh-HTv"/>
+                            <constraint firstItem="b1i-wF-NTG" firstAttribute="centerY" secondItem="Bfr-mb-tu0" secondAttribute="centerY" constant="-130" id="st3-Vr-2v3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RbQ-Xv-EZO"/>
+                                <exclude reference="Vf0-cX-5Ul"/>
+                                <exclude reference="bfJ-Fx-GIn"/>
+                                <exclude reference="jnx-Ed-jau"/>
+                                <exclude reference="st3-Vr-2v3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="07S-Ad-rUk" id="aTV-VD-5Ex"/>
+                        <outlet property="usernameTextField" destination="b1i-wF-NTG" id="dAU-Uv-w2f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKV-0z-3Nc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725.5" y="402.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="daQ-xe-YIb">
@@ -144,10 +258,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6KC-is-JIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="517" y="369"/>
+            <point key="canvasLocation" x="517" y="403"/>
         </scene>
     </scenes>
     <resources>
         <image name="GetWellLogin2a.png" width="1200" height="2038"/>
+        <image name="GetWellSignUpFinal.png" width="1200" height="2038"/>
     </resources>
 </document>
