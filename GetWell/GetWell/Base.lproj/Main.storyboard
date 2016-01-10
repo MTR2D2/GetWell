@@ -315,7 +315,7 @@
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaylistModalViewCell" id="989-E5-g0N" customClass="PlaylistTableViewCell" customModule="GetWell" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="989-E5-g0N" id="1eT-GA-ifw">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -367,7 +367,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ll-hf-rLd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2808.5" y="2095.5"/>
+            <point key="canvasLocation" x="2204.5" y="2005.5"/>
         </scene>
         <!--Set Reminder Pop Over View Controller-->
         <scene sceneID="RkA-Gm-jkD">
@@ -531,7 +531,9 @@
                                 <rect key="frame" x="331" y="385" width="36" height="36"/>
                                 <state key="normal" image="newGwArrowA.png"/>
                                 <connections>
-                                    <segue destination="KOE-pa-uR7" kind="presentation" id="eZR-Zu-6Gk"/>
+                                    <segue destination="04r-Fp-qi4" kind="popoverPresentation" identifier="PlaylistSegue" popoverAnchorView="kXY-1F-Dah" id="VOz-va-erA">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyI-z9-z8b">
@@ -832,27 +834,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f69-0h-iEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1186.5" y="2087.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="lMJ-Rr-AYK">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KOE-pa-uR7" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QoC-0n-Uks">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.42117964659685869" green="0.40879560382870483" blue="0.41576331390265592" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.49803921568627452" green="0.88627450980392153" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="04r-Fp-qi4" kind="relationship" relationship="rootViewController" id="pQA-ud-alY"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="77d-zA-8pe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2295.5" y="2095.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N7c-Ip-nuP">
