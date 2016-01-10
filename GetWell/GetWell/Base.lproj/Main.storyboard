@@ -168,9 +168,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EOz-yA-OVo" secondAttribute="height" multiplier="1.5" id="S98-fz-RmV"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="gHB-Qz-VgN" appends="YES" id="pXE-Ge-pGQ"/>
-                                </connections>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P7d-cT-zcm">
                                 <rect key="frame" x="0.0" y="314" width="375" height="246"/>
@@ -230,7 +227,7 @@
                                     <color key="titleShadowColor" red="0.60481220746914421" green="0.58110272404781738" blue="0.73985602094240832" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="94S-eX-J4O" kind="show" action="showDetailViewController:sender:" id="Vyo-1q-SSg"/>
+                                    <segue destination="94S-eX-J4O" kind="show" id="am1-lQ-TYf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVk-kw-nX2">
@@ -305,7 +302,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGp-HX-l28" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="gHB-Qz-VgN"/>
             </objects>
             <point key="canvasLocation" x="677.5" y="1239.5"/>
         </scene>
@@ -426,9 +422,9 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="gFP-cB-lCp"/>
                                 <exclude reference="70H-2R-3Cg"/>
                                 <exclude reference="EOZ-Is-E2O"/>
-                                <exclude reference="gFP-cB-lCp"/>
                             </mask>
                         </variation>
                     </view>
@@ -887,6 +883,6 @@
         <image name="stopButton.png" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vyo-1q-SSg"/>
+        <segue reference="am1-lQ-TYf"/>
     </inferredMetricsTieBreakers>
 </document>

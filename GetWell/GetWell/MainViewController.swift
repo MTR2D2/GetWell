@@ -178,19 +178,17 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let cell = tableView.visibleCells[indexPath.row] as! TableViewCell
         
-//        let todo = shownTodos[indexPath.row]
-        
         cell.isDone = !cell.isDone
         enableNextButtonWithAnimation()
         
-//        switch allToDos.indexOf(todo)
-//        {
-//        case 0: image = UIImage(named: clearMind)
-//        case 1: topImageView.image = UIImage(named: clearMind)
-//        case 2: topImageView.image = UIImage(named: findYourMeditationImg2)
-//        case 3: topImageView.image = UIImage(named: getComfortable)
-//        default: topImageView.image = UIImage(named: beginBreathing)
-//        }
+        switch indexPath.row
+        {
+        case 0: chkGuideImg.image = UIImage(named: "beginBreathing")
+        case 1: chkGuideImg.image = UIImage(named: "clearMind")
+        case 2: chkGuideImg.image = UIImage(named: "findYourMeditationImg2")
+        case 3: chkGuideImg.image = UIImage(named: "getComfortable")
+        default: chkGuideImg.image = UIImage(named: "beginBreathing")
+        }
         
         
         tableView.reloadData()
