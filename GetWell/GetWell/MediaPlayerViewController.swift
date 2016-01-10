@@ -13,15 +13,21 @@ import QuartzCore
 
 var timerCount = 0
 
-class MediaPlayerViewController: UIViewController
+class MediaPlayerViewController: UIViewController, UIPopoverPresentationControllerDelegate
 {
     
     var song: Song?
     
+    
+    // an instance of AVAudioRecorder and AVAudioPlayer (to play the recording sound)
+    var audioRecorder: AVAudioRecorder!
+    var audioPlayer: AVAudioPlayer?
+    @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var timeSegmentedControl: UISegmentedControl!
     @IBOutlet var meditationCountdown: UILabel!
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var albumArtwork: UIImageView!
+    //    @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
@@ -52,9 +58,11 @@ class MediaPlayerViewController: UIViewController
         
         //        self.navigationController!.navigationBar.topItem!.title = "Cancel"
         
-        backButton.enabled = false
+        recordingLabel.hidden = true
         
         setUpAudioRecord()
+        
+        backButton.enabled = false
         
         pulse(playPauseButton)
         morePulse(playPauseButton)
@@ -113,33 +121,44 @@ class MediaPlayerViewController: UIViewController
             originalCount = 300
             meditationCountdown.text = "05:00"
             whichSegment = 0
-            
+            //            startTimer()
+            //            setupAudioSession()
+            //            loadCurrentSong()
+            //            togglePlayback(true)
         }
         else if sender.selectedSegmentIndex == 1
         {
             originalCount = 600
             meditationCountdown.text = "10:00"
             whichSegment = 1
-            
+            //            startTimer()
+            //            setupAudioSession()
+            //            loadCurrentSong()
+            //            togglePlayback(true)
         }
         else if sender.selectedSegmentIndex == 2
         {
             originalCount = 900
             meditationCountdown.text = "15:00"
             whichSegment = 2
-            
+            //            startTimer()
+            //            setupAudioSession()
+            //            loadCurrentSong()
+            //            togglePlayback(true)
         }
         else if sender.selectedSegmentIndex == 3
         {
             originalCount = 1200
             meditationCountdown.text = "20:00"
             whichSegment = 3
-           
+            //            startTimer()
+            //            setupAudioSession()
+            //            loadCurrentSong()
+            //            togglePlayback(true)
         }
         
     }
     
-    // Play Button Animation
     func morePulse(button: UIButton)
     {
         let pulseAnimation = CABasicAnimation(keyPath: "opacity")
@@ -187,7 +206,9 @@ class MediaPlayerViewController: UIViewController
     func updateUI()
     {
         originalCount = originalCount - 1
-        
+        //        let newMinuteCount = originalCount/60
+        //        let newSecondCount = originalCount%60
+        //        meditationCountdown.text = String("\(newMinuteCount):\(newSecondCount)")
         timerDisplay()
         print(originalCount)
         
@@ -262,7 +283,7 @@ class MediaPlayerViewController: UIViewController
         }
         currentSong = songs[nextSong]
         loadCurrentSong()
-       
+        //        togglePlayback(true)
     }
     
     @IBAction func skipBackTapped(sender: UIButton)
@@ -448,7 +469,7 @@ class MediaPlayerViewController: UIViewController
             song.playerItem.seekToTime(CMTimeMakeWithSeconds(0.0, 1))
             player.insertItem(song.playerItem, afterItem: nil)
             songTitleLabel.text = song.title
-            
+            //            artistLabel.text? = song.artist
             albumArtwork.image = UIImage(named: song.albumArtworkName)
             
         }
@@ -529,14 +550,24 @@ class MediaPlayerViewController: UIViewController
         {
             togglePlayback(true)
         }
-        if let nav = segue.destinationViewController as? UINavigationController
+        
+        if let playlistVC = segue.destinationViewController as? PlaylistTableViewController
         {
-            if let playlistVC = nav.topViewController as? PlaylistTableViewController
-            {
-                playlistVC.parent = self
-                playlistVC.songs = songs
-            }
+            playlistVC.parent = self
+            playlistVC.songs = songs
         }
+        
+        if segue.identifier == "PlaylistSegue"
+        {
+            let destVC = segue.destinationViewController as! PlaylistTableViewController
+            destVC.popoverPresentationController?.delegate = self
+            destVC.parent = self
+            destVC.preferredContentSize = CGSizeMake(410.0, 216.0)
+            //            destVC = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0)
+            let frameSize: CGPoint = CGPointMake(UIScreen.mainScreen().bounds.size.width*0.5, UIScreen.mainScreen().bounds.size.height*0.5)
+            self.preferredContentSize = CGSizeMake(frameSize.x,frameSize.y);
+        }
+        
         
         if let nav = segue.destinationViewController as? UINavigationController
         {
@@ -548,10 +579,13 @@ class MediaPlayerViewController: UIViewController
         
     }
     
-    // an instance of AVAudioRecorder and AVAudioPlayer (to play the recording sound)
-    var audioRecorder: AVAudioRecorder!
-    var audioPlayer: AVAudioPlayer?
-
+    
+    // MARK: - UIPopoverPresentationController Delegate
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle
+    {
+        return UIModalPresentationStyle.None
+    }
     
     func setUpAudioRecord()
     {
@@ -678,7 +712,7 @@ extension MediaPlayerViewController : AVAudioRecorderDelegate
 {
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
-            self.alert("Finish recording", msg: "Successfully recorded the audio")
+            self.alert("Congratulations!", msg: "Successfully recorded the audio")
         }
     }
 }
@@ -699,18 +733,20 @@ extension MediaPlayerViewController : AVAudioPlayerDelegate
     @IBAction func recordTapped(sender: UIButton)
     {
         record()
+        recordingLabel.hidden = false
+        
     }
     
     @IBAction func cancelTapped(sender: UIButton)
     {
         cancel()
+        recordingLabel.hidden = true
+        
     }
     
     @IBAction func playTapped(sender: UIButton)
     {
         play()
     }
-    
-    
     
 }

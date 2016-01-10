@@ -23,6 +23,7 @@
 		4C66A2321C41B39300B4BFDA /* SetReminderPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */; };
 		4C66A2331C41B39300B4BFDA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A2301C41B39300B4BFDA /* TableViewCell.swift */; };
 		4C66A2341C41B39300B4BFDA /* TableViewChkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */; };
+		4C802BA21C42B6C300F5698C /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C802BA11C42B6C300F5698C /* ParseHelper.swift */; };
 		5DD63A731C41BA730063DCA4 /* cancelButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5C1C41BA730063DCA4 /* cancelButton.png */; };
 		5DD63A741C41BA730063DCA4 /* cancelButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5D1C41BA730063DCA4 /* cancelButton@2x.png */; };
 		5DD63A751C41BA730063DCA4 /* cancelButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5E1C41BA730063DCA4 /* cancelButton@3x.png */; };
@@ -143,6 +144,7 @@
 		4C66A2301C41B39300B4BFDA /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewChkList.swift; sourceTree = "<group>"; };
 		4C802BA01C42B17400F5698C /* SessionOver.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = SessionOver.m4a; sourceTree = "<group>"; };
+		4C802BA11C42B6C300F5698C /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GetWell-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		5DD63A5C1C41BA730063DCA4 /* cancelButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelButton.png; sourceTree = "<group>"; };
 		5DD63A5D1C41BA730063DCA4 /* cancelButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancelButton@2x.png"; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				5DD63A861C41BACC0063DCA4 /* checkedUnchecked */,
 				5DD63A5A1C41BA730063DCA4 /* buttons */,
 				4C66A2141C41921100B4BFDA /* Misc */,
+				4C802BA11C42B6C300F5698C /* ParseHelper.swift */,
 			);
 			path = GetWell;
 			sourceTree = "<group>";
@@ -753,6 +756,7 @@
 				4C66A2331C41B39300B4BFDA /* TableViewCell.swift in Sources */,
 				4C66A2031C41920300B4BFDA /* AppDelegate.swift in Sources */,
 				4C66A2221C41B12D00B4BFDA /* MapViewController.swift in Sources */,
+				4C802BA21C42B6C300F5698C /* ParseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
