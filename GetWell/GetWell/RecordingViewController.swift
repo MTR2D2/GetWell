@@ -180,23 +180,24 @@ extension RecordingViewController : AVAudioPlayerDelegate
         record()
         recordingLabel.hidden = false
         
+        
     }
     
     @IBAction func cancelTapped(sender: UIButton)
     {
         cancel()
         recordingLabel.hidden = true
-        
-        
-        
+        let nameOfFileTwo:String = "Wow"
+        ParseHelper.uploadSoundFileToParse(self.lastAudioFileURL!, nameOfFile:nameOfFileTwo)
+ 
         
     }
     
     @IBAction func playTapped(sender: UIButton)
     {
         play()
-        let nameOfFileTwo:String = "Wow"
-        ParseHelper.uploadSoundFileToParse(self.lastAudioFileURL!, nameOfFile:nameOfFileTwo)
+//        let nameOfFileTwo:String = "Wow"
+//        ParseHelper.uploadSoundFileToParse(self.lastAudioFileURL!, nameOfFile:nameOfFileTwo)
         //            dismissViewControllerAnimated(true, completion: nil)
     }
 }

@@ -283,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				4C66A22B1C41B33300B4BFDA /* Song.swift */,
+				4C802BA11C42B6C300F5698C /* ParseHelper.swift */,
 				5DD63B0E1C4217610063DCA4 /* Checklist.swift */,
 				4C66A2161C41B12D00B4BFDA /* MainViewController.swift */,
 				4C66A2151C41B12D00B4BFDA /* LoginViewController.swift */,
@@ -299,13 +300,12 @@
 				4C66A2061C41920300B4BFDA /* Main.storyboard */,
 				5DD63AF51C41BC600063DCA4 /* GWSound */,
 				5DD63AB81C41BB4E0063DCA4 /* UpdatedMediaImg */,
-				5DD63AAB1C41BB180063DCA4 /* gwIcons */,
+				5DD63AAB1C41BB180063DCA4 /* GWIcons */,
 				5DD63AA21C41BB070063DCA4 /* GuideButtonImages */,
-				5DD63A931C41BAE30063DCA4 /* GetWellSkin */,
-				5DD63A861C41BACC0063DCA4 /* checkedUnchecked */,
-				5DD63A5A1C41BA730063DCA4 /* buttons */,
+				5DD63A931C41BAE30063DCA4 /* GWSkin */,
+				5DD63A861C41BACC0063DCA4 /* CheckedUnchecked */,
+				5DD63A5A1C41BA730063DCA4 /* Buttons */,
 				4C66A2141C41921100B4BFDA /* Misc */,
-				4C802BA11C42B6C300F5698C /* ParseHelper.swift */,
 			);
 			path = GetWell;
 			sourceTree = "<group>";
@@ -321,7 +321,7 @@
 			name = Misc;
 			sourceTree = "<group>";
 		};
-		5DD63A5A1C41BA730063DCA4 /* buttons */ = {
+		5DD63A5A1C41BA730063DCA4 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
 				5DD63B341C4248650063DCA4 /* stopButton.png */,
@@ -354,6 +354,7 @@
 				5DD63A6E1C41BA730063DCA4 /* reset */,
 				5DD63A721C41BA730063DCA4 /* soundicon.png */,
 			);
+			name = Buttons;
 			path = buttons;
 			sourceTree = "<group>";
 		};
@@ -407,7 +408,7 @@
 			path = reset;
 			sourceTree = "<group>";
 		};
-		5DD63A861C41BACC0063DCA4 /* checkedUnchecked */ = {
+		5DD63A861C41BACC0063DCA4 /* CheckedUnchecked */ = {
 			isa = PBXGroup;
 			children = (
 				5DD63A871C41BACC0063DCA4 /* checked@1x.png */,
@@ -417,10 +418,11 @@
 				5DD63A8B1C41BACC0063DCA4 /* unchecked@2x.png */,
 				5DD63A8C1C41BACC0063DCA4 /* unchecked@3x.png */,
 			);
+			name = CheckedUnchecked;
 			path = checkedUnchecked;
 			sourceTree = "<group>";
 		};
-		5DD63A931C41BAE30063DCA4 /* GetWellSkin */ = {
+		5DD63A931C41BAE30063DCA4 /* GWSkin */ = {
 			isa = PBXGroup;
 			children = (
 				5DD63B101C421F550063DCA4 /* newMediaSkin2.png */,
@@ -434,6 +436,7 @@
 				5DD63A991C41BAE30063DCA4 /* GetWellSignUpFinal.png */,
 				5DD63A9A1C41BAE30063DCA4 /* newMediaSkin.jpg */,
 			);
+			name = GWSkin;
 			path = GetWellSkin;
 			sourceTree = "<group>";
 		};
@@ -448,7 +451,7 @@
 			path = GuideButtonImages;
 			sourceTree = "<group>";
 		};
-		5DD63AAB1C41BB180063DCA4 /* gwIcons */ = {
+		5DD63AAB1C41BB180063DCA4 /* GWIcons */ = {
 			isa = PBXGroup;
 			children = (
 				5DD63B021C41F2A90063DCA4 /* calendarImage2.png */,
@@ -459,6 +462,7 @@
 				5DD63AB01C41BB180063DCA4 /* searchYogaButton.png */,
 				5DD63AB11C41BB180063DCA4 /* searchYogaButton2.png */,
 			);
+			name = GWIcons;
 			path = gwIcons;
 			sourceTree = "<group>";
 		};
