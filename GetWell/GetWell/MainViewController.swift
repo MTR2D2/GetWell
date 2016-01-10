@@ -23,7 +23,7 @@ protocol LoginViewControllerDismissDelegate
     func unwindFromLogin()
 }
 
-class MainViewController: UIViewController,UIPopoverPresentationControllerDelegate, DatePickerDelegate, UITableViewDataSource, UITableViewDelegate,LoginViewControllerDismissDelegate
+class MainViewController: UIViewController,UIPopoverPresentationControllerDelegate, DatePickerDelegate, UITableViewDataSource, UITableViewDelegate,LoginViewControllerDismissDelegate, UIGestureRecognizerDelegate
     
 {
 
@@ -38,6 +38,7 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
     @IBOutlet weak var next: UIButton!
     @IBOutlet weak var loginButton: UIBarButtonItem!
     @IBOutlet weak var setReminderButton: UIBarButtonItem!
+    @IBOutlet weak var tapImageGesture: UIGestureRecognizer!
     
     //var allToDos: [NSDictionary]
     
@@ -84,10 +85,12 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         next.alpha = 0
         isDone = false
         
-        if PFUser.currentUser() == nil
-        {
-//                        performSegueWithIdentifier(<#T##identifier: String##String#>, sender: <#T##AnyObject?#>)
-        }
+        chkGuideImg.addGestureRecognizer(tapImageGesture)
+        
+//        if PFUser.currentUser() == nil
+//        {
+//                   performSegueWithIdentifier(<#T##identifier: String##String#>, sender: <#T##AnyObject?#>)
+//        }
         
         let addInterval: NSTimeInterval = 0.75
         addTodoTimer = NSTimer.scheduledTimerWithTimeInterval(addInterval, target: self, selector: "addTodo", userInfo: nil, repeats: true)
@@ -175,8 +178,20 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let cell = tableView.visibleCells[indexPath.row] as! TableViewCell
         
+//        let todo = shownTodos[indexPath.row]
+        
         cell.isDone = !cell.isDone
         enableNextButtonWithAnimation()
+        
+//        switch allToDos.indexOf(todo)
+//        {
+//        case 0: image = UIImage(named: clearMind)
+//        case 1: topImageView.image = UIImage(named: clearMind)
+//        case 2: topImageView.image = UIImage(named: findYourMeditationImg2)
+//        case 3: topImageView.image = UIImage(named: getComfortable)
+//        default: topImageView.image = UIImage(named: beginBreathing)
+//        }
+        
         
         tableView.reloadData()
         

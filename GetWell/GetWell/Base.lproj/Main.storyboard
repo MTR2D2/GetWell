@@ -164,9 +164,13 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainImage2.png" translatesAutoresizingMaskIntoConstraints="NO" id="EOz-yA-OVo">
                                 <rect key="frame" x="0.0" y="64" width="375" height="250"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EOz-yA-OVo" secondAttribute="height" multiplier="1.5" id="S98-fz-RmV"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gHB-Qz-VgN" appends="YES" id="pXE-Ge-pGQ"/>
+                                </connections>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P7d-cT-zcm">
                                 <rect key="frame" x="0.0" y="314" width="375" height="246"/>
@@ -301,6 +305,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGp-HX-l28" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gHB-Qz-VgN"/>
             </objects>
             <point key="canvasLocation" x="677.5" y="1239.5"/>
         </scene>
