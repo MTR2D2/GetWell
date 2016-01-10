@@ -27,36 +27,59 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
     
 {
 
-    
+    //var checklist: Checklist?
     var timer: NSTimer?
     
+    @IBOutlet weak var chkGuideImg: UIImageView!
     @IBOutlet weak var nextMeditation: UILabel!
-    //@IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var image: UIImage!
-    @IBOutlet var skipToMedia: UIButton!
+//    @IBOutlet var skipToMedia: UIButton!
     @IBOutlet weak var tv: UITableView!
-    @IBOutlet weak var plus: UIButton!
     @IBOutlet weak var next: UIButton!
     @IBOutlet weak var loginButton: UIBarButtonItem!
     @IBOutlet weak var setReminderButton: UIBarButtonItem!
+    
+    //var allToDos: [NSDictionary]
     
     var allToDos = ["Find your meditation spot", "Get comfortable", "Begin Deep Breathing", "Clear your mind"]
     var shownTodos = [String]()
     var currentItemIndex = 0
     var addTodoTimer: NSTimer?
     
+    
+    let checklistDict1: NSDictionary = [
+        "checklist": "Find your meditation spot",
+        "listImg" : "fingYourMeditationImg2",
+        ]
+    let checklistDict2: NSDictionary = [
+        "checklist": "Get comfortable",
+        "listImg" : "getComfortable",
+    ]
+    let checklistDict3: NSDictionary = [
+        "checklist": "Begin Deep Breathing",
+        "listImg" : "beginBreathing",
+    ]
+    let checklistDict4: NSDictionary = [
+        "checklist": "Clear your mind",
+        "listImg" : "clearMind",
+    ]
+    
+    
+
     var isDone: Bool?
-    let checkImg = UIImage(named: "checkedwhite.png")
-    let uncheckImg = UIImage(named: "testunchk.png")
+    let checkImg = UIImage(named: "cHheckeD.png")
+    let uncheckImg = UIImage(named: "uUncheckeD.png")
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
+        //allToDos = [checklistDict1, checklistDict2, checklistDict3, checklistDict4]
+        
 //        self.navigationController!.navigationBar.topItem!.title = "Cancel"
         
-        plus.hidden = true
-        plus.enabled = false
+       // plus.hidden = true
+       // plus.enabled = false
         next.hidden = true
         next.alpha = 0
         isDone = false
@@ -129,10 +152,10 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
             
         {
             
-        case true: cell.todoCheckbox.image = UIImage(named: "checkedwhite.png")
+        case true: cell.todoCheckbox.image = UIImage(named: "cHheckeD.png")
             cell.backgroundColor = UIColor(red: 0.73, green: 0.031, blue: 0.91, alpha: 1)
             
-        case false: cell.todoCheckbox.image = UIImage(named: "testunchk.png")
+        case false: cell.todoCheckbox.image = UIImage(named: "uUncheckeD.png")
             cell.backgroundColor = UIColor(red:0.64, green:0.027, blue:0.86, alpha:1.0)
             
         }

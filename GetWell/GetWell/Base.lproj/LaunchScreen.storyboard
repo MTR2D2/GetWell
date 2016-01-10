@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,11 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2xc-fd-hfe">
-                                <rect key="frame" x="0.0" y="200" width="375" height="227"/>
+                                <rect key="frame" x="0.0" y="187" width="375" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2xc-fd-hfe" secondAttribute="height" multiplier="1.5" id="0Y5-1U-fVS"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="2xc-fd-hfe" secondAttribute="bottom" constant="230" id="A0m-gm-cW2"/>
                             <constraint firstItem="2xc-fd-hfe" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="216" id="FFP-TK-LIv"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="2xc-fd-hfe" secondAttribute="bottom" constant="240" id="FJS-Yo-O3e"/>
                             <constraint firstAttribute="trailing" secondItem="2xc-fd-hfe" secondAttribute="trailing" id="hGt-Go-wfD"/>
@@ -33,6 +38,8 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="FFP-TK-LIv"/>
+                                <exclude reference="poZ-fx-7JJ"/>
+                                <exclude reference="FJS-Yo-O3e"/>
                             </mask>
                         </variation>
                     </view>

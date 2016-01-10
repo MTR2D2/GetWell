@@ -96,6 +96,12 @@
 		5DD63AF21C41BC470063DCA4 /* thebeautifulbeach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63AF11C41BC470063DCA4 /* thebeautifulbeach.mp3 */; };
 		5DD63AF41C41BC550063DCA4 /* thunderlight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63AF31C41BC550063DCA4 /* thunderlight.mp3 */; };
 		5DD63AF71C41C3BC0063DCA4 /* mainProfileImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63AF61C41C3BC0063DCA4 /* mainProfileImg.png */; };
+		5DD63AF91C41EA2D0063DCA4 /* mainImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63AF81C41EA2D0063DCA4 /* mainImage2.png */; };
+		5DD63B031C41F2A90063DCA4 /* calendarImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B021C41F2A90063DCA4 /* calendarImage2.png */; };
+		5DD63B0B1C4209230063DCA4 /* uUncheckeD.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B0A1C4209230063DCA4 /* uUncheckeD.png */; };
+		5DD63B0D1C4209E90063DCA4 /* cHheckeD.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B0C1C4209E90063DCA4 /* cHheckeD.png */; };
+		5DD63B0F1C4217610063DCA4 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD63B0E1C4217610063DCA4 /* Checklist.swift */; };
+		5DD63B111C421F550063DCA4 /* newMediaSkin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B101C421F550063DCA4 /* newMediaSkin2.png */; };
 		E1281FCAC358DC7ECD4396D8 /* libPods-GetWell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3C58CCC35B4189BB3E31 /* libPods-GetWell.a */; };
 /* End PBXBuildFile section */
 
@@ -191,7 +197,13 @@
 		5DD63AEF1C41BC340063DCA4 /* relaxingnovember.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relaxingnovember.mp3; sourceTree = "<group>"; };
 		5DD63AF11C41BC470063DCA4 /* thebeautifulbeach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thebeautifulbeach.mp3; sourceTree = "<group>"; };
 		5DD63AF31C41BC550063DCA4 /* thunderlight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thunderlight.mp3; sourceTree = "<group>"; };
-		5DD63AF61C41C3BC0063DCA4 /* mainProfileImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainProfileImg.png; sourceTree = "<group>"; };
+		5DD63AF61C41C3BC0063DCA4 /* mainProfileImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainProfileImg.png; path = ../mainProfileImg.png; sourceTree = "<group>"; };
+		5DD63AF81C41EA2D0063DCA4 /* mainImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainImage2.png; path = ../mainImage2.png; sourceTree = "<group>"; };
+		5DD63B021C41F2A90063DCA4 /* calendarImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendarImage2.png; path = ../calendarImage2.png; sourceTree = "<group>"; };
+		5DD63B0A1C4209230063DCA4 /* uUncheckeD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = uUncheckeD.png; path = ../uUncheckeD.png; sourceTree = "<group>"; };
+		5DD63B0C1C4209E90063DCA4 /* cHheckeD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cHheckeD.png; path = ../cHheckeD.png; sourceTree = "<group>"; };
+		5DD63B0E1C4217610063DCA4 /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
+		5DD63B101C421F550063DCA4 /* newMediaSkin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newMediaSkin2.png; sourceTree = "<group>"; };
 		9C602676B433DB109FA1C0C8 /* Pods-GetWell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.release.xcconfig"; sourceTree = "<group>"; };
 		BBE4FD4065752F92C4A89F66 /* Pods-GetWell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.debug.xcconfig"; sourceTree = "<group>"; };
 		C0AB3C58CCC35B4189BB3E31 /* libPods-GetWell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GetWell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,9 +243,10 @@
 			isa = PBXGroup;
 			children = (
 				4C66A22B1C41B33300B4BFDA /* Song.swift */,
+				5DD63B0E1C4217610063DCA4 /* Checklist.swift */,
+				4C66A2161C41B12D00B4BFDA /* MainViewController.swift */,
 				4C66A2151C41B12D00B4BFDA /* LoginViewController.swift */,
 				4C66A22D1C41B35700B4BFDA /* RegisterViewController.swift */,
-				4C66A2161C41B12D00B4BFDA /* MainViewController.swift */,
 				4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */,
 				4C66A2301C41B39300B4BFDA /* TableViewCell.swift */,
 				4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */,
@@ -243,7 +256,6 @@
 				4C66A21E1C41B12D00B4BFDA /* PlaylistTableViewController.swift */,
 				4C66A21F1C41B12D00B4BFDA /* RecordingViewController.swift */,
 				5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */,
-				5DD63AF61C41C3BC0063DCA4 /* mainProfileImg.png */,
 				4C66A2061C41920300B4BFDA /* Main.storyboard */,
 				5DD63AF51C41BC600063DCA4 /* GWSound */,
 				5DD63AB81C41BB4E0063DCA4 /* UpdatedMediaImg */,
@@ -271,6 +283,8 @@
 		5DD63A5A1C41BA730063DCA4 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
+				5DD63B0C1C4209E90063DCA4 /* cHheckeD.png */,
+				5DD63B0A1C4209230063DCA4 /* uUncheckeD.png */,
 				5DD63A5B1C41BA730063DCA4 /* cancelButton */,
 				5DD63A5F1C41BA730063DCA4 /* DownArrow.png */,
 				5DD63A601C41BA730063DCA4 /* gwArrow.png */,
@@ -350,6 +364,9 @@
 		5DD63A931C41BAE30063DCA4 /* GetWellSkin */ = {
 			isa = PBXGroup;
 			children = (
+				5DD63B101C421F550063DCA4 /* newMediaSkin2.png */,
+				5DD63AF61C41C3BC0063DCA4 /* mainProfileImg.png */,
+				5DD63AF81C41EA2D0063DCA4 /* mainImage2.png */,
 				5DD63A941C41BAE30063DCA4 /* Affirmation Page.jpg */,
 				5DD63A951C41BAE30063DCA4 /* background.png */,
 				5DD63A961C41BAE30063DCA4 /* GetWellLogin2.jpg */,
@@ -375,6 +392,7 @@
 		5DD63AAB1C41BB180063DCA4 /* gwIcons */ = {
 			isa = PBXGroup;
 			children = (
+				5DD63B021C41F2A90063DCA4 /* calendarImage2.png */,
 				5DD63AAC1C41BB180063DCA4 /* Icon-40@2x.png */,
 				5DD63AAD1C41BB180063DCA4 /* Icon-60@2x.png */,
 				5DD63AAE1C41BB180063DCA4 /* Icon-60@3x.png */,
@@ -508,6 +526,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DD63B0B1C4209230063DCA4 /* uUncheckeD.png in Resources */,
 				5DD63ACB1C41BB4E0063DCA4 /* newChillImg.png in Resources */,
 				5DD63ACA1C41BB4E0063DCA4 /* newCalmAffirmation.png in Resources */,
 				5DD63A831C41BA730063DCA4 /* theReset@2x.png in Resources */,
@@ -519,6 +538,7 @@
 				5DD63AB71C41BB180063DCA4 /* searchYogaButton2.png in Resources */,
 				5DD63A9E1C41BAE30063DCA4 /* GetWellLogin2a.png in Resources */,
 				5DD63AEE1C41BC280063DCA4 /* rainy.mp3 in Resources */,
+				5DD63B0D1C4209E90063DCA4 /* cHheckeD.png in Resources */,
 				5DD63AE81C41BBF70063DCA4 /* littlebirds.mp3 in Resources */,
 				5DD63A7C1C41BA730063DCA4 /* PlayPauseB.png in Resources */,
 				5DD63AD11C41BB4E0063DCA4 /* newRelaxingImg.png in Resources */,
@@ -538,6 +558,7 @@
 				5DD63AD51C41BB4E0063DCA4 /* newTomorrowImg.png in Resources */,
 				5DD63A8F1C41BACC0063DCA4 /* checked@3x.png in Resources */,
 				5DD63A911C41BACC0063DCA4 /* unchecked@2x.png in Resources */,
+				5DD63AF91C41EA2D0063DCA4 /* mainImage2.png in Resources */,
 				5DD63AB41C41BB180063DCA4 /* Icon-60@3x.png in Resources */,
 				5DD63ACE1C41BB4E0063DCA4 /* newHeavyRain.png in Resources */,
 				5DD63ACD1C41BB4E0063DCA4 /* newForestImg.png in Resources */,
@@ -572,8 +593,10 @@
 				4C66A2081C41920300B4BFDA /* Main.storyboard in Resources */,
 				5DD63A7D1C41BA730063DCA4 /* PlayPauseB@2x.png in Resources */,
 				5DD63A901C41BACC0063DCA4 /* unchecked@1x.png in Resources */,
+				5DD63B111C421F550063DCA4 /* newMediaSkin2.png in Resources */,
 				5DD63AF71C41C3BC0063DCA4 /* mainProfileImg.png in Resources */,
 				5DD63A801C41BA730063DCA4 /* PreviousB@2x.png in Resources */,
+				5DD63B031C41F2A90063DCA4 /* calendarImage2.png in Resources */,
 				5DD63AF01C41BC340063DCA4 /* relaxingnovember.mp3 in Resources */,
 				5DD63A771C41BA730063DCA4 /* gwArrow.png in Resources */,
 				5DD63ACF1C41BB4E0063DCA4 /* newMindPowerImg.png in Resources */,
@@ -648,6 +671,7 @@
 				4C66A2271C41B12D00B4BFDA /* MediaPlayerViewController.swift in Sources */,
 				4C66A2341C41B39300B4BFDA /* TableViewChkList.swift in Sources */,
 				4C66A2321C41B39300B4BFDA /* SetReminderPopOverViewController.swift in Sources */,
+				5DD63B0F1C4217610063DCA4 /* Checklist.swift in Sources */,
 				4C66A22A1C41B12D00B4BFDA /* RecordingViewController.swift in Sources */,
 				4C66A2201C41B12D00B4BFDA /* LoginViewController.swift in Sources */,
 				4C66A2281C41B12D00B4BFDA /* PlaylistTableViewCell.swift in Sources */,
