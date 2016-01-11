@@ -110,7 +110,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
     
     override func viewWillDisappear(animated: Bool)
     {
-        togglePlayback(false)
+        resetTimer()
     }
     
     @IBAction func segmentedIndexTapped(sender: UISegmentedControl)
@@ -526,8 +526,9 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         }
     }
     
-    @IBAction func resetPressed(sender: UIButton!)
+    func resetTimer()
     {
+        timer?.invalidate()
         meditationCountdown.textColor = UIColor.whiteColor()
         
         if whichSegment == 0
@@ -556,7 +557,11 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         timesTapped = 1
         loadCurrentSong()
         togglePlayback(false)
-        //        startTimer()
+    }
+    
+    @IBAction func resetPressed(sender: UIButton!)
+    {
+        resetTimer()
     }
     
     // MARK: - Navigation
@@ -742,7 +747,7 @@ extension MediaPlayerViewController : AVAudioPlayerDelegate
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool)
     {
         if flag {
-            self.alert("Finish Playing", msg: "Finish playing the recording")
+            self.alert("Try out GetWell Pro", msg: "To save your affirmations!")
             
         }
     }

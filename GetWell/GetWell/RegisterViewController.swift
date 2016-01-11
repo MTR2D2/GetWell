@@ -36,6 +36,8 @@ class RegisterViewController: UIViewController
         {
             return true
         }
+        errorMessageLabel.text = "Please Create a Username and Password"
+
         return false
     }
     
