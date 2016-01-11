@@ -260,6 +260,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
     @IBAction func playPauseTapped(sender: UIButton)
     {
         timerCount = timerCount + 1
+        updatePlayPauseButton()
         startTimer()
         togglePlayback(!nowPlaying)
         backButton.hidden = false
@@ -473,6 +474,20 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
             albumArtwork.image = UIImage(named: song.albumArtworkName)
             
         }
+    }
+    
+    func updatePlayPauseButton()
+    {
+        if timerCount % 2 == 1
+        {
+            playPauseButton.setImage(UIImage(named:"DownArrow"), forState:. Normal)
+            playPauseButton.setImage(UIImage(named: "PlayPauseB"), forState: .Highlighted)
+        }
+        else
+        {
+            playPauseButton.setImage(UIImage(named: "PlayPauseB"), forState: .Normal)
+        }
+        
     }
     
     func setupAudioSession()
