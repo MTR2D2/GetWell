@@ -9,10 +9,14 @@
 import UIKit
 import AVFoundation
 
-class RecordingViewController: UIViewController
+class RecordingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     
     @IBOutlet weak var recordingLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var affirmationGoal: UITextField!
     
     // an instance of AVAudioRecorder and AVAudioPlayer (to play the recording sound)
     var audioRecorder: AVAudioRecorder!
@@ -30,6 +34,30 @@ class RecordingViewController: UIViewController
         
     }
     
+    // MARK: - Table View Data Source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+        return 1
+    }
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+        
+    {
+        return 20
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("affirmationCell", forIndexPath: indexPath) as! RecordingTableViewCell
+        
+    return cell
+    }
+    
+
+
     func setUpAudioRecord()
     {
         //            let audiOFile = ParseHelper.uploadSoundFileToParse("documents/var..","myRecording1")

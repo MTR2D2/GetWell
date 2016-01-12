@@ -122,6 +122,13 @@
 		5DD63B311C42461F0063DCA4 /* newMicrophoneE.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B301C42461F0063DCA4 /* newMicrophoneE.png */; };
 		5DD63B331C4246F00063DCA4 /* myMicrophone2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B321C4246F00063DCA4 /* myMicrophone2.png */; };
 		5DD63B351C4248650063DCA4 /* stopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B341C4248650063DCA4 /* stopButton.png */; };
+		5DD63B381C4480700063DCA4 /* savedButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B361C4480700063DCA4 /* savedButton2.png */; };
+		5DD63B391C4480700063DCA4 /* talkButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B371C4480700063DCA4 /* talkButton2.png */; };
+		5DD63B3B1C4482080063DCA4 /* playbackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B3A1C4482080063DCA4 /* playbackButton.png */; };
+		5DD63B3D1C448B690063DCA4 /* popOverButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B3C1C448B690063DCA4 /* popOverButton.png */; };
+		5DD63B3F1C44ADEC0063DCA4 /* RecordingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD63B3E1C44ADEC0063DCA4 /* RecordingTableViewCell.swift */; };
+		5DD63B411C44B8F40063DCA4 /* RecordPopOverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD63B401C44B8F40063DCA4 /* RecordPopOverTableViewController.swift */; };
+		5DD63B431C44BB1D0063DCA4 /* RecordPopOverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD63B421C44BB1D0063DCA4 /* RecordPopOverTableViewCell.swift */; };
 		E1281FCAC358DC7ECD4396D8 /* libPods-GetWell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3C58CCC35B4189BB3E31 /* libPods-GetWell.a */; };
 /* End PBXBuildFile section */
 
@@ -244,6 +251,13 @@
 		5DD63B301C42461F0063DCA4 /* newMicrophoneE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newMicrophoneE.png; sourceTree = "<group>"; };
 		5DD63B321C4246F00063DCA4 /* myMicrophone2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myMicrophone2.png; sourceTree = "<group>"; };
 		5DD63B341C4248650063DCA4 /* stopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopButton.png; sourceTree = "<group>"; };
+		5DD63B361C4480700063DCA4 /* savedButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = savedButton2.png; path = ../savedButton2.png; sourceTree = "<group>"; };
+		5DD63B371C4480700063DCA4 /* talkButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = talkButton2.png; path = ../talkButton2.png; sourceTree = "<group>"; };
+		5DD63B3A1C4482080063DCA4 /* playbackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playbackButton.png; path = ../playbackButton.png; sourceTree = "<group>"; };
+		5DD63B3C1C448B690063DCA4 /* popOverButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = popOverButton.png; path = ../popOverButton.png; sourceTree = "<group>"; };
+		5DD63B3E1C44ADEC0063DCA4 /* RecordingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingTableViewCell.swift; sourceTree = "<group>"; };
+		5DD63B401C44B8F40063DCA4 /* RecordPopOverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordPopOverTableViewController.swift; sourceTree = "<group>"; };
+		5DD63B421C44BB1D0063DCA4 /* RecordPopOverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordPopOverTableViewCell.swift; sourceTree = "<group>"; };
 		9C602676B433DB109FA1C0C8 /* Pods-GetWell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.release.xcconfig"; sourceTree = "<group>"; };
 		BBE4FD4065752F92C4A89F66 /* Pods-GetWell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.debug.xcconfig"; sourceTree = "<group>"; };
 		C0AB3C58CCC35B4189BB3E31 /* libPods-GetWell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GetWell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,11 +305,14 @@
 				4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */,
 				4C66A2301C41B39300B4BFDA /* TableViewCell.swift */,
 				4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */,
+				4C66A21F1C41B12D00B4BFDA /* RecordingViewController.swift */,
+				5DD63B3E1C44ADEC0063DCA4 /* RecordingTableViewCell.swift */,
 				4C66A2171C41B12D00B4BFDA /* MapViewController.swift */,
 				4C66A21C1C41B12D00B4BFDA /* MediaPlayerViewController.swift */,
 				4C66A21D1C41B12D00B4BFDA /* PlaylistTableViewCell.swift */,
 				4C66A21E1C41B12D00B4BFDA /* PlaylistTableViewController.swift */,
-				4C66A21F1C41B12D00B4BFDA /* RecordingViewController.swift */,
+				5DD63B401C44B8F40063DCA4 /* RecordPopOverTableViewController.swift */,
+				5DD63B421C44BB1D0063DCA4 /* RecordPopOverTableViewCell.swift */,
 				5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */,
 				4C66A2061C41920300B4BFDA /* Main.storyboard */,
 				5DD63AF51C41BC600063DCA4 /* GWSound */,
@@ -324,6 +341,10 @@
 		5DD63A5A1C41BA730063DCA4 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				5DD63B361C4480700063DCA4 /* savedButton2.png */,
+				5DD63B3C1C448B690063DCA4 /* popOverButton.png */,
+				5DD63B3A1C4482080063DCA4 /* playbackButton.png */,
+				5DD63B371C4480700063DCA4 /* talkButton2.png */,
 				5DD63B341C4248650063DCA4 /* stopButton.png */,
 				5DD63B321C4246F00063DCA4 /* myMicrophone2.png */,
 				5DD63B301C42461F0063DCA4 /* newMicrophoneE.png */,
@@ -620,7 +641,9 @@
 				5DD63AA11C41BAE30063DCA4 /* newMediaSkin.jpg in Resources */,
 				5DD63A8D1C41BACC0063DCA4 /* checked@1x.png in Resources */,
 				5DD63A841C41BA730063DCA4 /* theReset@3x.png in Resources */,
+				5DD63B381C4480700063DCA4 /* savedButton2.png in Resources */,
 				5DD63B1E1C423FCC0063DCA4 /* newPlay.png in Resources */,
+				5DD63B3B1C4482080063DCA4 /* playbackButton.png in Resources */,
 				5DD63A921C41BACC0063DCA4 /* unchecked@3x.png in Resources */,
 				5DD63A851C41BA730063DCA4 /* soundicon.png in Resources */,
 				5DD63AD31C41BB4E0063DCA4 /* newSnowStormImg.png in Resources */,
@@ -628,6 +651,7 @@
 				5DD63A7E1C41BA730063DCA4 /* PlayPauseB@3x.png in Resources */,
 				5DD63B271C42418B0063DCA4 /* newGwArrowA.png in Resources */,
 				5DD63B201C423FCC0063DCA4 /* newReset.png in Resources */,
+				5DD63B3D1C448B690063DCA4 /* popOverButton.png in Resources */,
 				5DD63A781C41BA730063DCA4 /* microphone2.png in Resources */,
 				5DD63B351C4248650063DCA4 /* stopButton.png in Resources */,
 				5DD63AD01C41BB4E0063DCA4 /* newRainImg.png in Resources */,
@@ -656,6 +680,7 @@
 				5DD63AD21C41BB4E0063DCA4 /* newRooftopImg.png in Resources */,
 				5DD63B1F1C423FCC0063DCA4 /* newPrevious.png in Resources */,
 				5DD63A791C41BA730063DCA4 /* NextB.png in Resources */,
+				5DD63B391C4480700063DCA4 /* talkButton2.png in Resources */,
 				5DD63AAA1C41BB070063DCA4 /* getComfortable.png in Resources */,
 				5DD63A741C41BA730063DCA4 /* cancelButton@2x.png in Resources */,
 				5DD63ADE1C41BBB00063DCA4 /* coldsnowstorm.mp3 in Resources */,
@@ -756,10 +781,13 @@
 				4C66A22C1C41B33300B4BFDA /* Song.swift in Sources */,
 				4C66A22E1C41B35700B4BFDA /* RegisterViewController.swift in Sources */,
 				4C66A2211C41B12D00B4BFDA /* MainViewController.swift in Sources */,
+				5DD63B411C44B8F40063DCA4 /* RecordPopOverTableViewController.swift in Sources */,
+				5DD63B431C44BB1D0063DCA4 /* RecordPopOverTableViewCell.swift in Sources */,
 				4C66A2271C41B12D00B4BFDA /* MediaPlayerViewController.swift in Sources */,
 				4C66A2341C41B39300B4BFDA /* TableViewChkList.swift in Sources */,
 				4C66A2321C41B39300B4BFDA /* SetReminderPopOverViewController.swift in Sources */,
 				5DD63B0F1C4217610063DCA4 /* Checklist.swift in Sources */,
+				5DD63B3F1C44ADEC0063DCA4 /* RecordingTableViewCell.swift in Sources */,
 				4C66A22A1C41B12D00B4BFDA /* RecordingViewController.swift in Sources */,
 				4C66A2201C41B12D00B4BFDA /* LoginViewController.swift in Sources */,
 				4C66A2281C41B12D00B4BFDA /* PlaylistTableViewCell.swift in Sources */,
