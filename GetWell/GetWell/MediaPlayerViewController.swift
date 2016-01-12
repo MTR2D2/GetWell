@@ -480,7 +480,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
     {
         if timerCount % 2 == 1
         {
-            playPauseButton.setImage(UIImage(named:"DownArrow"), forState:. Normal)
+            playPauseButton.setImage(UIImage(named:"PauseB"), forState:. Normal)
             playPauseButton.setImage(UIImage(named: "PlayPauseB"), forState: .Highlighted)
         }
         else

@@ -18,6 +18,8 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var affirmationGoal: UITextField!
     
+    @IBOutlet weak var affirmationListButton: UIButton!
+    
     // an instance of AVAudioRecorder and AVAudioPlayer (to play the recording sound)
     var audioRecorder: AVAudioRecorder!
     var audioPlayer: AVAudioPlayer?
@@ -29,6 +31,7 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         
         recordingLabel.hidden = true
+        //affirmationListButton.hidden = true
         
         setUpAudioRecord()
         
