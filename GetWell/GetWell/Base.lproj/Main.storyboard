@@ -1054,12 +1054,30 @@
                                 <rect key="frame" x="16" y="368" width="84" height="30"/>
                                 <state key="normal" title="Affirmations"/>
                                 <connections>
-                                    <segue destination="WDE-2B-crh" kind="show" id="A7t-zS-0GS"/>
+                                    <segue destination="uaa-Co-NAC" kind="popoverPresentation" identifier="AffirmationSegue" popoverAnchorView="0Yg-J9-F69" id="qJQ-rj-Ev0">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTX-dr-djT">
+                                <rect key="frame" x="167" y="123" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0h-9i-PBz">
+                                <rect key="frame" x="12" y="406" width="93" height="30"/>
+                                <state key="normal" title="Set Reminder"/>
+                                <connections>
+                                    <segue destination="ubk-G8-OmH" kind="popoverPresentation" identifier="SetReminderSegue" popoverAnchorView="y0h-9i-PBz" id="4f9-qY-OI3">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bTX-dr-djT" firstAttribute="centerY" secondItem="3sd-P3-DVf" secondAttribute="centerY" multiplier="0.4" id="20P-DP-2Gd"/>
                             <constraint firstItem="Evn-dp-dZ9" firstAttribute="leading" secondItem="JOB-ag-511" secondAttribute="trailing" constant="40" id="4fx-pD-Iiq"/>
                             <constraint firstItem="hs6-LN-fRW" firstAttribute="leading" secondItem="3sd-P3-DVf" secondAttribute="leading" constant="70" id="672-pT-BWV"/>
                             <constraint firstItem="Evn-dp-dZ9" firstAttribute="centerY" secondItem="JOB-ag-511" secondAttribute="centerY" id="6Lj-DM-1ok"/>
@@ -1068,6 +1086,7 @@
                             <constraint firstItem="6QG-x9-siR" firstAttribute="leading" secondItem="3sd-P3-DVf" secondAttribute="leading" id="8L6-88-kTv"/>
                             <constraint firstAttribute="trailing" secondItem="54K-Cw-vIY" secondAttribute="trailing" constant="60" id="8xa-fa-SMB"/>
                             <constraint firstItem="0Yg-J9-F69" firstAttribute="top" secondItem="kww-r5-4bx" secondAttribute="bottom" constant="8" id="Bdz-vJ-fdS"/>
+                            <constraint firstItem="y0h-9i-PBz" firstAttribute="leading" secondItem="3sd-P3-DVf" secondAttribute="leadingMargin" constant="-4" id="D7t-Qg-Hsk"/>
                             <constraint firstAttribute="trailing" secondItem="6QG-x9-siR" secondAttribute="trailing" id="EEM-3b-FFf"/>
                             <constraint firstItem="nXE-dM-OnA" firstAttribute="top" secondItem="bkK-4d-KyP" secondAttribute="bottom" id="IDE-v9-ffc"/>
                             <constraint firstItem="NRF-Iq-JWm" firstAttribute="leading" secondItem="3sd-P3-DVf" secondAttribute="leading" constant="70" id="JM9-Vb-9u3"/>
@@ -1077,6 +1096,7 @@
                             <constraint firstItem="DyP-NY-eWh" firstAttribute="centerX" secondItem="W6s-bE-KR3" secondAttribute="centerX" id="RxR-Iq-9Cd"/>
                             <constraint firstItem="Vuj-v1-KNt" firstAttribute="centerX" secondItem="JOB-ag-511" secondAttribute="centerX" id="T5a-LA-70r"/>
                             <constraint firstItem="xe6-tR-UIO" firstAttribute="top" secondItem="JOB-ag-511" secondAttribute="bottom" constant="30" id="TCU-6Q-3o0"/>
+                            <constraint firstItem="y0h-9i-PBz" firstAttribute="top" secondItem="0Yg-J9-F69" secondAttribute="bottom" constant="8" id="TXV-6q-Vfd"/>
                             <constraint firstAttribute="trailing" secondItem="nXE-dM-OnA" secondAttribute="trailing" id="UJP-M4-Wnm"/>
                             <constraint firstItem="nXc-mJ-dmc" firstAttribute="top" secondItem="kww-r5-4bx" secondAttribute="bottom" constant="8" id="UoG-MD-Sgu"/>
                             <constraint firstItem="0Yg-J9-F69" firstAttribute="leading" secondItem="3sd-P3-DVf" secondAttribute="leadingMargin" id="VQc-ZX-yJW"/>
@@ -1096,6 +1116,7 @@
                             <constraint firstItem="W6s-bE-KR3" firstAttribute="centerX" secondItem="nXc-mJ-dmc" secondAttribute="centerX" id="iO0-c6-AQF"/>
                             <constraint firstItem="hs6-LN-fRW" firstAttribute="centerY" secondItem="JOB-ag-511" secondAttribute="centerY" id="oYa-0Z-Z7E"/>
                             <constraint firstItem="54K-Cw-vIY" firstAttribute="centerY" secondItem="xe6-tR-UIO" secondAttribute="centerY" id="qVW-hX-PdZ"/>
+                            <constraint firstItem="bTX-dr-djT" firstAttribute="centerX" secondItem="3sd-P3-DVf" secondAttribute="centerX" id="rdP-7N-g8o"/>
                             <constraint firstItem="TfH-RZ-eim" firstAttribute="top" secondItem="xe6-tR-UIO" secondAttribute="bottom" constant="8" id="sGo-qP-wF7"/>
                             <constraint firstAttribute="trailing" secondItem="Evn-dp-dZ9" secondAttribute="trailing" constant="70" id="sow-mr-c8T"/>
                             <constraint firstItem="xe6-tR-UIO" firstAttribute="leading" secondItem="NRF-Iq-JWm" secondAttribute="trailing" constant="40" id="tNw-D6-OVA"/>
@@ -1126,6 +1147,7 @@
                         <outlet property="albumArtwork" destination="6QG-x9-siR" id="fel-MV-zoP"/>
                         <outlet property="backButton" destination="hs6-LN-fRW" id="f7V-ka-xdY"/>
                         <outlet property="meditationCountdown" destination="W6s-bE-KR3" id="8en-mg-cHz"/>
+                        <outlet property="nextMeditation" destination="bTX-dr-djT" id="7j2-M0-eW6"/>
                         <outlet property="playPauseButton" destination="JOB-ag-511" id="n6h-qn-R5v"/>
                         <outlet property="plusButton" destination="Tge-fy-nRI" id="mDf-1e-ziu"/>
                         <outlet property="recordingLabel" destination="TfH-RZ-eim" id="J8Y-la-Ki6"/>
@@ -1136,6 +1158,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kR4-Br-NDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1246.5" y="2006.5"/>
+        </scene>
+        <!--Affirmation View Controller-->
+        <scene sceneID="kRF-NG-0Vk">
+            <objects>
+                <viewController id="uaa-Co-NAC" customClass="AffirmationViewController" customModule="GetWell" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nb1-7e-lT9"/>
+                        <viewControllerLayoutGuide type="bottom" id="mNm-uz-Ibb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gnp-Al-VA0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9N-8U-cPM">
+                                <rect key="frame" x="262" y="285" width="76" height="30"/>
+                                <state key="normal" title="Affirmation"/>
+                                <connections>
+                                    <segue destination="WDE-2B-crh" kind="show" id="4iB-l9-NaH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I9N-8U-cPM" firstAttribute="centerY" secondItem="Gnp-Al-VA0" secondAttribute="centerY" id="CnA-ZA-UMQ"/>
+                            <constraint firstItem="I9N-8U-cPM" firstAttribute="centerX" secondItem="Gnp-Al-VA0" secondAttribute="centerX" id="Ehm-AG-gZs"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GL0-cq-ZB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1246" y="2788"/>
         </scene>
         <!--Record Pop Over Table View Controller-->
         <scene sceneID="Tvx-mE-vxm">
@@ -1201,7 +1254,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAt-ck-Isy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2211.5" y="2192"/>
+            <point key="canvasLocation" x="2209.5" y="2007"/>
         </scene>
     </scenes>
     <resources>
@@ -1224,6 +1277,6 @@
         <image name="talkButton2.png" width="65" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VOz-va-erA"/>
+        <segue reference="Vzx-vn-KPS"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,9 +13,7 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
 {
     
     @IBOutlet weak var recordingLabel: UILabel!
-    
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var affirmationGoal: UITextField!
     
     // an instance of AVAudioRecorder and AVAudioPlayer (to play the recording sound)
@@ -23,6 +21,9 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
     var audioPlayer: AVAudioPlayer?
     
     var lastAudioFileURL: String?
+    
+    var dad: MediaPlayerVC2?
+
     
     override func viewDidLoad()
     {
@@ -32,6 +33,18 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
         
         setUpAudioRecord()
         
+        if timerCount%2 == 1
+        {
+            dad?.togglePlayback(true)
+        }
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if timerCount%2 == 1
+        {
+            dad?.togglePlayback(true)
+        }
     }
     
     // MARK: - Table View Data Source

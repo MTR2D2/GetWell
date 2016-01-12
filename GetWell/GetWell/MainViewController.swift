@@ -8,10 +8,7 @@
 
 import UIKit
 
-protocol DatePickerDelegate
-{
-    func dateWasChosen(date: NSDate)
-}
+
 
 protocol StepsListViewDelegate
 {
@@ -23,7 +20,7 @@ protocol LoginViewControllerDismissDelegate
     func unwindFromLogin()
 }
 
-class MainViewController: UIViewController,UIPopoverPresentationControllerDelegate, DatePickerDelegate, UITableViewDataSource, UITableViewDelegate,LoginViewControllerDismissDelegate, UIGestureRecognizerDelegate
+class MainViewController: UIViewController,UIPopoverPresentationControllerDelegate, UITableViewDataSource, UITableViewDelegate,LoginViewControllerDismissDelegate, UIGestureRecognizerDelegate, DatePickerDelegate
     
 {
 
@@ -31,13 +28,13 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
     var timer: NSTimer?
     
     @IBOutlet weak var chkGuideImg: UIImageView!
-    @IBOutlet weak var nextMeditation: UILabel!
     @IBOutlet weak var image: UIImage!
 //    @IBOutlet var skipToMedia: UIButton!
     @IBOutlet weak var tv: UITableView!
     @IBOutlet weak var next: UIButton!
     @IBOutlet weak var loginButton: UIBarButtonItem!
     @IBOutlet weak var setReminderButton: UIBarButtonItem!
+    @IBOutlet weak var nextMeditation: UILabel!
     @IBOutlet weak var tapImageGesture: UIGestureRecognizer!
     
     //var allToDos: [NSDictionary]
@@ -286,11 +283,11 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
             destVC.preferredContentSize = CGSizeMake(410.0, 216.0)
            
         }
-        if let loginVC = segue.destinationViewController as? LoginViewController
-        {
-            loginVC.dismissDelegate = self
-
-        }
+//        if let loginVC = segue.destinationViewController as? LoginViewController
+//        {
+//            loginVC.dismissDelegate = self
+//
+//        }
     }
     
     func unwindFromLogin()

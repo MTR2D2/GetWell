@@ -19,7 +19,12 @@ import MediaPlayer
 import AVFoundation
 import QuartzCore
 
-class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate
+protocol DatePickerDelegate
+{
+    func dateWasChosen(date: NSDate)
+}
+
+class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate, DatePickerDelegate
 {
     
     var song: Song?
@@ -36,6 +41,8 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var setReminderButton: UIBarButtonItem!
+    @IBOutlet weak var nextMeditation: UILabel!
     
     //    let avQueuePlayer = AVQueuePlayer()
     var player = AVQueuePlayer()
@@ -81,6 +88,7 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate
         setupAudioSession()
         configurePlaylist()
         loadCurrentSong()
+        
         
         do
         {
@@ -485,7 +493,7 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate
     {
         if timerCount % 2 == 1
         {
-            playPauseButton.setImage(UIImage(named:"DownArrow"), forState:. Normal)
+            playPauseButton.setImage(UIImage(named:"PauseB"), forState:. Normal)
             playPauseButton.setImage(UIImage(named: "PlayPauseB"), forState: .Highlighted)
         }
         else
@@ -595,15 +603,35 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate
             self.preferredContentSize = CGSizeMake(frameSize.x,frameSize.y);
         }
         
+        if segue.identifier == "AffirmationSegue"
+        {
+            let destVC = segue.destinationViewController as! AffirmationViewController
+            destVC.popoverPresentationController?.delegate = self
+            destVC.dad = self
+            destVC.preferredContentSize = CGSizeMake(410.0, 216.0)
+            //            destVC = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0)
+            let frameSize: CGPoint = CGPointMake(UIScreen.mainScreen().bounds.size.width*0.5, UIScreen.mainScreen().bounds.size.height*0.5)
+            self.preferredContentSize = CGSizeMake(frameSize.x,frameSize.y);
+        }
         
-//        if let nav = segue.destinationViewController as? UINavigationController
-//        {
-//            if let searchVC = nav.topViewController as? MapViewController
-//            {
-//                searchVC.parent = self
-//            }
-//        }
+        if segue.identifier == "SetReminderSegue"
+        {
+            let destVC = segue.destinationViewController as! SetReminderPopOverViewController
+            destVC.popoverPresentationController?.delegate = self
+            destVC.delegate = self
+            destVC.preferredContentSize = CGSizeMake(410.0, 216.0)
+        }
         
+        //        if let loginVC = segue.destinationViewController as? LoginViewController
+        //        {
+        //            loginVC.dismissDelegate = self
+        //
+        //        }
+    }
+    
+    func unwindFromLogin()
+    {
+        navigationController?.popToRootViewControllerAnimated(true)
     }
     
     
@@ -614,6 +642,46 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate
         return UIModalPresentationStyle.None
     }
     
+    // MARK: DatePicker Delegate
+    
+    func dateWasChosen(date: NSDate)
+    {
+        nextMeditation.text = "Next session: \(dateFormat(date))"
+        
+        let localNotification = UILocalNotification()
+        localNotification.fireDate = date
+        print(NSDate())
+        print(localNotification.fireDate)
+        localNotification.timeZone = NSTimeZone.localTimeZone()
+        localNotification.alertBody = "Time to Relax"
+        localNotification.alertAction = "Open App"
+        localNotification.soundName = UILocalNotificationDefaultSoundName
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+    }
+    
+    
+    func dateFormat(x: NSDate) -> String
+    {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = NSDateFormatter.dateFormatFromTemplate("MMM dd yyyy HH:mm", options: 0, locale: NSLocale.currentLocale())
+        let formattedTime = formatter.stringFromDate(x).uppercaseString
+        
+        return String(formattedTime)
+    }
+
+        
+        
+//        if let nav = segue.destinationViewController as? UINavigationController
+//        {
+//            if let searchVC = nav.topViewController as? MapViewController
+//            {
+//                searchVC.parent = self
+//            }
+//        }
+        
+//    }
+
 //    func setUpAudioRecord()
 //    {
 //        // set up the audio file
