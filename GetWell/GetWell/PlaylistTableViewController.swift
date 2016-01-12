@@ -14,6 +14,7 @@ class PlaylistTableViewController: UITableViewController
     var songs = Array<Song>()
     
     var parent: MediaPlayerViewController?
+    var dad: MediaPlayerVC2?
     
     override func viewDidLoad()
     {
@@ -105,6 +106,9 @@ class PlaylistTableViewController: UITableViewController
         parent?.song = selectedSong
         parent?.currentSong = selectedSong
         parent?.loadCurrentSong()
+        dad?.song = selectedSong
+        dad?.currentSong = selectedSong
+        dad?.loadCurrentSong()
         //        parent?.player.play()
         //        parent?.startTimer()
         

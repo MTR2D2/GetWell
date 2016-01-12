@@ -8,10 +8,7 @@
 
 import UIKit
 
-protocol DatePickerDelegate
-{
-    func dateWasChosen(date: NSDate)
-}
+
 
 protocol StepsListViewDelegate
 {
@@ -23,21 +20,21 @@ protocol LoginViewControllerDismissDelegate
     func unwindFromLogin()
 }
 
-class MainViewController: UIViewController,UIPopoverPresentationControllerDelegate, DatePickerDelegate, UITableViewDataSource, UITableViewDelegate,LoginViewControllerDismissDelegate, UIGestureRecognizerDelegate
+class MainViewController: UIViewController,UIPopoverPresentationControllerDelegate, UITableViewDataSource, UITableViewDelegate,LoginViewControllerDismissDelegate, UIGestureRecognizerDelegate, DatePickerDelegate
     
 {
-
+    
     //var checklist: Checklist?
     var timer: NSTimer?
     
     @IBOutlet weak var chkGuideImg: UIImageView!
-    @IBOutlet weak var nextMeditation: UILabel!
     @IBOutlet weak var image: UIImage!
-//    @IBOutlet var skipToMedia: UIButton!
+    //    @IBOutlet var skipToMedia: UIButton!
     @IBOutlet weak var tv: UITableView!
     @IBOutlet weak var next: UIButton!
     @IBOutlet weak var loginButton: UIBarButtonItem!
     @IBOutlet weak var setReminderButton: UIBarButtonItem!
+    @IBOutlet weak var nextMeditation: UILabel!
     @IBOutlet weak var tapImageGesture: UIGestureRecognizer!
     
     //var allToDos: [NSDictionary]
@@ -51,7 +48,7 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
     let checklistDict1: NSDictionary = [
         "checklist": "Find your meditation spot",
         "listImg" : "fingYourMeditationImg2",
-        ]
+    ]
     let checklistDict2: NSDictionary = [
         "checklist": "Get comfortable",
         "listImg" : "getComfortable",
@@ -66,7 +63,7 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
     ]
     
     
-
+    
     var isDone: Bool?
     let checkImg = UIImage(named: "cHheckeD.png")
     let uncheckImg = UIImage(named: "uUncheckeD.png")
@@ -77,20 +74,20 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         
         //allToDos = [checklistDict1, checklistDict2, checklistDict3, checklistDict4]
         
-//        self.navigationController!.navigationBar.topItem!.title = "Cancel"
+        //        self.navigationController!.navigationBar.topItem!.title = "Cancel"
         
-       // plus.hidden = true
-       // plus.enabled = false
+        // plus.hidden = true
+        // plus.enabled = false
         next.hidden = true
         next.alpha = 0
         isDone = false
         
-//        chkGuideImg.addGestureRecognizer(tapImageGesture)
+        //        chkGuideImg.addGestureRecognizer(tapImageGesture)
         
-//        if PFUser.currentUser() == nil
-//        {
-//                   performSegueWithIdentifier(<#T##identifier: String##String#>, sender: <#T##AnyObject?#>)
-//        }
+        //        if PFUser.currentUser() == nil
+        //        {
+        //                   performSegueWithIdentifier(<#T##identifier: String##String#>, sender: <#T##AnyObject?#>)
+        //        }
         
         let addInterval: NSTimeInterval = 0.75
         addTodoTimer = NSTimer.scheduledTimerWithTimeInterval(addInterval, target: self, selector: "addTodo", userInfo: nil, repeats: true)
@@ -125,16 +122,16 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
     override func viewDidAppear(animated: Bool)
     {
         super.viewDidAppear(animated)
-      
+        
     }
-
+    
     // MARK: - Table View Data Source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return 1
     }
-
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
         
@@ -156,10 +153,10 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         {
             
         case true: cell.todoCheckbox.image = UIImage(named: "cHheckeD.png")
-            cell.backgroundColor = UIColor(red: 0.73, green: 0.031, blue: 0.91, alpha: 1)
+        cell.backgroundColor = UIColor(red: 0.73, green: 0.031, blue: 0.91, alpha: 1)
             
         case false: cell.todoCheckbox.image = UIImage(named: "uUncheckeD.png")
-            cell.backgroundColor = UIColor(red:0.64, green:0.027, blue:0.86, alpha:1.0)
+        cell.backgroundColor = UIColor(red:0.64, green:0.027, blue:0.86, alpha:1.0)
             
         }
         
@@ -167,11 +164,11 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         
     }
     
-     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
     {
         return true
     }
-
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
         
     {
@@ -200,7 +197,7 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         isDone = true
         let newTodo = allToDos[currentItemIndex]
         shownTodos.insert(newTodo, atIndex: currentItemIndex)
-     
+        
         let newItemIndexPath = NSIndexPath(forRow: currentItemIndex, inSection: 0)
         tv.insertRowsAtIndexPaths([newItemIndexPath], withRowAnimation: .Automatic)
         
@@ -263,20 +260,20 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
     
     
     
-
+    
     // MARK: - Navigation
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        let backItem = UIBarButtonItem()
-        backItem.title = "Cancel"
-        navigationItem.backBarButtonItem = backItem
-        backItem.tintColor = UIColor.whiteColor()
-//        if segue.identifier == "ShowMediaSegue"
-//        {
-//            let mediaPlayerVC = segue.destinationViewController as! MediaPlayerViewController
-//            mediaPlayerVC.delegate = self
-//        }
+        //        let backItem = UIBarButtonItem()
+        //        backItem.title = "Cancel"
+        //        navigationItem.backBarButtonItem = backItem
+        //        backItem.tintColor = UIColor.whiteColor()
+        //        if segue.identifier == "ShowMediaSegue"
+        //        {
+        //            let mediaPlayerVC = segue.destinationViewController as! MediaPlayerViewController
+        //            mediaPlayerVC.delegate = self
+        //        }
         
         if segue.identifier == "SetReminderSegue"
         {
@@ -284,20 +281,20 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
             destVC.popoverPresentationController?.delegate = self
             destVC.delegate = self
             destVC.preferredContentSize = CGSizeMake(410.0, 216.0)
-           
+            
         }
-        if let loginVC = segue.destinationViewController as? LoginViewController
-        {
-            loginVC.dismissDelegate = self
-
-        }
+        //        if let loginVC = segue.destinationViewController as? LoginViewController
+        //        {
+        //            loginVC.dismissDelegate = self
+        //
+        //        }
     }
     
     func unwindFromLogin()
     {
         navigationController?.popToRootViewControllerAnimated(true)
     }
-
+    
     
     // MARK: - UIPopoverPresentationController Delegate
     
@@ -333,11 +330,11 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         
         return String(formattedTime)
     }
-
+    
     @IBAction func unwindToMainViewController(unwindSegue: UIStoryboardSegue)
     {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
-
+    
+    
 }

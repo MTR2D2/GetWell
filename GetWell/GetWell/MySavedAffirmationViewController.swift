@@ -14,15 +14,28 @@ class MySavedAffirmationViewController: UIViewController, UITableViewDataSource,
 
     @IBOutlet weak var createAffirmation: UIButton!
     
+    var dad: MediaPlayerVC2?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if timerCount%2 == 1
+        {
+            dad?.togglePlayback(true)
+        }
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if timerCount%2 == 1
+        {
+            dad?.togglePlayback(true)
+        }
     }
     
     // MARK: - Table View Data Source

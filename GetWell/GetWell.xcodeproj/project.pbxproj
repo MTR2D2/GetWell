@@ -135,6 +135,7 @@
 		5DD63B511C458DFC0063DCA4 /* PauseB.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63B501C458DFC0063DCA4 /* PauseB.png */; };
 		5DD63B571C45A91A0063DCA4 /* MySavedAffirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD63B561C45A91A0063DCA4 /* MySavedAffirmationViewController.swift */; };
 		5DD63B591C45A9920063DCA4 /* MySavedAffirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD63B581C45A9920063DCA4 /* MySavedAffirmationTableViewCell.swift */; };
+		5DD63B5B1C45B4770063DCA4 /* MediaPlayerVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD63B5A1C45B4770063DCA4 /* MediaPlayerVC2.swift */; };
 		E1281FCAC358DC7ECD4396D8 /* libPods-GetWell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3C58CCC35B4189BB3E31 /* libPods-GetWell.a */; };
 /* End PBXBuildFile section */
 
@@ -270,6 +271,7 @@
 		5DD63B501C458DFC0063DCA4 /* PauseB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PauseB.png; path = ../PauseB.png; sourceTree = "<group>"; };
 		5DD63B561C45A91A0063DCA4 /* MySavedAffirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySavedAffirmationViewController.swift; sourceTree = "<group>"; };
 		5DD63B581C45A9920063DCA4 /* MySavedAffirmationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySavedAffirmationTableViewCell.swift; sourceTree = "<group>"; };
+		5DD63B5A1C45B4770063DCA4 /* MediaPlayerVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerVC2.swift; sourceTree = "<group>"; };
 		9C602676B433DB109FA1C0C8 /* Pods-GetWell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.release.xcconfig"; sourceTree = "<group>"; };
 		BBE4FD4065752F92C4A89F66 /* Pods-GetWell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.debug.xcconfig"; sourceTree = "<group>"; };
 		C0AB3C58CCC35B4189BB3E31 /* libPods-GetWell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GetWell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,17 +316,18 @@
 				4C66A2161C41B12D00B4BFDA /* MainViewController.swift */,
 				4C66A2151C41B12D00B4BFDA /* LoginViewController.swift */,
 				4C66A22D1C41B35700B4BFDA /* RegisterViewController.swift */,
-				4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */,
 				4C66A2301C41B39300B4BFDA /* TableViewCell.swift */,
 				4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */,
-				4C66A21F1C41B12D00B4BFDA /* RecordingViewController.swift */,
-				5DD63B3E1C44ADEC0063DCA4 /* RecordingTableViewCell.swift */,
-				4C66A2171C41B12D00B4BFDA /* MapViewController.swift */,
 				4C66A21C1C41B12D00B4BFDA /* MediaPlayerViewController.swift */,
-				5DD63B561C45A91A0063DCA4 /* MySavedAffirmationViewController.swift */,
-				5DD63B581C45A9920063DCA4 /* MySavedAffirmationTableViewCell.swift */,
 				4C66A21D1C41B12D00B4BFDA /* PlaylistTableViewCell.swift */,
 				4C66A21E1C41B12D00B4BFDA /* PlaylistTableViewController.swift */,
+				5DD63B5A1C45B4770063DCA4 /* MediaPlayerVC2.swift */,
+				4C66A2171C41B12D00B4BFDA /* MapViewController.swift */,
+				4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */,
+				5DD63B561C45A91A0063DCA4 /* MySavedAffirmationViewController.swift */,
+				5DD63B581C45A9920063DCA4 /* MySavedAffirmationTableViewCell.swift */,
+				4C66A21F1C41B12D00B4BFDA /* RecordingViewController.swift */,
+				5DD63B3E1C44ADEC0063DCA4 /* RecordingTableViewCell.swift */,
 				5DD63B401C44B8F40063DCA4 /* RecordPopOverTableViewController.swift */,
 				5DD63B421C44BB1D0063DCA4 /* RecordPopOverTableViewCell.swift */,
 				5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */,
@@ -804,6 +807,7 @@
 				4C66A22E1C41B35700B4BFDA /* RegisterViewController.swift in Sources */,
 				4C66A2211C41B12D00B4BFDA /* MainViewController.swift in Sources */,
 				5DD63B411C44B8F40063DCA4 /* RecordPopOverTableViewController.swift in Sources */,
+				5DD63B5B1C45B4770063DCA4 /* MediaPlayerVC2.swift in Sources */,
 				5DD63B431C44BB1D0063DCA4 /* RecordPopOverTableViewCell.swift in Sources */,
 				4C66A2271C41B12D00B4BFDA /* MediaPlayerViewController.swift in Sources */,
 				4C66A2341C41B39300B4BFDA /* TableViewChkList.swift in Sources */,

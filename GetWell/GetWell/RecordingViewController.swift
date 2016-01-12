@@ -20,6 +20,8 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var affirmationListButton: UIButton!
     
+    var dad: MediaPlayerVC2?
+    
     // an instance of AVAudioRecorder and AVAudioPlayer (to play the recording sound)
     var audioRecorder: AVAudioRecorder!
     var audioPlayer: AVAudioPlayer?
@@ -35,8 +37,22 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
         
         setUpAudioRecord()
         
+        if timerCount%2 == 1
+        {
+            dad?.togglePlayback(true)
+        }
+        
+        
     }
     
+    override func viewWillAppear(animated: Bool)
+    {
+        if timerCount%2 == 1
+        {
+            dad?.togglePlayback(true)
+        }
+    }
+
     // MARK: - Table View Data Source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
@@ -230,5 +246,10 @@ extension RecordingViewController : AVAudioPlayerDelegate
 //        let nameOfFileTwo:String = "Wow"
 //        ParseHelper.uploadSoundFileToParse(self.lastAudioFileURL!, nameOfFile:nameOfFileTwo)
         //            dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func backPressed(sender: UIButton)
+    {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
