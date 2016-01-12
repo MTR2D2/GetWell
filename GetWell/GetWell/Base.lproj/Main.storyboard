@@ -754,7 +754,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6KC-is-JIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="517" y="403"/>
+            <point key="canvasLocation" x="623" y="369"/>
         </scene>
         <!--Recording View Controller-->
         <scene sceneID="Wg2-cm-XnP">

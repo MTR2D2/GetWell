@@ -28,7 +28,6 @@
 		4CB28E191C45778500EF25CD /* MediaPlayerVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E181C45778500EF25CD /* MediaPlayerVC2.swift */; };
 		4CB28E1B1C457D3400EF25CD /* PlaylistVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E1A1C457D3400EF25CD /* PlaylistVC2.swift */; };
 		4CB28E1D1C457D4400EF25CD /* PlaylistVCCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E1C1C457D4400EF25CD /* PlaylistVCCell2.swift */; };
-		4CB28E1F1C459F6500EF25CD /* AffirmationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E1E1C459F6500EF25CD /* AffirmationTableViewController.swift */; };
 		4CB28E211C45A1CD00EF25CD /* AffirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E201C45A1CD00EF25CD /* AffirmationTableViewCell.swift */; };
 		4CB28E231C45A46700EF25CD /* AffirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E221C45A46700EF25CD /* AffirmationViewController.swift */; };
 		5DD63A731C41BA730063DCA4 /* cancelButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5C1C41BA730063DCA4 /* cancelButton.png */; };
@@ -165,7 +164,6 @@
 		4CB28E181C45778500EF25CD /* MediaPlayerVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerVC2.swift; sourceTree = "<group>"; };
 		4CB28E1A1C457D3400EF25CD /* PlaylistVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistVC2.swift; sourceTree = "<group>"; };
 		4CB28E1C1C457D4400EF25CD /* PlaylistVCCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistVCCell2.swift; sourceTree = "<group>"; };
-		4CB28E1E1C459F6500EF25CD /* AffirmationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AffirmationTableViewController.swift; sourceTree = "<group>"; };
 		4CB28E201C45A1CD00EF25CD /* AffirmationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AffirmationTableViewCell.swift; sourceTree = "<group>"; };
 		4CB28E221C45A46700EF25CD /* AffirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AffirmationViewController.swift; sourceTree = "<group>"; };
 		5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GetWell-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -329,7 +327,6 @@
 				4C66A2171C41B12D00B4BFDA /* MapViewController.swift */,
 				4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */,
 				4CB28E221C45A46700EF25CD /* AffirmationViewController.swift */,
-				4CB28E1E1C459F6500EF25CD /* AffirmationTableViewController.swift */,
 				4CB28E201C45A1CD00EF25CD /* AffirmationTableViewCell.swift */,
 				4C66A21F1C41B12D00B4BFDA /* RecordingViewController.swift */,
 				5DD63B3E1C44ADEC0063DCA4 /* RecordingTableViewCell.swift */,
@@ -816,7 +813,6 @@
 				5DD63B411C44B8F40063DCA4 /* RecordPopOverTableViewController.swift in Sources */,
 				5DD63B431C44BB1D0063DCA4 /* RecordPopOverTableViewCell.swift in Sources */,
 				4C66A2271C41B12D00B4BFDA /* MediaPlayerViewController.swift in Sources */,
-				4CB28E1F1C459F6500EF25CD /* AffirmationTableViewController.swift in Sources */,
 				4C66A2341C41B39300B4BFDA /* TableViewChkList.swift in Sources */,
 				4C66A2321C41B39300B4BFDA /* SetReminderPopOverViewController.swift in Sources */,
 				5DD63B0F1C4217610063DCA4 /* Checklist.swift in Sources */,
