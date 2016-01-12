@@ -25,6 +25,10 @@
 		4C66A2341C41B39300B4BFDA /* TableViewChkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */; };
 		4C802BA21C42B6C300F5698C /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C802BA11C42B6C300F5698C /* ParseHelper.swift */; };
 		4C802BA31C42BC0B00F5698C /* SessionOver.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C802BA01C42B17400F5698C /* SessionOver.m4a */; };
+		4CB28E0C1C4478A800EF25CD /* MyCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E0A1C4478A800EF25CD /* MyCoreDataModel.xcdatamodeld */; };
+		4CB28E0F1C4479F300EF25CD /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E0E1C4479F300EF25CD /* DataController.swift */; };
+		4CB28E121C447BCB00EF25CD /* Affirmation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E101C447BCB00EF25CD /* Affirmation+CoreDataProperties.swift */; };
+		4CB28E131C447BCB00EF25CD /* Affirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E111C447BCB00EF25CD /* Affirmation.swift */; };
 		5DD63A731C41BA730063DCA4 /* cancelButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5C1C41BA730063DCA4 /* cancelButton.png */; };
 		5DD63A741C41BA730063DCA4 /* cancelButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5D1C41BA730063DCA4 /* cancelButton@2x.png */; };
 		5DD63A751C41BA730063DCA4 /* cancelButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5E1C41BA730063DCA4 /* cancelButton@3x.png */; };
@@ -146,6 +150,10 @@
 		4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewChkList.swift; sourceTree = "<group>"; };
 		4C802BA01C42B17400F5698C /* SessionOver.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = SessionOver.m4a; sourceTree = "<group>"; };
 		4C802BA11C42B6C300F5698C /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
+		4CB28E0B1C4478A800EF25CD /* MyCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		4CB28E0E1C4479F300EF25CD /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		4CB28E101C447BCB00EF25CD /* Affirmation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Affirmation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4CB28E111C447BCB00EF25CD /* Affirmation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Affirmation.swift; sourceTree = "<group>"; };
 		5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GetWell-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		5DD63A5C1C41BA730063DCA4 /* cancelButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelButton.png; sourceTree = "<group>"; };
 		5DD63A5D1C41BA730063DCA4 /* cancelButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancelButton@2x.png"; sourceTree = "<group>"; };
@@ -306,6 +314,7 @@
 				5DD63A861C41BACC0063DCA4 /* CheckedUnchecked */,
 				5DD63A5A1C41BA730063DCA4 /* Buttons */,
 				4C66A2141C41921100B4BFDA /* Misc */,
+				4CB28E0D1C4478F800EF25CD /* CoreData */,
 			);
 			path = GetWell;
 			sourceTree = "<group>";
@@ -319,6 +328,17 @@
 				4C66A20E1C41920300B4BFDA /* Info.plist */,
 			);
 			name = Misc;
+			sourceTree = "<group>";
+		};
+		4CB28E0D1C4478F800EF25CD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4CB28E101C447BCB00EF25CD /* Affirmation+CoreDataProperties.swift */,
+				4CB28E111C447BCB00EF25CD /* Affirmation.swift */,
+				4CB28E0E1C4479F300EF25CD /* DataController.swift */,
+				4CB28E0A1C4478A800EF25CD /* MyCoreDataModel.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		5DD63A5A1C41BA730063DCA4 /* Buttons */ = {
@@ -750,11 +770,14 @@
 			files = (
 				4C66A22C1C41B33300B4BFDA /* Song.swift in Sources */,
 				4C66A22E1C41B35700B4BFDA /* RegisterViewController.swift in Sources */,
+				4CB28E121C447BCB00EF25CD /* Affirmation+CoreDataProperties.swift in Sources */,
 				4C66A2211C41B12D00B4BFDA /* MainViewController.swift in Sources */,
 				4C66A2271C41B12D00B4BFDA /* MediaPlayerViewController.swift in Sources */,
 				4C66A2341C41B39300B4BFDA /* TableViewChkList.swift in Sources */,
+				4CB28E131C447BCB00EF25CD /* Affirmation.swift in Sources */,
 				4C66A2321C41B39300B4BFDA /* SetReminderPopOverViewController.swift in Sources */,
 				5DD63B0F1C4217610063DCA4 /* Checklist.swift in Sources */,
+				4CB28E0F1C4479F300EF25CD /* DataController.swift in Sources */,
 				4C66A22A1C41B12D00B4BFDA /* RecordingViewController.swift in Sources */,
 				4C66A2201C41B12D00B4BFDA /* LoginViewController.swift in Sources */,
 				4C66A2281C41B12D00B4BFDA /* PlaylistTableViewCell.swift in Sources */,
@@ -762,6 +785,7 @@
 				4C66A2331C41B39300B4BFDA /* TableViewCell.swift in Sources */,
 				4C66A2031C41920300B4BFDA /* AppDelegate.swift in Sources */,
 				4C66A2221C41B12D00B4BFDA /* MapViewController.swift in Sources */,
+				4CB28E0C1C4478A800EF25CD /* MyCoreDataModel.xcdatamodeld in Sources */,
 				4C802BA21C42B6C300F5698C /* ParseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -920,6 +944,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4CB28E0A1C4478A800EF25CD /* MyCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4CB28E0B1C4478A800EF25CD /* MyCoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 4CB28E0B1C4478A800EF25CD /* MyCoreDataModel.xcdatamodel */;
+			path = MyCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4C66A1F71C41920300B4BFDA /* Project object */;
 }

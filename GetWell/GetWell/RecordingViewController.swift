@@ -8,13 +8,15 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 class RecordingViewController: UIViewController
 {
     
     @IBOutlet weak var recordingLabel: UILabel!
     
-    // an instance of AVAudioRecorder and AVAudioPlayer (to play the recording sound)
+    let moc = DataController().managedObjectContext
+    
     var audioRecorder: AVAudioRecorder!
     var audioPlayer: AVAudioPlayer?
     
@@ -27,7 +29,34 @@ class RecordingViewController: UIViewController
         recordingLabel.hidden = true
         
         setUpAudioRecord()
+//        seedAffirmation()
+        fetch()
         
+    }
+    
+    func fetch()
+    {
+        let affirmationFetch = NSFetchRequest(entityName: "Affirmation")
+        
+        do {
+                let fetchedAffirmation = try moc.executeFetchRequest(affirmationFetch) as! [Affirmation]
+            print(fetchedAffirmation.first!.name!)
+        }   catch {
+                fatalError("bad things happened \(error)")
+        }
+    }
+    
+    func seedAffirmation()
+    {
+        let entity = NSEntityDescription.insertNewObjectForEntityForName("Affirmation", inManagedObjectContext: moc) as! Affirmation
+        
+        entity.setValue("MyAffirmation", forKey: "name")
+        
+        do {
+                try moc.save()
+        }   catch {
+                fatalError("failure to save context: \(error)")
+        }
     }
     
     func setUpAudioRecord()
