@@ -29,6 +29,8 @@
 		4CB28E0F1C4479F300EF25CD /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E0E1C4479F300EF25CD /* DataController.swift */; };
 		4CB28E121C447BCB00EF25CD /* Affirmation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E101C447BCB00EF25CD /* Affirmation+CoreDataProperties.swift */; };
 		4CB28E131C447BCB00EF25CD /* Affirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E111C447BCB00EF25CD /* Affirmation.swift */; };
+		4CB28E151C4493C200EF25CD /* AffirmationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E141C4493C200EF25CD /* AffirmationsTableViewController.swift */; };
+		4CB28E171C449A7300EF25CD /* AffirmationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E161C449A7300EF25CD /* AffirmationsTableViewCell.swift */; };
 		5DD63A731C41BA730063DCA4 /* cancelButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5C1C41BA730063DCA4 /* cancelButton.png */; };
 		5DD63A741C41BA730063DCA4 /* cancelButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5D1C41BA730063DCA4 /* cancelButton@2x.png */; };
 		5DD63A751C41BA730063DCA4 /* cancelButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5E1C41BA730063DCA4 /* cancelButton@3x.png */; };
@@ -154,6 +156,8 @@
 		4CB28E0E1C4479F300EF25CD /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		4CB28E101C447BCB00EF25CD /* Affirmation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Affirmation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4CB28E111C447BCB00EF25CD /* Affirmation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Affirmation.swift; sourceTree = "<group>"; };
+		4CB28E141C4493C200EF25CD /* AffirmationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AffirmationsTableViewController.swift; sourceTree = "<group>"; };
+		4CB28E161C449A7300EF25CD /* AffirmationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AffirmationsTableViewCell.swift; sourceTree = "<group>"; };
 		5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GetWell-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		5DD63A5C1C41BA730063DCA4 /* cancelButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelButton.png; sourceTree = "<group>"; };
 		5DD63A5D1C41BA730063DCA4 /* cancelButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancelButton@2x.png"; sourceTree = "<group>"; };
@@ -304,6 +308,8 @@
 				4C66A21D1C41B12D00B4BFDA /* PlaylistTableViewCell.swift */,
 				4C66A21E1C41B12D00B4BFDA /* PlaylistTableViewController.swift */,
 				4C66A21F1C41B12D00B4BFDA /* RecordingViewController.swift */,
+				4CB28E141C4493C200EF25CD /* AffirmationsTableViewController.swift */,
+				4CB28E161C449A7300EF25CD /* AffirmationsTableViewCell.swift */,
 				5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */,
 				4C66A2061C41920300B4BFDA /* Main.storyboard */,
 				5DD63AF51C41BC600063DCA4 /* GWSound */,
@@ -769,6 +775,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C66A22C1C41B33300B4BFDA /* Song.swift in Sources */,
+				4CB28E171C449A7300EF25CD /* AffirmationsTableViewCell.swift in Sources */,
 				4C66A22E1C41B35700B4BFDA /* RegisterViewController.swift in Sources */,
 				4CB28E121C447BCB00EF25CD /* Affirmation+CoreDataProperties.swift in Sources */,
 				4C66A2211C41B12D00B4BFDA /* MainViewController.swift in Sources */,
@@ -782,6 +789,7 @@
 				4C66A2201C41B12D00B4BFDA /* LoginViewController.swift in Sources */,
 				4C66A2281C41B12D00B4BFDA /* PlaylistTableViewCell.swift in Sources */,
 				4C66A2291C41B12D00B4BFDA /* PlaylistTableViewController.swift in Sources */,
+				4CB28E151C4493C200EF25CD /* AffirmationsTableViewController.swift in Sources */,
 				4C66A2331C41B39300B4BFDA /* TableViewCell.swift in Sources */,
 				4C66A2031C41920300B4BFDA /* AppDelegate.swift in Sources */,
 				4C66A2221C41B12D00B4BFDA /* MapViewController.swift in Sources */,
