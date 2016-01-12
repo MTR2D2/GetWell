@@ -243,6 +243,8 @@ extension RecordingViewController : AVAudioPlayerDelegate
     @IBAction func playTapped(sender: UIButton)
     {
         play()
+        
+        
 //        let nameOfFileTwo:String = "Wow"
 //        ParseHelper.uploadSoundFileToParse(self.lastAudioFileURL!, nameOfFile:nameOfFileTwo)
         //            dismissViewControllerAnimated(true, completion: nil)

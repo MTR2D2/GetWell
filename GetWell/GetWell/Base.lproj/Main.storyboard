@@ -1643,9 +1643,9 @@
                                     <action selector="playPauseTapped:" destination="ku2-mE-4Ww" eventType="touchUpInside" id="YtC-gw-OH6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKl-4N-V2u">
-                                <rect key="frame" x="8" y="369" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKl-4N-V2u">
+                                <rect key="frame" x="8" y="369" width="40" height="40"/>
+                                <state key="normal" image="talkButton4.png"/>
                                 <connections>
                                     <segue destination="oPG-Qe-CVe" kind="popoverPresentation" identifier="AffirmationSegue" popoverAnchorView="ZKl-4N-V2u" id="BG2-mx-p6U">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -1944,7 +1944,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="K0E-Hd-hQe">
-                        <barButtonItem key="leftBarButtonItem" image="calendarImage2.png" id="BHa-DF-G7P">
+                        <barButtonItem key="rightBarButtonItem" image="calendarImage2.png" id="BHa-DF-G7P">
                             <connections>
                                 <segue destination="ubk-G8-OmH" kind="popoverPresentation" identifier="SetReminderSegue" popoverAnchorBarButtonItem="BHa-DF-G7P" id="asG-UA-IVc">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
