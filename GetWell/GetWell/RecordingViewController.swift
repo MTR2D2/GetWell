@@ -204,7 +204,7 @@ extension RecordingViewController : AVAudioRecorderDelegate
 {
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
-            self.alert("Finish recording", msg: "Successfully recorded the audio")
+            self.alert("Excellent!", msg: "Successfully recorded your affirmation")
         }
     }
 }
@@ -217,7 +217,7 @@ extension RecordingViewController : AVAudioPlayerDelegate
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool)
     {
         if flag {
-            self.alert("Finish Playing", msg: "Finish playing the recording")
+            self.alert("Sounds Great!", msg: "Finished playing your affirmation")
             
         }
     }
