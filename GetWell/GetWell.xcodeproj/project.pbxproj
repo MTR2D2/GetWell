@@ -25,6 +25,9 @@
 		4C66A2341C41B39300B4BFDA /* TableViewChkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */; };
 		4C802BA21C42B6C300F5698C /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C802BA11C42B6C300F5698C /* ParseHelper.swift */; };
 		4C802BA31C42BC0B00F5698C /* SessionOver.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C802BA01C42B17400F5698C /* SessionOver.m4a */; };
+		4CB28E191C45778500EF25CD /* MediaPlayerVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E181C45778500EF25CD /* MediaPlayerVC2.swift */; };
+		4CB28E1B1C457D3400EF25CD /* PlaylistVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E1A1C457D3400EF25CD /* PlaylistVC2.swift */; };
+		4CB28E1D1C457D4400EF25CD /* PlaylistVCCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB28E1C1C457D4400EF25CD /* PlaylistVCCell2.swift */; };
 		5DD63A731C41BA730063DCA4 /* cancelButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5C1C41BA730063DCA4 /* cancelButton.png */; };
 		5DD63A741C41BA730063DCA4 /* cancelButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5D1C41BA730063DCA4 /* cancelButton@2x.png */; };
 		5DD63A751C41BA730063DCA4 /* cancelButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD63A5E1C41BA730063DCA4 /* cancelButton@3x.png */; };
@@ -156,6 +159,9 @@
 		4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewChkList.swift; sourceTree = "<group>"; };
 		4C802BA01C42B17400F5698C /* SessionOver.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = SessionOver.m4a; sourceTree = "<group>"; };
 		4C802BA11C42B6C300F5698C /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
+		4CB28E181C45778500EF25CD /* MediaPlayerVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerVC2.swift; sourceTree = "<group>"; };
+		4CB28E1A1C457D3400EF25CD /* PlaylistVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistVC2.swift; sourceTree = "<group>"; };
+		4CB28E1C1C457D4400EF25CD /* PlaylistVCCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistVCCell2.swift; sourceTree = "<group>"; };
 		5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GetWell-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		5DD63A5C1C41BA730063DCA4 /* cancelButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelButton.png; sourceTree = "<group>"; };
 		5DD63A5D1C41BA730063DCA4 /* cancelButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancelButton@2x.png"; sourceTree = "<group>"; };
@@ -308,20 +314,21 @@
 				4C66A2161C41B12D00B4BFDA /* MainViewController.swift */,
 				4C66A2151C41B12D00B4BFDA /* LoginViewController.swift */,
 				4C66A22D1C41B35700B4BFDA /* RegisterViewController.swift */,
-				4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */,
 				4C66A2301C41B39300B4BFDA /* TableViewCell.swift */,
 				4C66A2311C41B39300B4BFDA /* TableViewChkList.swift */,
+				4C66A21C1C41B12D00B4BFDA /* MediaPlayerViewController.swift */,
+				4C66A21E1C41B12D00B4BFDA /* PlaylistTableViewController.swift */,
+				4C66A21D1C41B12D00B4BFDA /* PlaylistTableViewCell.swift */,
+				4CB28E181C45778500EF25CD /* MediaPlayerVC2.swift */,
+				4C66A2171C41B12D00B4BFDA /* MapViewController.swift */,
+				4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */,
 				4C66A21F1C41B12D00B4BFDA /* RecordingViewController.swift */,
 				5DD63B3E1C44ADEC0063DCA4 /* RecordingTableViewCell.swift */,
-				4C66A2171C41B12D00B4BFDA /* MapViewController.swift */,
-				4C66A21C1C41B12D00B4BFDA /* MediaPlayerViewController.swift */,
+				5DD63B401C44B8F40063DCA4 /* RecordPopOverTableViewController.swift */,
+				5DD63B421C44BB1D0063DCA4 /* RecordPopOverTableViewCell.swift */,
 				5DD63B441C4563540063DCA4 /* playbackButton3.png */,
 				5DD63B451C4563540063DCA4 /* savedButton3.png */,
 				5DD63B461C4563540063DCA4 /* talkButton3.png */,
-				4C66A21D1C41B12D00B4BFDA /* PlaylistTableViewCell.swift */,
-				4C66A21E1C41B12D00B4BFDA /* PlaylistTableViewController.swift */,
-				5DD63B401C44B8F40063DCA4 /* RecordPopOverTableViewController.swift */,
-				5DD63B421C44BB1D0063DCA4 /* RecordPopOverTableViewCell.swift */,
 				5DD63A571C41ADB90063DCA4 /* GetWell-Bridging-Header.h */,
 				4C66A2061C41920300B4BFDA /* Main.storyboard */,
 				5DD63AF51C41BC600063DCA4 /* GWSound */,
@@ -339,6 +346,8 @@
 		4C66A2141C41921100B4BFDA /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				4CB28E1A1C457D3400EF25CD /* PlaylistVC2.swift */,
+				4CB28E1C1C457D4400EF25CD /* PlaylistVCCell2.swift */,
 				4C66A2021C41920300B4BFDA /* AppDelegate.swift */,
 				4C66A2091C41920300B4BFDA /* Assets.xcassets */,
 				4C66A20B1C41920300B4BFDA /* LaunchScreen.storyboard */,
@@ -800,8 +809,11 @@
 				4C66A2321C41B39300B4BFDA /* SetReminderPopOverViewController.swift in Sources */,
 				5DD63B0F1C4217610063DCA4 /* Checklist.swift in Sources */,
 				5DD63B3F1C44ADEC0063DCA4 /* RecordingTableViewCell.swift in Sources */,
+				4CB28E191C45778500EF25CD /* MediaPlayerVC2.swift in Sources */,
 				4C66A22A1C41B12D00B4BFDA /* RecordingViewController.swift in Sources */,
+				4CB28E1D1C457D4400EF25CD /* PlaylistVCCell2.swift in Sources */,
 				4C66A2201C41B12D00B4BFDA /* LoginViewController.swift in Sources */,
+				4CB28E1B1C457D3400EF25CD /* PlaylistVC2.swift in Sources */,
 				4C66A2281C41B12D00B4BFDA /* PlaylistTableViewCell.swift in Sources */,
 				4C66A2291C41B12D00B4BFDA /* PlaylistTableViewController.swift in Sources */,
 				4C66A2331C41B39300B4BFDA /* TableViewCell.swift in Sources */,

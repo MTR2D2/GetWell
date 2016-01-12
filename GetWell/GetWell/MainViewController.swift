@@ -268,10 +268,10 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        let backItem = UIBarButtonItem()
-        backItem.title = "Cancel"
-        navigationItem.backBarButtonItem = backItem
-        backItem.tintColor = UIColor.whiteColor()
+//        let backItem = UIBarButtonItem()
+//        backItem.title = "Cancel"
+//        navigationItem.backBarButtonItem = backItem
+//        backItem.tintColor = UIColor.whiteColor()
 //        if segue.identifier == "ShowMediaSegue"
 //        {
 //            let mediaPlayerVC = segue.destinationViewController as! MediaPlayerViewController

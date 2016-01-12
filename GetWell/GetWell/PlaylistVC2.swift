@@ -1,20 +1,19 @@
 //
-//  PlaylistTableViewController.swift
-//  FinalGetWell2
+//  PlaylistVC2.swift
+//  GetWell
 //
-//  Created by Michael Reynolds on 1/4/16.
-//  Copyright © 2016 Keron. All rights reserved.
+//  Created by Michael Reynolds on 1/12/16.
+//  Copyright © 2016 GetWell. All rights reserved.
 //
 
 import UIKit
 
 
-class PlaylistTableViewController: UITableViewController
+class PlaylistVC2: UITableViewController
 {
     var songs = Array<Song>()
     
-    var parent: MediaPlayerViewController?
-    var dad: MediaPlayerVC2?
+    var parent: MediaPlayerVC2?
     
     override func viewDidLoad()
     {
@@ -86,7 +85,7 @@ class PlaylistTableViewController: UITableViewController
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("PlaylistModalViewCell", forIndexPath: indexPath) as! PlaylistTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("PlaylistVCCell2", forIndexPath: indexPath) as! PlaylistVCCell2
         
         let aSong = songs[indexPath.row]
         cell.meditationImage.image = UIImage(named: aSong.albumArtworkName)
@@ -106,9 +105,6 @@ class PlaylistTableViewController: UITableViewController
         parent?.song = selectedSong
         parent?.currentSong = selectedSong
         parent?.loadCurrentSong()
-        dad?.song = selectedSong
-        dad?.currentSong = selectedSong
-        dad?.loadCurrentSong()
         //        parent?.player.play()
         //        parent?.startTimer()
         
@@ -117,7 +113,7 @@ class PlaylistTableViewController: UITableViewController
     
     override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath)
     {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! PlaylistTableViewCell
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! PlaylistVCCell2
         
         UIView.animateWithDuration(0.5) { () -> Void in
             cell.imageOverlayView.alpha = 0.3
@@ -127,7 +123,7 @@ class PlaylistTableViewController: UITableViewController
     
     override func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath)
     {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! PlaylistTableViewCell
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! PlaylistVCCell2
         
         UIView.animateWithDuration(0.25) { () -> Void in
             cell.imageOverlayView.alpha = 1.0
@@ -215,3 +211,4 @@ class PlaylistTableViewController: UITableViewController
     //    }
     
 }
+

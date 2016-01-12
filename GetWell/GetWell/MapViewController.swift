@@ -13,7 +13,7 @@ import MapKit
 class MapViewController: UIViewController, UISearchBarDelegate
 {
     
-    var parent: MediaPlayerViewController?
+    var parent: MediaPlayerVC2?
 
     var searchController:UISearchController!
     var annotation:MKAnnotation!
