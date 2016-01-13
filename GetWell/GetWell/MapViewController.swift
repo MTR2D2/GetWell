@@ -14,7 +14,7 @@ class MapViewController: UIViewController, UISearchBarDelegate
 {
     
     var parent: MediaPlayerViewController?
-    var delegate: GoogleAPIController?
+//    var delegate: GoogleAPIController?
 
     var searchController:UISearchController!
     var annotation:MKAnnotation!
