@@ -136,7 +136,6 @@
 		5DD63B571C45A91A0063DCA4 /* MySavedAffirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD63B561C45A91A0063DCA4 /* MySavedAffirmationViewController.swift */; };
 		5DD63B591C45A9920063DCA4 /* MySavedAffirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD63B581C45A9920063DCA4 /* MySavedAffirmationTableViewCell.swift */; };
 		5DD63B5B1C45B4770063DCA4 /* MediaPlayerVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD63B5A1C45B4770063DCA4 /* MediaPlayerVC2.swift */; };
-		AA057A741C45C23200641322 /* GoogleAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA057A731C45C23200641322 /* GoogleAPIController.swift */; };
 		E1281FCAC358DC7ECD4396D8 /* libPods-GetWell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3C58CCC35B4189BB3E31 /* libPods-GetWell.a */; };
 /* End PBXBuildFile section */
 
@@ -274,7 +273,6 @@
 		5DD63B581C45A9920063DCA4 /* MySavedAffirmationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySavedAffirmationTableViewCell.swift; sourceTree = "<group>"; };
 		5DD63B5A1C45B4770063DCA4 /* MediaPlayerVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerVC2.swift; sourceTree = "<group>"; };
 		9C602676B433DB109FA1C0C8 /* Pods-GetWell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.release.xcconfig"; sourceTree = "<group>"; };
-		AA057A731C45C23200641322 /* GoogleAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIController.swift; sourceTree = "<group>"; };
 		BBE4FD4065752F92C4A89F66 /* Pods-GetWell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetWell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetWell/Pods-GetWell.debug.xcconfig"; sourceTree = "<group>"; };
 		C0AB3C58CCC35B4189BB3E31 /* libPods-GetWell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GetWell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -325,7 +323,6 @@
 				4C66A21E1C41B12D00B4BFDA /* PlaylistTableViewController.swift */,
 				5DD63B5A1C45B4770063DCA4 /* MediaPlayerVC2.swift */,
 				4C66A2171C41B12D00B4BFDA /* MapViewController.swift */,
-				AA057A731C45C23200641322 /* GoogleAPIController.swift */,
 				4C66A22F1C41B39300B4BFDA /* SetReminderPopOverViewController.swift */,
 				5DD63B561C45A91A0063DCA4 /* MySavedAffirmationViewController.swift */,
 				5DD63B581C45A9920063DCA4 /* MySavedAffirmationTableViewCell.swift */,
@@ -608,7 +605,7 @@
 				TargetAttributes = {
 					4C66A1FE1C41920300B4BFDA = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 3DZML8547T;
+						DevelopmentTeam = HM7AP2V9SS;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -823,7 +820,6 @@
 				4C66A2281C41B12D00B4BFDA /* PlaylistTableViewCell.swift in Sources */,
 				4C66A2291C41B12D00B4BFDA /* PlaylistTableViewController.swift in Sources */,
 				4C66A2331C41B39300B4BFDA /* TableViewCell.swift in Sources */,
-				AA057A741C45C23200641322 /* GoogleAPIController.swift in Sources */,
 				5DD63B591C45A9920063DCA4 /* MySavedAffirmationTableViewCell.swift in Sources */,
 				4C66A2031C41920300B4BFDA /* AppDelegate.swift in Sources */,
 				4C66A2221C41B12D00B4BFDA /* MapViewController.swift in Sources */,
