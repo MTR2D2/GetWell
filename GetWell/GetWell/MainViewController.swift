@@ -90,7 +90,7 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         //        }
         
         let addInterval: NSTimeInterval = 0.75
-        addTodoTimer = NSTimer.scheduledTimerWithTimeInterval(addInterval, target: self, selector: "addTodo", userInfo: nil, repeats: true)
+        addTodoTimer = NSTimer.scheduledTimerWithTimeInterval(addInterval, target: self, selector: #selector(MainViewController.addTodo), userInfo: nil, repeats: true)
     }
     
     func addTodo()
@@ -103,7 +103,7 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
             let newItemIndexPath = NSIndexPath(forRow: currentItemIndex, inSection: 0)
             tv.insertRowsAtIndexPaths([newItemIndexPath], withRowAnimation: .Automatic)
             
-            currentItemIndex++
+            currentItemIndex += 1
         }
         else
         {
@@ -221,7 +221,7 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
             if cell.isDone
                 
             {
-                count++
+                count += 1
             }
             
         }

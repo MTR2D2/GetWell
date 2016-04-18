@@ -187,9 +187,9 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
     func pulse(button: UIButton)
     {
         let pulseAnimation:CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
-        pulseAnimation.duration = 3
+        pulseAnimation.duration = 10
         pulseAnimation.fromValue = NSNumber(float: 0.7)
-        pulseAnimation.toValue = NSNumber(float: 1.3)
+        pulseAnimation.toValue = NSNumber(float: 1.2)
         pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         pulseAnimation.autoreverses = true
         pulseAnimation.repeatCount = FLT_MAX
@@ -205,7 +205,7 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         }
         else
         {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateUI", userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(MediaPlayerVC2.updateUI), userInfo: nil, repeats: true)
             updateUI()
         }
     }
@@ -229,7 +229,7 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         {
             timer?.invalidate()
             flashTimer = NSTimer
-                .scheduledTimerWithTimeInterval(0.2, target: self, selector: "flashLabel" , userInfo: nil, repeats: true)
+                .scheduledTimerWithTimeInterval(0.2, target: self, selector: #selector(MediaPlayerVC2.flashLabel) , userInfo: nil, repeats: true)
             playNotification()
         }
     }
@@ -254,7 +254,7 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         {
             meditationCountdown.textColor = UIColor.yellowColor()
         }
-        flashCount++
+        flashCount += 1
         
         if flashCount > 100
         {
@@ -272,8 +272,17 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
     
     @IBAction func playPauseTapped(sender: UIButton)
     {
-        timerCount = timerCount + 1
-        updatePlayPauseButton()
+//        timerCount = timerCount + 1
+        timerCount += 1
+
+        if originalCount <= 1
+        {
+            flashTimer?.invalidate()
+            meditationCountdown.textColor = UIColor.whiteColor()
+            resetTimer()
+            togglePlayback(true)
+        }
+//        updatePlayPauseButton()
         startTimer()
         togglePlayback(!nowPlaying)
         backButton.hidden = false

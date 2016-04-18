@@ -192,7 +192,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         }
         else
         {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateUI", userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(MediaPlayerViewController.updateUI), userInfo: nil, repeats: true)
             updateUI()
         }
     }
@@ -216,7 +216,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         {
             timer?.invalidate()
             flashTimer = NSTimer
-                .scheduledTimerWithTimeInterval(0.2, target: self, selector: "flashLabel" , userInfo: nil, repeats: true)
+                .scheduledTimerWithTimeInterval(0.2, target: self, selector: #selector(MediaPlayerViewController.flashLabel) , userInfo: nil, repeats: true)
             playNotification()
         }
     }
@@ -241,7 +241,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         {
             meditationCountdown.textColor = UIColor.yellowColor()
         }
-        flashCount++
+        flashCount += 1
         
         if flashCount > 100
         {
