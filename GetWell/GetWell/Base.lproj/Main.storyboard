@@ -107,7 +107,7 @@
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFW-D9-UFs">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <color key="backgroundColor" red="0.36480593681335449" green="0.72580748796463013" blue="0.47900140285491943" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.4093969464302063" green="0.64911913871765137" blue="0.40417870879173279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYq-Rb-2hU">
                                             <rect key="frame" x="16" y="11" width="66" height="28"/>
@@ -1567,7 +1567,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4VA-PW-ZnH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.64826709032058716" green="0.87849980592727661" blue="0.76489180326461792" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.4093969464302063" green="0.64911913871765137" blue="0.40417870879173279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1586,7 +1586,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4bk-DR-4gJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.64826709032058716" green="0.87849980592727661" blue="0.76489180326461792" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.4093969464302063" green="0.64911913871765137" blue="0.40417870879173279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
