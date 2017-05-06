@@ -48,31 +48,7 @@ class LoginViewController: UIViewController
     }
     
 
-    @IBAction func signinTapped(sender: UIButton)
-    {
-        
-        if userCanSignIn()
-        {
-            PFUser.logInWithUsernameInBackground(usernameTextField.text!, password: passwordTextField.text!) {
-                (user: PFUser?, error: NSError?) -> Void in
-                if user != nil
-                {
-                    print("login successful")
-//       self.dismissDelegate?.unwindFromLogin()
-//        self.navigationController?.performSegueWithIdentifier("unwindFromLogin", sender: self)
-                    self.performSegueWithIdentifier("unwindFromLogin", sender: self)
-//                    self.navigationController?.performSegueWithIdentifier("MediaPlayerViewController", sender: self)
-                }
-                else
-                {
-                    print(error?.localizedDescription)
-                    self.errorMessageLabel.text = "Username and/or Password Do Not Match"
-                }
-                
-            }
-        }
-    }
-    
+
 //    @IBAction func cancelPressed(sender: UIBarButtonItem)
 //    {
 //        dismissViewControllerAnimated(true, completion: nil)

@@ -38,12 +38,12 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
     var currentSong: Song?
     var nowPlaying: Bool = false
     
-    var timer: NSTimer?
+    var timer: Timer?
     var originalCount = 0
     
     var whichSegment = 0
     
-    var flashTimer: NSTimer?
+    var flashTimer: Timer?
     var flashCount = 0
     var flashing = true
     
@@ -58,11 +58,11 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         
         //        self.navigationController!.navigationBar.topItem!.title = "Cancel"
         
-        recordingLabel.hidden = true
+        recordingLabel.isHidden = true
         
         setUpAudioRecord()
         
-        backButton.enabled = false
+        backButton.isEnabled = false
         
         pulse(playPauseButton)
         morePulse(playPauseButton)
@@ -79,7 +79,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         
         do
         {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord, withOptions:.DefaultToSpeaker)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord, with:.defaultToSpeaker)
         }
         catch let error as NSError
         {
@@ -95,11 +95,11 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
     }
     
     
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>)
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
     {
-        if keyPath == "currentItem", let player = object as? AVPlayer, currentItem = player.currentItem?.asset as? AVURLAsset
+        if keyPath == "currentItem", let player = object as? AVPlayer, let currentItem = player.currentItem?.asset as? AVURLAsset
         {
-            songTitleLabel.text = currentItem.URL.lastPathComponent ?? "Unknown"
+            songTitleLabel.text = currentItem.url.lastPathComponent 
             
         }
     }
@@ -108,12 +108,12 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         super.didReceiveMemoryWarning()
     }
     
-    override func viewWillDisappear(animated: Bool)
+    override func viewWillDisappear(_ animated: Bool)
     {
         resetTimer()
     }
     
-    @IBAction func segmentedIndexTapped(sender: UISegmentedControl)
+    @IBAction func segmentedIndexTapped(_ sender: UISegmentedControl)
     {
         
         if sender.selectedSegmentIndex == 0
@@ -159,7 +159,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         
     }
     
-    func morePulse(button: UIButton)
+    func morePulse(_ button: UIButton)
     {
         let pulseAnimation = CABasicAnimation(keyPath: "opacity")
         pulseAnimation.duration = 3
@@ -168,19 +168,19 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         pulseAnimation.autoreverses = true
         pulseAnimation.repeatCount = FLT_MAX
-        button.layer.addAnimation(pulseAnimation, forKey: nil)
+        button.layer.add(pulseAnimation, forKey: nil)
     }
     
-    func pulse(button: UIButton)
+    func pulse(_ button: UIButton)
     {
         let pulseAnimation:CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
         pulseAnimation.duration = 3
-        pulseAnimation.fromValue = NSNumber(float: 0.7)
-        pulseAnimation.toValue = NSNumber(float: 1.3)
+        pulseAnimation.fromValue = NSNumber(value: 0.7 as Float)
+        pulseAnimation.toValue = NSNumber(value: 1.3 as Float)
         pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         pulseAnimation.autoreverses = true
         pulseAnimation.repeatCount = FLT_MAX
-        button.layer.addAnimation(pulseAnimation, forKey: "layerAnimation")
+        button.layer.add(pulseAnimation, forKey: "layerAnimation")
     }
     
     
@@ -192,7 +192,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         }
         else
         {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(MediaPlayerViewController.updateUI), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(MediaPlayerViewController.updateUI), userInfo: nil, repeats: true)
             updateUI()
         }
     }
@@ -215,8 +215,8 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         if originalCount == 0
         {
             timer?.invalidate()
-            flashTimer = NSTimer
-                .scheduledTimerWithTimeInterval(0.2, target: self, selector: #selector(MediaPlayerViewController.flashLabel) , userInfo: nil, repeats: true)
+            flashTimer = Timer
+                .scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(MediaPlayerViewController.flashLabel) , userInfo: nil, repeats: true)
             playNotification()
         }
     }
@@ -235,11 +235,11 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         flashing = !flashing
         if flashing
         {
-            meditationCountdown.textColor = UIColor.whiteColor()
+            meditationCountdown.textColor = UIColor.white
         }
         else
         {
-            meditationCountdown.textColor = UIColor.yellowColor()
+            meditationCountdown.textColor = UIColor.yellow
         }
         flashCount += 1
         
@@ -251,27 +251,27 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
     
     func playNotification()
     {
-        let soundURL = NSBundle.mainBundle().URLForResource("SessionOver", withExtension: "m4a")!
+        let soundURL = Bundle.main.url(forResource: "SessionOver", withExtension: "m4a")!
         var soundID: SystemSoundID = 0
-        AudioServicesCreateSystemSoundID(soundURL, &soundID)
+        AudioServicesCreateSystemSoundID(soundURL as CFURL, &soundID)
         AudioServicesPlaySystemSound(soundID)
     }
     
-    @IBAction func playPauseTapped(sender: UIButton)
+    @IBAction func playPauseTapped(_ sender: UIButton)
     {
         timerCount = timerCount + 1
         updatePlayPauseButton()
         startTimer()
         togglePlayback(!nowPlaying)
-        backButton.hidden = false
-        backButton.enabled = true
-        meditationCountdown.textColor = UIColor.whiteColor()
+        backButton.isHidden = false
+        backButton.isEnabled = true
+        meditationCountdown.textColor = UIColor.white
     }
     
-    @IBAction func skipForwardTapped(sender: UIButton)
+    @IBAction func skipForwardTapped(_ sender: UIButton)
     {
-        meditationCountdown.textColor = UIColor.whiteColor()
-        let currentSongIndex = (songs as NSArray).indexOfObject(currentSong!)
+        meditationCountdown.textColor = UIColor.white
+        let currentSongIndex = (songs as NSArray).index(of: currentSong!)
         let nextSong: Int
         
         if currentSongIndex + 1 >= songs.count
@@ -287,20 +287,20 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         //        togglePlayback(true)
     }
     
-    @IBAction func skipBackTapped(sender: UIButton)
+    @IBAction func skipBackTapped(_ sender: UIButton)
     {
         if nowPlaying
         {
-            meditationCountdown.textColor = UIColor.whiteColor()
+            meditationCountdown.textColor = UIColor.white
             timesTapped = timesTapped + 1
             
             if timesTapped % 2 == 1
             {
-                player.seekToTime(CMTimeMakeWithSeconds(0.0, 1))
+                player.seek(to: CMTimeMakeWithSeconds(0.0, 1))
             }
             else if timesTapped % 2 == 0
             {
-                let currentSongIndex = (songs as NSArray).indexOfObject(currentSong!)
+                let currentSongIndex = (songs as NSArray).index(of: currentSong!)
                 let nextSong: Int
                 if currentSongIndex != 0
                 {
@@ -317,7 +317,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         }
         else
         {
-            backButton.enabled = false
+            backButton.isEnabled = false
         }
         
     }
@@ -467,8 +467,8 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         player.removeAllItems()
         if let song = currentSong
         {
-            song.playerItem.seekToTime(CMTimeMakeWithSeconds(0.0, 1))
-            player.insertItem(song.playerItem, afterItem: nil)
+            song.playerItem.seek(to: CMTimeMakeWithSeconds(0.0, 1))
+            player.insert(song.playerItem, after: nil)
             songTitleLabel.text = song.title
             //            artistLabel.text? = song.artist
             albumArtwork.image = UIImage(named: song.albumArtworkName)
@@ -480,12 +480,12 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
     {
         if timerCount % 2 == 1
         {
-            playPauseButton.setImage(UIImage(named:"PauseB"), forState:. Normal)
-            playPauseButton.setImage(UIImage(named: "PlayPauseB"), forState: .Highlighted)
+            playPauseButton.setImage(UIImage(named:"PauseB"), for:UIControlState())
+            playPauseButton.setImage(UIImage(named: "PlayPauseB"), for: .highlighted)
         }
         else
         {
-            playPauseButton.setImage(UIImage(named: "PlayPauseB"), forState: .Normal)
+            playPauseButton.setImage(UIImage(named: "PlayPauseB"), for: UIControlState())
         }
         
     }
@@ -511,7 +511,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         })
     }
     
-    func togglePlayback(play: Bool)
+    func togglePlayback(_ play: Bool)
     {
         nowPlaying = play
         if play
@@ -529,7 +529,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
     func resetTimer()
     {
         timer?.invalidate()
-        meditationCountdown.textColor = UIColor.whiteColor()
+        meditationCountdown.textColor = UIColor.white
         
         if whichSegment == 0
         {
@@ -559,21 +559,21 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         togglePlayback(false)
     }
     
-    @IBAction func resetPressed(sender: UIButton!)
+    @IBAction func resetPressed(_ sender: UIButton!)
     {
         resetTimer()
     }
     
     // MARK: - Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if timerCount%2 == 1
         {
             togglePlayback(true)
         }
         
-        if let playlistVC = segue.destinationViewController as? PlaylistTableViewController
+        if let playlistVC = segue.destination as? PlaylistTableViewController
         {
             playlistVC.parent = self
             playlistVC.songs = songs
@@ -581,17 +581,17 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         
         if segue.identifier == "PlaylistSegue"
         {
-            let destVC = segue.destinationViewController as! PlaylistTableViewController
+            let destVC = segue.destination as! PlaylistTableViewController
             destVC.popoverPresentationController?.delegate = self
             destVC.parent = self
-            destVC.preferredContentSize = CGSizeMake(410.0, 216.0)
+            destVC.preferredContentSize = CGSize(width: 410.0, height: 216.0)
             //            destVC = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0)
-            let frameSize: CGPoint = CGPointMake(UIScreen.mainScreen().bounds.size.width*0.5, UIScreen.mainScreen().bounds.size.height*0.5)
-            self.preferredContentSize = CGSizeMake(frameSize.x,frameSize.y);
+            let frameSize: CGPoint = CGPoint(x: UIScreen.main.bounds.size.width*0.5, y: UIScreen.main.bounds.size.height*0.5)
+            self.preferredContentSize = CGSize(width: frameSize.x,height: frameSize.y);
         }
         
         
-        if let nav = segue.destinationViewController as? UINavigationController
+        if let nav = segue.destination as? UINavigationController
         {
             if let searchVC = nav.topViewController as? MapViewController
             {
@@ -604,16 +604,16 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
     
     // MARK: - UIPopoverPresentationController Delegate
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle
     {
-        return UIModalPresentationStyle.None
+        return UIModalPresentationStyle.none
     }
     
     func setUpAudioRecord()
     {
         // set up the audio file
-        let directoryURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).first!
-        let audioFileURL = directoryURL.URLByAppendingPathComponent("MyMemo.m4a")
+        let directoryURL = FileManager.default.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first!
+        let audioFileURL = directoryURL.appendingPathComponent("MyMemo.m4a")
         
         // set up the audio session
         // the audio session acts as the middle man between the app and the system's media service
@@ -621,7 +621,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         let audioSession = AVAudioSession.sharedInstance()
         
         do {
-            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord, withOptions: AVAudioSessionCategoryOptions.DefaultToSpeaker)
+            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord, with: AVAudioSessionCategoryOptions.defaultToSpeaker)
         } catch let error {
             print(error)
         }
@@ -629,13 +629,13 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         
         // define the recorder setting
         
-        let recorderSettings = [AVFormatIDKey: Int(kAudioFormatMPEG4AAC), AVSampleRateKey : 44100.0, AVNumberOfChannelsKey : 2 as NSNumber]
+        let recorderSettings = [AVFormatIDKey: Int(kAudioFormatMPEG4AAC), AVSampleRateKey : 44100.0, AVNumberOfChannelsKey : 2 as NSNumber] as [String : Any]
         
         // initiate and prepare the recorder
         do {
-            audioRecorder  = try AVAudioRecorder(URL: audioFileURL, settings: recorderSettings)
+            audioRecorder  = try AVAudioRecorder(url: audioFileURL, settings: recorderSettings)
             audioRecorder?.delegate = self
-            audioRecorder?.meteringEnabled = true
+            audioRecorder?.isMeteringEnabled = true
             audioRecorder?.prepareToRecord()
         } catch let error {
             print(error)
@@ -645,16 +645,16 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
     func play()
     {
         if let player = audioPlayer {
-            if player.playing {
+            if player.isPlaying {
                 player.stop()
                 return
             }
         }
         
         if let recorder = audioRecorder {
-            if !recorder.recording {
+            if !recorder.isRecording {
                 do {
-                    audioPlayer = try AVAudioPlayer(contentsOfURL: recorder.url)
+                    audioPlayer = try AVAudioPlayer(contentsOf: recorder.url)
                     audioPlayer?.delegate = self
                     audioPlayer?.play()
                     
@@ -688,7 +688,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
     {
         // stop the audio player before recording
         if let player = audioPlayer {
-            if player.playing {
+            if player.isPlaying {
                 player.stop()
                 
             }
@@ -696,7 +696,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
         
         // if we are not recording the start recording!
         if let recorder = audioRecorder {
-            if !recorder.recording {
+            if !recorder.isRecording {
                 do {
                     let audioSession = AVAudioSession.sharedInstance()
                     try audioSession.setActive(true)    // make the recorder work
@@ -719,11 +719,11 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
     // MARK: - Helper method
     
     // this just presents an alert view with the given title and message (msg)
-    func alert(title: String, msg: String)
+    func alert(_ title: String, msg: String)
     {
-        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        self.presentViewController(alertController, animated: true, completion: nil)
+        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }
@@ -732,7 +732,7 @@ class MediaPlayerViewController: UIViewController, UIPopoverPresentationControll
 
 extension MediaPlayerViewController : AVAudioRecorderDelegate
 {
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
             self.alert("Congratulations!", msg: "Successfully recorded the audio")
         }
@@ -744,7 +744,7 @@ extension MediaPlayerViewController : AVAudioRecorderDelegate
 
 extension MediaPlayerViewController : AVAudioPlayerDelegate
 {
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool)
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool)
     {
         if flag {
             self.alert("Try out GetWell Pro", msg: "To save your affirmations!")
@@ -752,21 +752,21 @@ extension MediaPlayerViewController : AVAudioPlayerDelegate
         }
     }
     
-    @IBAction func recordTapped(sender: UIButton)
+    @IBAction func recordTapped(_ sender: UIButton)
     {
         record()
-        recordingLabel.hidden = false
+        recordingLabel.isHidden = false
         
     }
     
-    @IBAction func cancelTapped(sender: UIButton)
+    @IBAction func cancelTapped(_ sender: UIButton)
     {
         cancel()
-        recordingLabel.hidden = true
+        recordingLabel.isHidden = true
         
     }
     
-    @IBAction func playTapped(sender: UIButton)
+    @IBAction func playTapped(_ sender: UIButton)
     {
         play()
     }

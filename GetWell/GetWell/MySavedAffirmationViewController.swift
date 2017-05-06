@@ -31,7 +31,7 @@ class MySavedAffirmationViewController: UIViewController, UITableViewDataSource,
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         if timerCount%2 == 1
         {
             dad?.togglePlayback(true)
@@ -40,22 +40,22 @@ class MySavedAffirmationViewController: UIViewController, UITableViewDataSource,
     
     // MARK: - Table View Data Source
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1
     }
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
         
     {
         return 10
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SavedAff", forIndexPath: indexPath) as! MySavedAffirmationTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SavedAff", for: indexPath) as! MySavedAffirmationTableViewCell
         
         return cell
     }

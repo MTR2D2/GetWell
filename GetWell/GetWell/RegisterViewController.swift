@@ -40,30 +40,4 @@ class RegisterViewController: UIViewController
 
         return false
     }
-    
-    @IBAction func createAccountTapped(sender: UIButton)
-    {
-        if userCanRegister()
-        {
-            let user = PFUser()
-            user.username = usernameTextField.text!
-            user.password = passwordTextField.text!
-            
-            user.signUpInBackgroundWithBlock {
-                (succeeded: Bool, error: NSError?) -> Void in
-                if !succeeded
-                {
-                    print(error?.localizedDescription)
-                    self.errorMessageLabel.text = "Username Already Taken"
-
-                }
-                else
-                {
-                    self.navigationController?.popToRootViewControllerAnimated(true)
-                }
-            }
-        }
-    }
-
-
 }

@@ -12,7 +12,7 @@ import UIKit
 
 protocol StepsListViewDelegate
 {
-    func stepsChecked(buttonTapped: Int)
+    func stepsChecked(_ buttonTapped: Int)
 }
 
 protocol LoginViewControllerDismissDelegate
@@ -25,13 +25,13 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
 {
     
     //var checklist: Checklist?
-    var timer: NSTimer?
+    var timer: Timer?
     
     @IBOutlet weak var chkGuideImg: UIImageView!
     @IBOutlet weak var image: UIImage!
     //    @IBOutlet var skipToMedia: UIButton!
     @IBOutlet weak var tv: UITableView!
-    @IBOutlet weak var next: UIButton!
+    @IBOutlet var next: UIButton!
     @IBOutlet weak var loginButton: UIBarButtonItem!
     @IBOutlet weak var setReminderButton: UIBarButtonItem!
     @IBOutlet weak var nextMeditation: UILabel!
@@ -42,7 +42,7 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
     var allToDos = ["Find your meditation spot", "Get comfortable", "Begin Deep Breathing", "Clear your mind"]
     var shownTodos = [String]()
     var currentItemIndex = 0
-    var addTodoTimer: NSTimer?
+    var addTodoTimer: Timer?
     
     
     let checklistDict1: NSDictionary = [
@@ -78,7 +78,7 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         
         // plus.hidden = true
         // plus.enabled = false
-        next.hidden = true
+        next.isHidden = true
         next.alpha = 0
         isDone = false
         
@@ -89,8 +89,8 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         //                   performSegueWithIdentifier(<#T##identifier: String##String#>, sender: <#T##AnyObject?#>)
         //        }
         
-        let addInterval: NSTimeInterval = 0.75
-        addTodoTimer = NSTimer.scheduledTimerWithTimeInterval(addInterval, target: self, selector: #selector(MainViewController.addTodo), userInfo: nil, repeats: true)
+        let addInterval: TimeInterval = 0.75
+        addTodoTimer = Timer.scheduledTimer(timeInterval: addInterval, target: self, selector: #selector(MainViewController.addTodo), userInfo: nil, repeats: true)
     }
     
     func addTodo()
@@ -98,10 +98,10 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         if shownTodos.count != allToDos.count
         {
             let newTodo = allToDos[currentItemIndex]
-            shownTodos.insert(newTodo, atIndex: currentItemIndex)
+            shownTodos.insert(newTodo, at: currentItemIndex)
             
-            let newItemIndexPath = NSIndexPath(forRow: currentItemIndex, inSection: 0)
-            tv.insertRowsAtIndexPaths([newItemIndexPath], withRowAnimation: .Automatic)
+            let newItemIndexPath = IndexPath(row: currentItemIndex, section: 0)
+            tv.insertRows(at: [newItemIndexPath], with: .automatic)
             
             currentItemIndex += 1
         }
@@ -119,7 +119,7 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         super.didReceiveMemoryWarning()
     }
     
-    override func viewDidAppear(animated: Bool)
+    override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
         
@@ -127,24 +127,24 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
     
     // MARK: - Table View Data Source
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1
     }
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
         
     {
         return shownTodos.count
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("aCell", forIndexPath: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "aCell", for: indexPath) as! TableViewCell
         
-        let todo = shownTodos[indexPath.row]
+        let todo = shownTodos[(indexPath as NSIndexPath).row]
         
         cell.todoDescription.text = todo
         
@@ -164,21 +164,21 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         
     }
     
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
     {
         return true
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
         
     {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let cell = tableView.visibleCells[indexPath.row] as! TableViewCell
+        tableView.deselectRow(at: indexPath, animated: true)
+        let cell = tableView.visibleCells[(indexPath as NSIndexPath).row] as! TableViewCell
         
         cell.isDone = !cell.isDone
         enableNextButtonWithAnimation()
         
-        switch indexPath.row
+        switch (indexPath as NSIndexPath).row
         {
         case 0: chkGuideImg.image = UIImage(named: "findYourMeditationImg2")
         case 1: chkGuideImg.image = UIImage(named: "getComfortable")
@@ -191,21 +191,21 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         
     }
     
-    @IBAction func addButtonPressed(sender: UIButton!)
+    @IBAction func addButtonPressed(_ sender: UIButton!)
         
     {
         isDone = true
         let newTodo = allToDos[currentItemIndex]
-        shownTodos.insert(newTodo, atIndex: currentItemIndex)
+        shownTodos.insert(newTodo, at: currentItemIndex)
         
-        let newItemIndexPath = NSIndexPath(forRow: currentItemIndex, inSection: 0)
-        tv.insertRowsAtIndexPaths([newItemIndexPath], withRowAnimation: .Automatic)
+        let newItemIndexPath = IndexPath(row: currentItemIndex, section: 0)
+        tv.insertRows(at: [newItemIndexPath], with: .automatic)
         
         currentItemIndex += 1
         if currentItemIndex == 4
             
         {
-            sender.enabled = false
+            sender.isEnabled = false
         }
         
     }
@@ -229,31 +229,31 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         if count == 4
             
         {
-            next.hidden = false
+            next.isHidden = false
             let originalNextButtonY = next.frame.origin.y
             next.frame.origin.y += next.frame.size.height
-            UIView.animateWithDuration(0.25, animations: { () -> Void in
+            UIView.animate(withDuration: 0.25, animations: { () -> Void in
                 
                 self.next.alpha = 1
                 
                 self.next.frame.origin.y = originalNextButtonY
                 
-                }) { (_) -> Void in
+                }, completion: { (_) -> Void in
                     
                     //nothing
-            }
+            }) 
         }
             
-        else  if next.hidden == false || next.alpha != 0
+        else  if next.isHidden == false || next.alpha != 0
             
         {
-            UIView.animateWithDuration(0.25, animations: { () -> Void in
+            UIView.animate(withDuration: 0.25, animations: { () -> Void in
                 
                 self.next.alpha = 0
                 
                 }, completion: { (_) -> Void in
                     
-                    self.next.hidden = true
+                    self.next.isHidden = true
             })
         }
     }
@@ -263,7 +263,7 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
     
     // MARK: - Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         //        let backItem = UIBarButtonItem()
         //        backItem.title = "Cancel"
@@ -277,10 +277,10 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
         
         if segue.identifier == "SetReminderSegue"
         {
-            let destVC = segue.destinationViewController as! SetReminderPopOverViewController
+            let destVC = segue.destination as! SetReminderPopOverViewController
             destVC.popoverPresentationController?.delegate = self
             destVC.delegate = self
-            destVC.preferredContentSize = CGSizeMake(410.0, 216.0)
+            destVC.preferredContentSize = CGSize(width: 410.0, height: 216.0)
             
         }
         //        if let loginVC = segue.destinationViewController as? LoginViewController
@@ -292,48 +292,48 @@ class MainViewController: UIViewController,UIPopoverPresentationControllerDelega
     
     func unwindFromLogin()
     {
-        navigationController?.popToRootViewControllerAnimated(true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     
     // MARK: - UIPopoverPresentationController Delegate
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle
     {
-        return UIModalPresentationStyle.None
+        return UIModalPresentationStyle.none
     }
     
     // MARK: DatePicker Delegate
     
-    func dateWasChosen(date: NSDate)
+    func dateWasChosen(_ date: Date)
     {
         nextMeditation.text = "Next session: \(dateFormat(date))"
         
         let localNotification = UILocalNotification()
         localNotification.fireDate = date
-        print(NSDate())
+        print(Date())
         print(localNotification.fireDate)
-        localNotification.timeZone = NSTimeZone.localTimeZone()
+        localNotification.timeZone = TimeZone.autoupdatingCurrent
         localNotification.alertBody = "Time to Relax"
         localNotification.alertAction = "Open App"
         localNotification.soundName = UILocalNotificationDefaultSoundName
         
-        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        UIApplication.shared.scheduleLocalNotification(localNotification)
     }
     
     
-    func dateFormat(x: NSDate) -> String
+    func dateFormat(_ x: Date) -> String
     {
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = NSDateFormatter.dateFormatFromTemplate("MMM dd yyyy HH:mm", options: 0, locale: NSLocale.currentLocale())
-        let formattedTime = formatter.stringFromDate(x).uppercaseString
+        let formatter = DateFormatter()
+        formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "MMM dd yyyy HH:mm", options: 0, locale: Locale.current)
+        let formattedTime = formatter.string(from: x).uppercased()
         
         return String(formattedTime)
     }
     
-    @IBAction func unwindToMainViewController(unwindSegue: UIStoryboardSegue)
+    @IBAction func unwindToMainViewController(_ unwindSegue: UIStoryboardSegue)
     {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     

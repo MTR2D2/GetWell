@@ -25,12 +25,12 @@ class MapViewController: UIViewController, UISearchBarDelegate
     var pointAnnotation:MKPointAnnotation!
     var pinAnnotationView:MKPinAnnotationView!
     
-    @IBAction func searchBar(sender: AnyObject)
+    @IBAction func searchBar(_ sender: AnyObject)
     {
         searchController = UISearchController(searchResultsController: nil)
         searchController.hidesNavigationBarDuringPresentation = false
         self.searchController.searchBar.delegate = self
-        presentViewController(searchController, animated: true, completion: nil)
+        present(searchController, animated: true, completion: nil)
     }
     
     @IBOutlet weak var mapView: MKMapView!
@@ -50,7 +50,7 @@ class MapViewController: UIViewController, UISearchBarDelegate
         super.didReceiveMemoryWarning()
     }
     
-    override func viewWillAppear(animated: Bool)
+    override func viewWillAppear(_ animated: Bool)
     {
         if timerCount%2 == 1
         {
@@ -58,7 +58,7 @@ class MapViewController: UIViewController, UISearchBarDelegate
         }
     }
     
-    override func viewWillDisappear(animated: Bool)
+    override func viewWillDisappear(_ animated: Bool)
     {
         if timerCount%2 == 1
         {
@@ -66,11 +66,11 @@ class MapViewController: UIViewController, UISearchBarDelegate
         }
     }
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar)
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
     {
         //1
         searchBar.resignFirstResponder()
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
         if self.mapView.annotations.count != 0{
             annotation = self.mapView.annotations[0]
             self.mapView.removeAnnotation(annotation)
@@ -79,12 +79,12 @@ class MapViewController: UIViewController, UISearchBarDelegate
         localSearchRequest = MKLocalSearchRequest()
         localSearchRequest.naturalLanguageQuery = searchBar.text
         localSearch = MKLocalSearch(request: localSearchRequest)
-        localSearch.startWithCompletionHandler { (localSearchResponse, error) -> Void in
+        localSearch.start { (localSearchResponse, error) -> Void in
             
             if localSearchResponse == nil{
-                let alertController = UIAlertController(title: nil, message: "Place Not Found", preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alertController, animated: true, completion: nil)
+                let alertController = UIAlertController(title: nil, message: "Place Not Found", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
                 return
             }
             //3
@@ -99,9 +99,9 @@ class MapViewController: UIViewController, UISearchBarDelegate
         }
     }
     
-    @IBAction func backPressed(sender: UIBarButtonItem)
+    @IBAction func backPressed(_ sender: UIBarButtonItem)
     {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
         if timerCount%2 == 1
         {
             parent?.togglePlayback(true)

@@ -9,23 +9,23 @@
 import UIKit
 
 class ParseHelper: NSObject {
-    class func uploadSoundFileToParse(filePath:String,nameOfFile:String) {
+    class func uploadSoundFileToParse(_ filePath:String,nameOfFile:String) {
         do {
             //            let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
             //
             //            let audioFileURL = "\(documentsPath)/MyMemo.m4a"
             //
-            let paths:String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+            let paths:String = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
             let getImagePath = "\(paths)/MyMemo.m4a"
             
-            let dataOfFile:NSData = try NSData(contentsOfFile: getImagePath, options: .DataReadingMappedAlways)
-            let dataToUpload : NSData = dataOfFile
+            let dataOfFile:Data = try Data(contentsOf: URL(fileURLWithPath: getImagePath), options: .alwaysMapped)
+            let dataToUpload : Data = dataOfFile
             let soundFile = PFFile(name: nameOfFile, data: dataToUpload)
             let userSound = PFObject(className:"upload")
             userSound["name"] = nameOfFile
             userSound["user"] = ""
             userSound["sound"] = soundFile
-            userSound.saveInBackgroundWithBlock({ (success, error) -> Void in
+            userSound.saveInBackground(block: { (success, error) -> Void in
                 print(error)
             })
         } catch {

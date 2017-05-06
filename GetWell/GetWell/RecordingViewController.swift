@@ -32,7 +32,7 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
     {
         super.viewDidLoad()
         
-        recordingLabel.hidden = true
+        recordingLabel.isHidden = true
         //affirmationListButton.hidden = true
         
         setUpAudioRecord()
@@ -45,7 +45,7 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
-    override func viewWillAppear(animated: Bool)
+    override func viewWillAppear(_ animated: Bool)
     {
         if timerCount%2 == 1
         {
@@ -55,22 +55,22 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
 
     // MARK: - Table View Data Source
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1
     }
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
         
     {
         return 20
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("affirmationCell", forIndexPath: indexPath) as! RecordingTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "affirmationCell", for: indexPath) as! RecordingTableViewCell
         
     return cell
     }
@@ -81,9 +81,9 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
     {
         //            let audiOFile = ParseHelper.uploadSoundFileToParse("documents/var..","myRecording1")
         // set up the audio file
-        let directoryURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).first!
+        let directoryURL = FileManager.default.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first!
         // rename file using a method to change string to random
-        let audioFileURL = directoryURL.URLByAppendingPathComponent("MyMemo.m4a")
+        let audioFileURL = directoryURL.appendingPathComponent("MyMemo.m4a")
         self.lastAudioFileURL = audioFileURL.absoluteString
         // set up the audio session
         // the audio session acts as the middle man between the app and the system's media service
@@ -91,7 +91,7 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
         let audioSession = AVAudioSession.sharedInstance()
         
         do {
-            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord, withOptions: AVAudioSessionCategoryOptions.DefaultToSpeaker)
+            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord, with: AVAudioSessionCategoryOptions.defaultToSpeaker)
         } catch let error {
             print(error)
         }
@@ -99,13 +99,13 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
         
         // define the recorder setting
         
-        let recorderSettings = [AVFormatIDKey: Int(kAudioFormatMPEG4AAC), AVSampleRateKey : 44100.0, AVNumberOfChannelsKey : 2 as NSNumber]
+        let recorderSettings = [AVFormatIDKey: Int(kAudioFormatMPEG4AAC), AVSampleRateKey : 44100.0, AVNumberOfChannelsKey : 2 as NSNumber] as [String : Any]
         
         // initiate and prepare the recorder
         do {
-            audioRecorder  = try AVAudioRecorder(URL: audioFileURL, settings: recorderSettings)
+            audioRecorder  = try AVAudioRecorder(url: audioFileURL, settings: recorderSettings)
             audioRecorder?.delegate = self
-            audioRecorder?.meteringEnabled = true
+            audioRecorder?.isMeteringEnabled = true
             audioRecorder?.prepareToRecord()
         } catch let error {
             print(error)
@@ -115,16 +115,16 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
     func play()
     {
         if let player = audioPlayer {
-            if player.playing {
+            if player.isPlaying {
                 player.stop()
                 return
             }
         }
         
         if let recorder = audioRecorder {
-            if !recorder.recording {
+            if !recorder.isRecording {
                 do {
-                    audioPlayer = try AVAudioPlayer(contentsOfURL: recorder.url)
+                    audioPlayer = try AVAudioPlayer(contentsOf: recorder.url)
                     audioPlayer?.delegate = self
                     audioPlayer?.play()
                     
@@ -158,7 +158,7 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
     {
         // stop the audio player before recording
         if let player = audioPlayer {
-            if player.playing {
+            if player.isPlaying {
                 player.stop()
                 
             }
@@ -166,7 +166,7 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
         
         // if we are not recording the start recording!
         if let recorder = audioRecorder {
-            if !recorder.recording {
+            if !recorder.isRecording {
                 do {
                     let audioSession = AVAudioSession.sharedInstance()
                     try audioSession.setActive(true)    // make the recorder work
@@ -189,11 +189,11 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
     // MARK: - Helper method
     
     // this just presents an alert view with the given title and message (msg)
-    func alert(title: String, msg: String)
+    func alert(_ title: String, msg: String)
     {
-        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        self.presentViewController(alertController, animated: true, completion: nil)
+        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }
@@ -202,7 +202,7 @@ class RecordingViewController: UIViewController, UITableViewDataSource, UITableV
 
 extension RecordingViewController : AVAudioRecorderDelegate
 {
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
             self.alert("Excellent!", msg: "Successfully recorded your affirmation")
         }
@@ -214,7 +214,7 @@ extension RecordingViewController : AVAudioRecorderDelegate
 
 extension RecordingViewController : AVAudioPlayerDelegate
 {
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool)
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool)
     {
         if flag {
             self.alert("Sounds Great!", msg: "Finished playing your affirmation")
@@ -222,25 +222,25 @@ extension RecordingViewController : AVAudioPlayerDelegate
         }
     }
     
-    @IBAction func recordTapped(sender: UIButton)
+    @IBAction func recordTapped(_ sender: UIButton)
     {
         record()
-        recordingLabel.hidden = false
+        recordingLabel.isHidden = false
         
         
     }
     
-    @IBAction func cancelTapped(sender: UIButton)
+    @IBAction func cancelTapped(_ sender: UIButton)
     {
         cancel()
-        recordingLabel.hidden = true
+        recordingLabel.isHidden = true
         let nameOfFileTwo:String = "Wow"
         ParseHelper.uploadSoundFileToParse(self.lastAudioFileURL!, nameOfFile:nameOfFileTwo)
  
         
     }
     
-    @IBAction func playTapped(sender: UIButton)
+    @IBAction func playTapped(_ sender: UIButton)
     {
         play()
         
@@ -250,8 +250,8 @@ extension RecordingViewController : AVAudioPlayerDelegate
         //            dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func backPressed(sender: UIButton)
+    @IBAction func backPressed(_ sender: UIButton)
     {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }

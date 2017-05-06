@@ -21,7 +21,7 @@ import QuartzCore
 
 protocol DatePickerDelegate
 {
-    func dateWasChosen(date: NSDate)
+    func dateWasChosen(_ date: Date)
 }
 
 class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate, DatePickerDelegate
@@ -50,12 +50,12 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
     var currentSong: Song?
     var nowPlaying: Bool = false
     
-    var timer: NSTimer?
+    var timer: Timer?
     var originalCount = 0
     
     var whichSegment = 0
     
-    var flashTimer: NSTimer?
+    var flashTimer: Timer?
     var flashCount = 0
     var flashing = true
     
@@ -74,7 +74,7 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         
         //        setUpAudioRecord()
         
-        backButton.enabled = false
+        backButton.isEnabled = false
         
         pulse(playPauseButton)
         morePulse(playPauseButton)
@@ -92,7 +92,7 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         
         do
         {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord, withOptions:.DefaultToSpeaker)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord, with:.defaultToSpeaker)
         }
         catch let error as NSError
         {
@@ -108,11 +108,11 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
     }
     
     
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>)
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
     {
-        if keyPath == "currentItem", let player = object as? AVPlayer, currentItem = player.currentItem?.asset as? AVURLAsset
+        if keyPath == "currentItem", let player = object as? AVPlayer, let currentItem = player.currentItem?.asset as? AVURLAsset
         {
-            songTitleLabel.text = currentItem.URL.lastPathComponent ?? "Unknown"
+            songTitleLabel.text = currentItem.url.lastPathComponent 
             
         }
     }
@@ -121,12 +121,12 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         super.didReceiveMemoryWarning()
     }
     
-    override func viewWillDisappear(animated: Bool)
+    override func viewWillDisappear(_ animated: Bool)
     {
         resetTimer()
     }
     
-    @IBAction func segmentedIndexTapped(sender: UISegmentedControl)
+    @IBAction func segmentedIndexTapped(_ sender: UISegmentedControl)
     {
         
         if sender.selectedSegmentIndex == 0
@@ -172,7 +172,7 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         
     }
     
-    func morePulse(button: UIButton)
+    func morePulse(_ button: UIButton)
     {
         let pulseAnimation = CABasicAnimation(keyPath: "opacity")
         pulseAnimation.duration = 3
@@ -181,19 +181,19 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         pulseAnimation.autoreverses = true
         pulseAnimation.repeatCount = FLT_MAX
-        button.layer.addAnimation(pulseAnimation, forKey: nil)
+        button.layer.add(pulseAnimation, forKey: nil)
     }
     
-    func pulse(button: UIButton)
+    func pulse(_ button: UIButton)
     {
         let pulseAnimation:CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
         pulseAnimation.duration = 10
-        pulseAnimation.fromValue = NSNumber(float: 0.7)
-        pulseAnimation.toValue = NSNumber(float: 1.2)
+        pulseAnimation.fromValue = NSNumber(value: 0.7 as Float)
+        pulseAnimation.toValue = NSNumber(value: 1.2 as Float)
         pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         pulseAnimation.autoreverses = true
         pulseAnimation.repeatCount = FLT_MAX
-        button.layer.addAnimation(pulseAnimation, forKey: "layerAnimation")
+        button.layer.add(pulseAnimation, forKey: "layerAnimation")
     }
     
     
@@ -205,7 +205,7 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         }
         else
         {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(MediaPlayerVC2.updateUI), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(MediaPlayerVC2.updateUI), userInfo: nil, repeats: true)
             updateUI()
         }
     }
@@ -228,8 +228,8 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         if originalCount == 0
         {
             timer?.invalidate()
-            flashTimer = NSTimer
-                .scheduledTimerWithTimeInterval(0.2, target: self, selector: #selector(MediaPlayerVC2.flashLabel) , userInfo: nil, repeats: true)
+            flashTimer = Timer
+                .scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(MediaPlayerVC2.flashLabel) , userInfo: nil, repeats: true)
             playNotification()
         }
     }
@@ -248,11 +248,11 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         flashing = !flashing
         if flashing
         {
-            meditationCountdown.textColor = UIColor.whiteColor()
+            meditationCountdown.textColor = UIColor.white
         }
         else
         {
-            meditationCountdown.textColor = UIColor.yellowColor()
+            meditationCountdown.textColor = UIColor.yellow
         }
         flashCount += 1
         
@@ -264,13 +264,13 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
     
     func playNotification()
     {
-        let soundURL = NSBundle.mainBundle().URLForResource("SessionOver", withExtension: "m4a")!
+        let soundURL = Bundle.main.url(forResource: "SessionOver", withExtension: "m4a")!
         var soundID: SystemSoundID = 0
-        AudioServicesCreateSystemSoundID(soundURL, &soundID)
+        AudioServicesCreateSystemSoundID(soundURL as CFURL, &soundID)
         AudioServicesPlaySystemSound(soundID)
     }
     
-    @IBAction func playPauseTapped(sender: UIButton)
+    @IBAction func playPauseTapped(_ sender: UIButton)
     {
 //        timerCount = timerCount + 1
         timerCount += 1
@@ -278,22 +278,22 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         if originalCount <= 1
         {
             flashTimer?.invalidate()
-            meditationCountdown.textColor = UIColor.whiteColor()
+            meditationCountdown.textColor = UIColor.white
             resetTimer()
             togglePlayback(true)
         }
 //        updatePlayPauseButton()
         startTimer()
         togglePlayback(!nowPlaying)
-        backButton.hidden = false
-        backButton.enabled = true
-        meditationCountdown.textColor = UIColor.whiteColor()
+        backButton.isHidden = false
+        backButton.isEnabled = true
+        meditationCountdown.textColor = UIColor.white
     }
     
-    @IBAction func skipForwardTapped(sender: UIButton)
+    @IBAction func skipForwardTapped(_ sender: UIButton)
     {
-        meditationCountdown.textColor = UIColor.whiteColor()
-        let currentSongIndex = (songs as NSArray).indexOfObject(currentSong!)
+        meditationCountdown.textColor = UIColor.white
+        let currentSongIndex = (songs as NSArray).index(of: currentSong!)
         let nextSong: Int
         
         if currentSongIndex + 1 >= songs.count
@@ -309,20 +309,20 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         //        togglePlayback(true)
     }
     
-    @IBAction func skipBackTapped(sender: UIButton)
+    @IBAction func skipBackTapped(_ sender: UIButton)
     {
         if nowPlaying
         {
-            meditationCountdown.textColor = UIColor.whiteColor()
+            meditationCountdown.textColor = UIColor.white
             timesTapped = timesTapped + 1
             
             if timesTapped % 2 == 1
             {
-                player.seekToTime(CMTimeMakeWithSeconds(0.0, 1))
+                player.seek(to: CMTimeMakeWithSeconds(0.0, 1))
             }
             else if timesTapped % 2 == 0
             {
-                let currentSongIndex = (songs as NSArray).indexOfObject(currentSong!)
+                let currentSongIndex = (songs as NSArray).index(of: currentSong!)
                 let nextSong: Int
                 if currentSongIndex != 0
                 {
@@ -339,7 +339,7 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         }
         else
         {
-            backButton.enabled = false
+            backButton.isEnabled = false
         }
         
     }
@@ -489,8 +489,8 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         player.removeAllItems()
         if let song = currentSong
         {
-            song.playerItem.seekToTime(CMTimeMakeWithSeconds(0.0, 1))
-            player.insertItem(song.playerItem, afterItem: nil)
+            song.playerItem.seek(to: CMTimeMakeWithSeconds(0.0, 1))
+            player.insert(song.playerItem, after: nil)
             songTitleLabel.text = song.title
             //            artistLabel.text? = song.artist
             albumArtwork.image = UIImage(named: song.albumArtworkName)
@@ -502,12 +502,12 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
     {
         if timerCount % 2 == 1
         {
-            playPauseButton.setImage(UIImage(named:"PauseB"), forState:. Normal)
-            playPauseButton.setImage(UIImage(named: "PlayPauseB"), forState: .Highlighted)
+            playPauseButton.setImage(UIImage(named:"PauseB"), for:UIControlState())
+            playPauseButton.setImage(UIImage(named: "PlayPauseB"), for: .highlighted)
         }
         else
         {
-            playPauseButton.setImage(UIImage(named: "PlayPauseB"), forState: .Normal)
+            playPauseButton.setImage(UIImage(named: "PlayPauseB"), for: UIControlState())
         }
         
     }
@@ -533,7 +533,7 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         })
     }
     
-    func togglePlayback(play: Bool)
+    func togglePlayback(_ play: Bool)
     {
         nowPlaying = play
         if play
@@ -551,7 +551,7 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
     func resetTimer()
     {
         timer?.invalidate()
-        meditationCountdown.textColor = UIColor.whiteColor()
+        meditationCountdown.textColor = UIColor.white
         
         if whichSegment == 0
         {
@@ -581,21 +581,21 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         togglePlayback(false)
     }
     
-    @IBAction func resetPressed(sender: UIButton!)
+    @IBAction func resetPressed(_ sender: UIButton!)
     {
         resetTimer()
     }
     
     // MARK: - Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if timerCount%2 == 1
         {
             togglePlayback(true)
         }
         
-        if let recordPlaylistVC = segue.destinationViewController as? PlaylistTableViewController
+        if let recordPlaylistVC = segue.destination as? PlaylistTableViewController
         {
             recordPlaylistVC.dad = self
             recordPlaylistVC.songs = songs
@@ -603,32 +603,32 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
         
         if segue.identifier == "PlaylistSegue2"
         {
-            let destVC = segue.destinationViewController as! PlaylistTableViewController
+            let destVC = segue.destination as! PlaylistTableViewController
             destVC.popoverPresentationController?.delegate = self
             destVC.dad = self
-            destVC.preferredContentSize = CGSizeMake(410.0, 216.0)
+            destVC.preferredContentSize = CGSize(width: 410.0, height: 216.0)
             //            destVC = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0)
-            let frameSize: CGPoint = CGPointMake(UIScreen.mainScreen().bounds.size.width*0.5, UIScreen.mainScreen().bounds.size.height*0.5)
-            self.preferredContentSize = CGSizeMake(frameSize.x,frameSize.y);
+            let frameSize: CGPoint = CGPoint(x: UIScreen.main.bounds.size.width*0.5, y: UIScreen.main.bounds.size.height*0.5)
+            self.preferredContentSize = CGSize(width: frameSize.x,height: frameSize.y);
         }
         
         if segue.identifier == "AffirmationSegue"
         {
-            let destVC = segue.destinationViewController as! MySavedAffirmationViewController
+            let destVC = segue.destination as! MySavedAffirmationViewController
             destVC.popoverPresentationController?.delegate = self
             destVC.dad = self
-            destVC.preferredContentSize = CGSizeMake(410.0, 216.0)
+            destVC.preferredContentSize = CGSize(width: 410.0, height: 216.0)
             //            destVC = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0)
-            let frameSize: CGPoint = CGPointMake(UIScreen.mainScreen().bounds.size.width*0.5, UIScreen.mainScreen().bounds.size.height*0.5)
-            self.preferredContentSize = CGSizeMake(frameSize.x,frameSize.y);
+            let frameSize: CGPoint = CGPoint(x: UIScreen.main.bounds.size.width*0.5, y: UIScreen.main.bounds.size.height*0.5)
+            self.preferredContentSize = CGSize(width: frameSize.x,height: frameSize.y);
         }
         
         if segue.identifier == "SetReminderSegue"
         {
-            let destVC = segue.destinationViewController as! SetReminderPopOverViewController
+            let destVC = segue.destination as! SetReminderPopOverViewController
             destVC.popoverPresentationController?.delegate = self
             destVC.delegate = self
-            destVC.preferredContentSize = CGSizeMake(410.0, 216.0)
+            destVC.preferredContentSize = CGSize(width: 410.0, height: 216.0)
         }
         
         //        if let loginVC = segue.destinationViewController as? LoginViewController
@@ -640,41 +640,41 @@ class MediaPlayerVC2: UIViewController, UIPopoverPresentationControllerDelegate,
     
     func unwindFromLogin()
     {
-        navigationController?.popToRootViewControllerAnimated(true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     
     // MARK: - UIPopoverPresentationController Delegate
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle
     {
-        return UIModalPresentationStyle.None
+        return UIModalPresentationStyle.none
     }
     
     // MARK: DatePicker Delegate
     
-    func dateWasChosen(date: NSDate)
+    func dateWasChosen(_ date: Date)
     {
         nextMeditation.text = "Next session: \(dateFormat(date))"
         
         let localNotification = UILocalNotification()
         localNotification.fireDate = date
-        print(NSDate())
+        print(Date())
         print(localNotification.fireDate)
-        localNotification.timeZone = NSTimeZone.localTimeZone()
+        localNotification.timeZone = TimeZone.autoupdatingCurrent
         localNotification.alertBody = "Time to Relax"
         localNotification.alertAction = "Open App"
         localNotification.soundName = UILocalNotificationDefaultSoundName
         
-        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        UIApplication.shared.scheduleLocalNotification(localNotification)
     }
     
     
-    func dateFormat(x: NSDate) -> String
+    func dateFormat(_ x: Date) -> String
     {
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = NSDateFormatter.dateFormatFromTemplate("MMM dd yyyy HH:mm", options: 0, locale: NSLocale.currentLocale())
-        let formattedTime = formatter.stringFromDate(x).uppercaseString
+        let formatter = DateFormatter()
+        formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "MMM dd yyyy HH:mm", options: 0, locale: Locale.current)
+        let formattedTime = formatter.string(from: x).uppercased()
         
         return String(formattedTime)
     }
